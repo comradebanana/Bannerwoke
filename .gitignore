@@ -1,0 +1,15 @@
+# Ignore everything
+*
+
+# Keep only Bannerwake project files
+!.gitignore
+!BANNERWAKE_*.txt
+!BANNERWAKE_*.md
+!BANNERWAKE_*.docx
+!STURGIA_NORDS_DESIGN.md
+!bannerwake_armor_archivist*.py
+!bannerwake_armor_archivist*.zip
+
+# Also track private_mod_docs folder
+!private_mod_docs/
+!private_mod_docs/**

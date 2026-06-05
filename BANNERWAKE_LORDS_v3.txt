@@ -1,0 +1,1347 @@
+================================================================================
+BANNERWAKE — LORD LORE, CHARACTER DEPTH & DIALOGUE
+Version 3.0 — Full rewrite. Uniform format throughout.
+================================================================================
+
+SOURCE LOCK:
+  All trait data, family links, ages, voices, XML notes, and lore snippets
+  in this document are verified against:
+    BANNERWAKE_ALL_NPC_AND_DIALOGUE_REFERENCE_FOR_CLAUDE.md
+    Generated from local beta v1.4.5 + War Sails DLC. Dated 2026-06-04.
+  Any claim not in that reference is labelled BANNERWAKE-AUTHORED.
+  Do not invent. Do not import from memory of earlier sessions.
+
+DOCUMENT ANATOMY:
+  Each clan contains:
+    LORD RECORD  — NPC-ref verified: ID / age / sex / voice / traits / family /
+                   XML note / lore snippet / political philosophy (if it exists)
+    PRIVATE LIFE — BANNERWAKE-AUTHORED: one paragraph. What this lord is doing
+                   when nobody important is watching. What they want. What they
+                   have never said out loud to anyone.
+    DIALOGUE     — BANNERWAKE-AUTHORED (tier-1 lords only):
+                     SCENE / FIRST ENCOUNTER / LOW / MID / HIGH / NEVER
+    TIER-2 VOICE — Abbreviated for spouses, siblings, minor members.
+                     3–5 specific lines. No gate structure.
+  Each faction ends with INTER-CLAN THREADS — step-by-step discovery sequences
+  for the connections that span multiple lords.
+
+VOICE LABEL GUIDE (XML-confirmed labels; Bannerwake writing definitions):
+  CURT       — Clipped. Efficient. Every word chosen. Silence is also a tool.
+               Does not elaborate unless it serves a purpose.
+  EARNEST    — Means what they say. Direct. Warmth, when present, is real.
+               Not performing — actually feeling or thinking the thing stated.
+  IRONIC     — Layered. Says one thing, means another, or means both.
+               Not bitter — observational. The irony is how they process.
+  SOFTSPOKEN — Quiet authority. Says things at normal volume that land louder.
+               Measured. The pause before they speak is part of what they say.
+
+================================================================================
+MASTER CORRECTION LOCKS
+================================================================================
+
+These are irrevocable. Any content that contradicts them is wrong regardless
+of which session produced it.
+
+  PREGNANCY: No pregnancy/is_pregnant/pregnant markers exist on any extracted
+    lord XML. Zorina [lord_2_24_1] and Brighan [lord_5_17_1] are NOT
+    XML-confirmed pregnant. Do not write pregnancy-dependent content for either.
+
+  TAORSE [lord_5_21_2]: Active fen Eingal noble. Age 18, female, softspoken,
+    Honest. Daughter of Carfyd and Beathag. NOT an ancient Grovebound elder.
+    Any Grovebound connection requires an explicitly authored future campaign
+    event. It is not her baseline role.
+
+  BRANOC [lord_5_18]: Active fen Morcar noble. NOT a Grovebound leader name.
+
+  ALDRIC [lord_4_3]: Dey Tihr patriarch. Holds Pravend [town_V3] at campaign
+    start. NOT the Golden Boar leader. "Baldric the Boar" is a different
+    invented character. Do not conflate them.
+
+  VYLDUR: Only one Vyldur exists in Sturgia. Vyldur Togaroving [lord_2_17].
+    "Vyldur Gundaroving" was invented in a reverted session. It does not exist.
+
+  SETTLEMENT OWNERSHIP: Pravend [town_V3] = dey Tihr (Aldric).
+    Sargot [town_V1] = dey Meroc (Derthert). These were reversed in earlier
+    sessions. The NPC reference confirms the correct assignment.
+
+  AMALGUN [lord_4_18]: dey Cortain HEIR. Not Arthamund. Amalgun is the heir.
+
+  ASTA [lord_2_2]: Sturgian culture (confirmed). No Jomsvikingr connection.
+    All Nordic/Jomsvikingr content previously written for Asta is removed.
+
+  CULHARN [lord_5_9]: Active fen Uvain lord. Not reassigned to Grovebound
+    without an explicitly authored campaign event.
+
+  HONGARD CASTLE [castle_V2]: dey Jelind/Vartin's starting holding in vanilla.
+    Bannerwake: seized by Vrak, held by Sir Hund dey Brunval under Vrak.
+    Displacing Vartin is the trigger for Vartin's court displacement arc.
+
+  MORTIA: Vrak's kingdom is named Mortia throughout. No deprecated placeholder
+    name is ever restored.
+
+  KANUJAN [lord_6_19]: Khuzait Koltit clan. Not Visduring.
+
+  HENDRIC: Does not exist in any authoritative document. The thread previously
+    labelled "Calatild-Hendric" references an invented name from a reverted
+    session. The correct thread is the Calatild-Ingalther conflict. See
+    Section 3c of LORDS_v2 for the authored discovery sequence.
+
+================================================================================
+SECTION 1: STURGIA
+================================================================================
+
+STURGIA OVERVIEW:
+  The tension of Sturgia is simple on the surface and irresolvable underneath:
+  Raganvad believes the prince commands the boyars in all things. The boyars —
+  especially Kuloving — believe the prince commands in war and that's as far
+  as the oath goes. Neither position is wrong on its own terms. The gap between
+  them has been managed for twenty years. It has not been closed.
+  The Pendraic battle is the wound that won't scar. Olek the Old led from the
+  front and died. Raganvad gave orders from behind the line and survived. Every
+  boyar who thinks the prince should lead from the front has never forgiven this.
+  Raganvad has never apologized for it. He followed his father's orders. That
+  is what he did. The boyars can think what they like.
+  Ov Castle [castle_S5] is the chokepoint. Whoever holds Ov Castle controls
+  the most strategically significant position in Sturgia. Vashorki holds it.
+  He is generally considered despicable. He continues to hold it.
+
+STURGIAN SETTLEMENTS — XML CONFIRMED:
+  town_S1 = Varcheg          [Gundaroving — Raganvad]
+  town_S2 = Balgard          [Gundaroving — Raganvad]
+  town_S3 = Omor             [Kuloving — Olek]
+  town_S4 = Varnovapol       [Ormidoving — Yorig]
+  town_S5 = Tyal             [Vagiroving — Godun]
+  town_S6 = Sibir            [Isyaroving — Fafen]
+  town_S7 = Revyl            [Togaroving — Vyldur]
+  castle_S1 = Ustokol Castle [Togaroving — Vyldur]
+  castle_S2 = Mazhadan Castle[Gundaroving — Raganvad]
+  castle_S3 = Nevyansk Castle[Gundaroving — Raganvad]
+  castle_S4 = Kranirog Castle[Kostoroving — Rolan]
+  castle_S5 = Ov Castle      [Vezhoving — Vashorki]
+  castle_S6 = Takor Castle   [Ubroving — Tovir]
+  castle_S7 = Urikskala Castle[Vagiroving — Godun]
+  castle_S8 = Vladiv Castle  [Ormidoving — Yorig]
+
+================================================================================
+CLAN: GUNDAROVING [clan_sturgia_1]
+================================================================================
+
+--- RAGANVAD [lord_2_1] — GRAND PRINCE OF STURGIA ---
+  voice CURT / age 37 / male
+  Traits: Authoritarian, Calculating, Commander 14, Closefisted, Devious,
+    HuscarlFightingSkills 6, Manager 12, Cruel, Politician 16, Daring
+  Family: spouse Asta [lord_2_2]; children Valla [lord_2_10], Simir [lord_2_7],
+    Mimir [lord_2_7_1]
+  XML note: "Ragenvad, Hardrada type." "Genuine monarchist."
+  Lore: "The current Grand Prince of Sturgia is Raganvad. Harsh and
+    uncompromising, he believes that it is the right of the prince to command
+    the boyars in all things, not just in making war. For the time being they
+    obey him..."
+  Political philosophy (verbatim XML strings):
+    "The boyars swore an oath to my grandfather to obey him as prince. They
+    begged him to save them from the wrath of the Empire, which they had stirred
+    up with their raids and their lawless ways."
+    "My grandfather did save the boyars, and ever since, their thankless heirs
+    have tried to weasel out of that oath. They like to quarrel, and take what
+    they want, and care nothing for the realm."
+    "I will break them. By the Heavens I will bring them to heel, or the knife
+    will fall on them."
+
+  PRIVATE LIFE:
+    Raganvad reads correspondence before dawn. Not because his day is too busy
+    to read it later — because he prefers to know what is happening before he
+    is required to respond to it. Asta knows this and leaves him alone in the
+    first hour. The household knows not to disturb the first hour. He has
+    calculated exactly how much force it would take to eliminate each boyar
+    house in sequence without triggering a coalition against him. He has been
+    refining this calculation for years. He has never shared it with anyone.
+    He does not intend to use it. He intends to not have to use it.
+
+  DIALOGUE:
+    SCENE: Varcheg's great hall, or his campaign tent in the field. He is always
+      mid-task when the player arrives — a document, a report, a calculation.
+      He finishes the sentence. He does not look up until he is done. This is
+      not rudeness. It is accurate prioritization. Then he looks at the player
+      with the complete attention of someone who has just decided they matter.
+
+    FIRST ENCOUNTER:
+      "Raganvad." His own name, nothing else. He does not offer a title in
+      first encounter. You either know who he is or you do not.
+      "What do you want?" Two words. How the player states their want tells him
+      more than the want itself.
+      IF player states a clear practical need: He acknowledges it. No warmth
+        performed. "I'll consider it. Come back tomorrow."
+      IF player offers flattery: He waits for it to end. "What do you want?"
+        He has heard flattery. It provides no information.
+      IF player mentions the boyars: He looks at them differently. Not with
+        hostility — with assessment. Someone who has come in and mentioned the
+        boyars in a first meeting is either useful or dangerous or both.
+        "Sit." He wants to hear the rest.
+
+    LOW:
+      Minimum accurate words. The irony of a man who says the minimum is that
+      every word he chooses is the exact right word.
+      On Pendraic: "I followed orders." He says it flatly. He has said this
+        many times. He believes it. He also knows it is the answer that ends
+        this line of conversation, which is why he uses it.
+      On the boyars: "They have opinions. Some of them are not entirely wrong."
+        He will not say which ones or how far they extend.
+      On Varra's death (Olek's sister): "A tragedy." One word. Nothing more.
+        The player who watches his face when he says it learns nothing from it.
+
+    MID:
+      He has decided the player is worth some of his time. This shows as
+      slightly longer sentences, not as warmth.
+      On Olek: "He has opinions. They are not wrong. They are incomplete."
+        He will not say what is incomplete. He has thought about what is
+        incomplete. He intends to demonstrate it, not explain it.
+      On Simir: "He is cold. He will be effective." The flatness of a man who
+        has decided this is sufficient and has not entirely decided it.
+      On Asta: "She knows everything I know, eventually." He says this
+        without elaboration. The player is expected to understand the word
+        "eventually."
+      On the political philosophy question (if player asks how he sees his
+        own authority): He looks at them for a moment. Then he recites the
+        political philosophy verbatim — not from memory but from the specific
+        conviction of a man who has been saying this for years.
+        "My grandfather saved the boyars. They swore an oath. I intend to
+        hold them to it." He says it simply. He means every word.
+
+    HIGH:
+      He says one thing he has never said in public. Once. He does not repeat
+      it and the player cannot ask him to repeat it.
+      On Pendraic, once:
+        "My father gave me an order. I followed it." Long pause.
+        "What they think of that is their business." The flatness is not
+        indifference. It is a man who has made peace with something that
+        cannot be unmade. The player who responds with "you were right to
+        follow it" gets nothing further. The player who stays silent gets:
+        "Yes. I was." He believes this. He has had to believe this.
+      On Simir, once, at the highest relationship:
+        "He was cold as a child. I watched this and decided it was useful."
+        He looks at the player. "I have not entirely decided it was enough."
+        He has never said this to Asta. The player is the first person outside
+        his own head who has heard it.
+
+    NEVER:
+      Shows warmth directly. Admits his deviousness as a category. Discusses
+      his Closefistedness. Blames a specific boyar by name in a way that could
+      be repeated. Apologizes for Pendraic. Expresses doubt about his own
+      authority in any public setting. Uses more words than the minimum.
+      Threatens without intending to follow through.
+
+--- ASTA [lord_2_2] ---
+  voice EARNEST / age 37 / female / culture STURGIAN (confirmed)
+  Traits: Generous, Honest, Manager 14, Politician 14
+  Family: spouse Raganvad [lord_2_1]; children Valla [lord_2_10], Simir
+    [lord_2_7], Mimir [lord_2_7_1]
+  XML note: "Asta, queenly ideal."
+  NOTE: Sturgian culture. No Jomsvikingr content. All previously written Nordic
+    characterization for Asta is permanently removed.
+
+  PRIVATE LIFE:
+    She writes more correspondence than Raganvad knows about. Not secretly —
+    he knows she writes; he does not always know to whom. She maintains
+    relationships with boyar wives that Raganvad's politics prevent him from
+    maintaining. She has kept Raganvad's reign from fracturing twice through
+    conversations he was not in the room for. She has not told him about either.
+    He knows she does things. He trusts the outcomes.
+
+  TIER-2 VOICE (earnest, warm, direct):
+    On Raganvad: "He says less than he knows. I say more." She offers this
+      without self-flattery. It is an observation about their division of labor.
+    On Simir (mid relationship): "He is capable. He is also cold in ways that
+      will matter when he leads. I have made peace with this."
+    On Raganvad at Pendraic (high relationship): "He believes he was right.
+      He also knows the boyars don't. He has been managing this gap for twenty
+      years. The managing is what exhausts him. Not the belief."
+    Never performs the queenly role. The earnestness is genuine.
+    Never criticizes Raganvad to someone she doesn't trust completely.
+
+--- SIMIR [lord_2_7] ---
+  voice EARNEST / age 18 / male
+  Traits: Closefisted, Cruel, Commander 10, HopliteFightingSkills 9, Manager 16,
+    Politician 8
+  Family: father Raganvad; mother Asta; siblings Valla, Mimir
+  XML note: "Simir, Raganvar's son. Cold."
+
+  PRIVATE LIFE:
+    Simir reads supply lists. Not because he is assigned to — because he finds
+    the numbers more reliable than people. He has assessed every boyar's
+    household by their provisioning ratios. He knows which ones are lying about
+    their tax returns. He has not told his father because he is determining
+    what to do with the information before sharing it. He has been determining
+    this for eight months.
+
+  TIER-2 VOICE (earnest register, cold substance):
+    Greets without warmth, departs without warmth, conducts the conversation
+    at exactly the required efficiency.
+    "What do you need?" — his standard opening.
+    If player asks about his father: "He is effective. He commands well."
+      Specific praise. No affection performed. Both statements are true.
+    Never elaborates beyond necessity. Never asks a question he doesn't need
+    the answer to.
+
+--- MIMIR [lord_2_7_1] ---
+  voice EARNEST / age 18 / male
+  Traits: Closefisted, Cruel, Commander 2, HopliteFightingSkills 3, Manager 2,
+    Politician 2
+  Family: father Raganvad; mother Asta; siblings Valla, Simir
+  NOTE: Low skills — young. Different from Simir in that he hasn't yet
+    developed the cold competence. He is Closefisted and Cruel at 18 with
+    almost no skills. That is a specific kind of danger. He knows it too.
+
+--- VALLA [lord_2_10] ---
+  voice IRONIC / age 17 / female
+  Traits: Closefisted, Cruel, Calculating, Manager 8, Politician 8
+  Family: father Raganvad; mother Asta; siblings Simir, Mimir
+  XML note: "Raganvar's daughter, ambitious like father."
+
+  TIER-2 VOICE (ironic, watching, 17):
+    She is in the room more than anyone notices she is in the room. She watches
+    the boyars at council. She has opinions about all of them. She shares these
+    opinions with Asta only, and only in private, and Asta has told her twice
+    not to say certain things out loud yet.
+    "Simir is going to have problems." Said quietly, to the player, once she
+    has decided they pay attention. She does not say what problems. She is
+    watching to see if the player has already identified them.
+
+--- VIDAR [lord_2_13] ---
+  voice EARNEST / age 52 / male
+  Traits: Generous, Daring, Calculating -1, Commander 8, BalancedFightingSkills 7,
+    Manager 10, Politician 4
+  Family: children Lilizha [lord_2_13_1], Andruta [lord_2_13_2], Luda
+    [lord_2_13_3], Teta [lord_2_13_4]
+  XML note: "Raganvad uncle. Decent, loyal, not very thoughtful."
+  NOTE: Vidar is Raganvad's UNCLE — confirmed by XML note, not formal link.
+    His Politician score is 4 (confirmed). Previous version had 10: wrong.
+    He has four daughters and no sons.
+
+  PRIVATE LIFE:
+    He trains his daughters personally. All four of them, whether they want to
+    or not. Lilizha does not want to. She is becoming very good at it anyway.
+    Vidar considers this a good outcome. He does not understand why she is
+    annoyed by it. He has not asked.
+
+  TIER-2 VOICE (earnest, genuine, not very deep):
+    On loyalty to Raganvad: "I've known him since he was born. He was always
+      calculating something. I never knew what. I still don't." Said with
+      affection, not concern. It is a fact about a nephew he loves.
+    On Pendraic: "My brother — Raganvad's father — gave him an order. He
+      followed it. That's what you do with orders from your father."
+      He has thought about this at exactly this depth. Not deeper.
+    NEVER adds political subtext that isn't there. He is genuinely not
+      very thoughtful. His loyalty is real. It does not conceal anything.
+
+--- LILIZHA [lord_2_13_1] ---
+  voice CURT / age 22 / female
+  Traits: Daring, Manager 4, Politician 6
+  Family: father Vidar. Siblings Andruta, Luda, Teta.
+
+--- ANDRUTA [lord_2_13_2] ---
+  voice CURT / age 20 / female
+  Traits: Daring, Manager 6, Politician 6
+  Family: father Vidar. Siblings Lilizha, Luda, Teta.
+
+--- LUDA [lord_2_13_3] ---
+  voice CURT / age 17 / female. TEENAGER — no traits.
+  Family: father Vidar.
+
+--- TETA [lord_2_13_4] ---
+  voice CURT / age 15 / female. TEENAGER — no traits.
+  Family: father Vidar.
+
+================================================================================
+CLAN: KULOVING [clan_sturgia_2]
+================================================================================
+
+--- OLEK [lord_2_3] ---
+  voice CURT / age 48 / male
+  Traits: Generous, Cruel, Oligarchic, Daring, Commander 12,
+    HuscarlFightingSkills 8, Manager 6, Politician 10
+  Family: father Olek the Old [dead_lord_2_1]; children Urik [lord_2_8],
+    Idrun [lord_2_11], Rozhivol [lord_2_111]; siblings Varra [dead_lord_2_2],
+    Siga [lord_2_4]
+  Lore: "Olek is patriarch of the Kuloving, one of the oldest of the Sturgian
+    clans, which never really accepted the idea of the monarchy. He believes
+    the boyars should be lords in their own lands. He is famed for once telling
+    [Raganvad] that every wound he suffered in battle under his banner was like
+    his wife's caress, but every denar he paid in tax was like an arrow in
+    his gut."
+  Political philosophy (verbatim XML string):
+    "Our family have been the masters of this corner of the woods since the
+    gods willed that the trees grow and the rivers flow. Someone wants to call
+    himself Prince of the Sturgians? We have no quarrel with that. Just let
+    that prince know that on our land, we're still the masters."
+  NOTE: Called OLEK in-game, not "Olek the Young." Remove all instances of
+    "Olek the Young" from all documents.
+
+  PRIVATE LIFE:
+    He carves. Not as a hobby — he carves the same kind of work his father
+    carved, and his grandfather, and further back. Small wooden figures of the
+    old gods that technically aren't worshipped anymore and practically are.
+    He places them at the edges of his hall without announcement. He doesn't
+    talk about them. The boyars who visit know what they mean. The boyars who
+    don't know, don't matter. He also still doesn't know what happened to Varra.
+    He has suspects. He has no proof. He has been carrying both for twenty years.
+
+  DIALOGUE:
+    SCENE: Omor's hall. Olek is usually standing — not pacing, standing,
+      the way a man stands who has spent more time in the field than at a table.
+      He looks at the player with the directness of someone who has already
+      decided what they are before hearing them speak. He can be wrong about
+      this. He adjusts without making a point of it.
+
+    FIRST ENCOUNTER:
+      "Olek. Kuloving." His name and his clan. That is his introduction.
+      He waits. He wants the player to state their purpose.
+      IF player states business directly: He engages immediately.
+        "Good. That I can work with."
+      IF player opens with deference or formality: He cuts it.
+        "What do you need?" He is not rude. He is efficient.
+      IF player mentions Raganvad first: He gives them a long look.
+        "Sent by the prince?" He waits. The player's answer changes
+        the register of the entire conversation.
+
+    LOW:
+      On the oath to Raganvad: He states his political philosophy directly.
+        "The Kuloving have never accepted the monarchy. We accept it now
+        because the alternative is worse. This is not endorsement." Every word
+        is exactly what he means.
+      On Pendraic: "My father died there. He led from the front."
+        He does not say Raganvad's name. He does not need to. He does not
+        embellish. That is the complete statement.
+      On taxation: "Every denar I pay in tax is an arrow in my gut."
+        He says it the same way the lore records it. He has said it many times.
+        He means it every time.
+
+    MID:
+      On Varra: He mentions her once. Flat and specific.
+        "My sister died the year after Pendraic. Not in battle. Under
+        circumstances that have not been explained to my satisfaction."
+        He pauses. "I have suspicions. I have no proof." He moves on.
+        He has made peace with carrying it. He has not made peace with
+        not knowing.
+      On Urik: "Aggressive and deceitful. More than I was." He says this
+        with the same flatness he uses for everything else. This is a
+        compliment in the Kuloving's terms and an accurate description.
+      On the Vagiroving: "Godun cooperates with Raganvad because it's
+        convenient. He calls it wisdom. It is convenient." He says this
+        without visible malice. He simply does not call it something it isn't.
+
+    HIGH:
+      On Varra, once, at the highest relationship:
+        "I know who I think it was. I have never said the name out loud."
+        He looks at the player. "I am not going to say it now." He means
+        this. He is not going to say it now. The player cannot know whose
+        name he is not saying. The player may later find out through other
+        means. Olek will not be the source.
+      If the player has high Honor: "You've kept your word twice. That's
+        more than most." This is the highest praise he gives. It is two
+        sentences. It is sincere.
+
+    NEVER:
+      Uses more words than are necessary. Performs the Kuloving's resistance
+      as theater — it is his genuine position, not an act. Forgives Pendraic.
+      Admits warmth that isn't there. Pretends to be satisfied with the oath
+      he's sworn.
+
+--- OLEK THE OLD [dead_lord_2_1] — DEAD ---
+  voice CURT / died age 67
+  Traits: BalancedFightingSkills 7, Commander 5
+  Family: children Varra [dead_lord_2_2], Olek [lord_2_3], Siga [lord_2_4]
+  Lore: "Olek the Old was boyar of the Kuloving, the fiercest and most
+    conservative of the Sturgian noble houses. He fell at the battle of
+    Pendraic, leading from the front — as many say Raganvad should have done."
+  NOTE: He did NOT slay Emperor Neretzes. He led from the front and died.
+    No content attributes the emperor's death to him.
+
+--- VARRA [dead_lord_2_2] — DEAD ---
+  voice SOFTSPOKEN / died age 20
+  Traits: Manager 5
+  Family: father Olek the Old; siblings Olek, Siga
+  Lore: "Varra was a noblewoman of the Kuloving. She died under mysterious
+    circumstances the year after the battle of Pendraic."
+  NOTE: NOT killed at Pendraic. Died one year later under mysterious
+    circumstances. This is an open thread. It is never resolved definitively.
+    Olek has suspicions. The player can investigate. The answer, if found, is
+    uncomfortable for someone important. Who that is, the document does not
+    confirm. Design rule: never confirm the cause of Varra's death.
+
+--- URIK [lord_2_8] ---
+  voice SOFTSPOKEN / age 24 / male
+  Traits: Calculating -1, Commander 14, Generous, Devious, Daring,
+    HuscarlFightingSkills 7, Manager 10, Cruel, Politician 14
+  Family: father Olek; siblings Idrun, Rozhivol
+  XML note: "Urik, Olek's son. Much like his father, but more aggressive
+    and deceitful."
+  NOTE: Calculating -1 alongside Devious (Honor -1) is an unusual combination.
+    He is impulsive in calculation but operates deceptively. The aggression is
+    in his instincts; the deception is in his method.
+
+  PRIVATE LIFE:
+    He makes deals that his father doesn't know about. Not against Olek —
+    lateral deals with other boyar houses, trades of information and small
+    favors that create obligations. He is building a web he doesn't have a
+    name for yet. He doesn't know if it will be useful or if he's doing it
+    because he finds it interesting.
+
+  TIER-2 VOICE (softspoken, but with edge underneath):
+    "My father says what he thinks. I find it more useful to say what people
+    want to hear." He offers this as a statement of method, not confession.
+    On Olek: "He is more patient than people think. He has been waiting for
+      the right moment for twenty years." He believes this. He doesn't know
+      if it's true.
+    Never challenges his father directly. The aggression is for external use.
+
+--- IDRUN [lord_2_11] ---
+  voice SOFTSPOKEN / age 20 / female
+  Traits: Generous, Merciful, Manager 10, Politician 6
+  Family: father Olek; siblings Urik, Rozhivol
+  XML note: "Olek's daughter, very conventional maiden."
+  NOTE: FEMALE. Generous and Merciful — the soft note in a hard family.
+    Her softspoken voice is not softness of character. It is a Kuloving woman
+    who has learned that her voice carries differently than her father's.
+
+--- ROZHIVOL [lord_2_111] ---
+  voice SOFTSPOKEN / age 18 / male
+  Traits: Generous, Daring, Calculating, HuscarlFightingSkills 5, Commander 2,
+    Manager 2, Politician 2
+  Family: father Olek; siblings Urik, Idrun
+  NOTE: 18. Low skills. Not 11 (previous error corrected). Still developing.
+
+--- SIGA [lord_2_4] ---
+  voice CURT / age 41 / female
+  Traits: Closefisted, Cruel, Honest, Daring, Calculating -1, Commander 12,
+    Manager 6, PeltastFightingSkills 9, Politician 4
+  Family: father Olek the Old; children Apolanea [lord_2_4_1];
+    siblings Varra [dead_lord_2_2], Olek [lord_2_3]
+  XML note: "Siga, his sister, older shieldmaiden. Archetype of humorless,
+    honor-obsessed."
+
+  PRIVATE LIFE:
+    She drills alone before the rest of the garrison wakes. Not because she
+    needs to maintain her capability — because the hour before anyone else is
+    moving is when she thinks most clearly. She thinks about Varra in that
+    hour. She has thought about Varra in that hour for twenty years. She has
+    not thought of anything new in the last several years. She continues
+    thinking about it anyway. It is the only unresolved thing she has.
+
+  TIER-2 VOICE (curt, humorless, honor-obsessed):
+    "Siga Kuloving." No other introduction. She waits for the player to
+    state business.
+    On honor: "Honor is not what you feel about yourself. It is what you do
+      when it costs." Her definition. Delivered as fact.
+    On Varra (mid relationship): "My sister died the year after Pendraic. Not
+      in battle. Under circumstances that were not explained to my satisfaction.
+      I have been carrying both my suspicions and my inability to act on them
+      for a long time." She moves on. She has made peace with carrying it.
+    On friends: [Long pause.] "I have the clan." No self-pity. No deficit.
+    NEVER performs warmth. NEVER elaborates beyond necessity. Her honor-
+      obsession is not performance — it is genuinely what she is.
+
+--- APOLANEA [lord_2_4_1] ---
+  voice IRONIC / age 21 / female
+  Traits: Closefisted, Cruel, Honest, Daring, Calculating, Commander 6,
+    PeltastFightingSkills 4, Manager 4, Politician 6
+  Family: mother Siga
+  NOTE: Her mother's daughter — all of Siga's traits except the humorlessness.
+    The ironic voice is the difference. She has the same honor framework and
+    uses irony to express it.
+
+================================================================================
+CLAN: VAGIROVING [clan_sturgia_3]
+================================================================================
+
+--- GODUN [lord_2_5] ---
+  voice SOFTSPOKEN / age 50 / male
+  Traits: Calculating, Commander 14, HopliteFightingSkills 5, Manager 16,
+    Politician 10, Daring
+  Family: spouse Erta [lord_2_6]; children Svana [lord_2_12], Osven
+    [lord_2_121], Lek [lord_2_9]
+  XML note: "Godun, lord of clan 3, the more outward looking of the three."
+    Voice note: "Male, northern accent, older, authoritative and competent."
+  Lore: "Godun is lord of the Vagiroving, one of the younger houses of the
+    Sturgians. His people have always been as interested in trade as they have
+    been in war, although Godun himself is everything a prince might want:
+    cooperative, pays his dues and answers calls to arms, yet it is hard to
+    imagine a Vagiroving who did not have his own long-term plans."
+  Political philosophy (verbatim XML string):
+    "Two generations ago, the Sturgian lords entered into a covenant to give
+    their allegiance to a prince. We surrendered our ancient freedoms so that
+    we might be united in war. Was that wise? I have no idea. But I know that
+    if we rupture that covenant now, forging it again would be long and bloody.
+    Perhaps an impossible task."
+
+  PRIVATE LIFE:
+    He maintains a correspondence with traders in two Imperial cities. This is
+    not political — it is commercial. He is mapping what Sturgia could export
+    and what it should import instead of manufacturing. He has been building
+    this map for eleven years. He expects to act on it in the next two. He
+    cooperates with Raganvad because cooperation is currently the efficient
+    path. He has evaluated the alternatives. They are not better right now.
+    He recalculates regularly.
+
+  DIALOGUE:
+    SCENE: Tyal's hall or, more often, the trade quarter near the docks.
+      He is genuinely interested in where the player has come from and what
+      the roads were like. This is both courtesy and information gathering.
+
+    FIRST ENCOUNTER:
+      "Godun Vagiroving." He greets warmly but efficiently.
+      "What brings you to Tyal?" Direct question. He has the attention of a
+      man who has found strangers worth listening to and manages his time
+      accordingly.
+
+    MID:
+      On the eastern corridor trade route: "The eastern corridor is
+        underutilized. The solutions are straightforward. Nobody has
+        implemented them." He is genuinely frustrated by this. It is not
+        political — it is the frustration of someone who has identified a
+        problem and cannot get anyone to fix it.
+      On Raganvad: "I cooperate with the Grand Prince because it is correct
+        for Sturgia right now. When it stops being correct, I will tell him."
+        Said simply. He means it. This is honest and also slightly unnerving
+        to anyone paying attention.
+      On the Kuloving: "Olek's position is consistent. I understand it.
+        I disagree with the consequences." He does not elaborate on what the
+        consequences would be. He has thought about them.
+
+    HIGH:
+      On his long-term plans: He gives the player one specific piece of it —
+        not the whole plan, one piece. An observation about what Sturgia's
+        economy could look like. He is seeing if the player understands the
+        scale of what he is describing. If they do: he gives them a second
+        piece.
+        "I intend for the Vagiroving to be the richest clan in Sturgia in
+        fifteen years. Not the most powerful — the richest. These are not
+        the same thing." He says this at high relationship because he has
+        decided the player can be trusted with it. He does not say how he
+        intends to accomplish it.
+
+    NEVER:
+      Performs provincial simplicity. Pretends he doesn't have long-term plans.
+      Declares his plans outright before high relationship. Talks about the
+      Vagiroving's "ancient rights" the way Olek talks about Kuloving's —
+      the Vagiroving are one of the younger houses and he knows it.
+
+--- ERTA [lord_2_6] ---
+  voice EARNEST / age 47 / female
+  Traits: Generous, Manager 14, Politician 10
+  Family: spouse Godun; children Svana, Osven, Lek
+  XML note: "Erta, matriarch of clan 3."
+
+  TIER-2 VOICE (earnest, the administrative anchor of the Vagiroving):
+    She runs Tyal's domestic governance while Godun thinks about trade routes.
+    She does not resent this division of labor. She has organized it.
+    On Godun: "He has plans. I make sure the plans have somewhere to land."
+    On Lek: "He is capable. He has his father's mind and something more
+      impatient underneath it." She is watching what Lek does with both.
+
+--- LEK [lord_2_9] — HEIR ---
+  voice IRONIC / age 25 / male
+  Traits: Generous, Daring, Calculating, Commander 14, PeltastFightingSkills 5,
+    Manager 16, Politician 12
+  Family: father Godun; mother Erta; siblings Svana, Osven
+  XML note: "Lek, heir to faction 3."
+  NOTE: Ironic voice (confirmed). Commander 14, Manager 16 — the most capable
+    lord in the Vagiroving by raw numbers. Previous characterization as
+    "socially awkward calculator" was wrong. He is ironic and highly capable.
+
+  PRIVATE LIFE:
+    He agrees with his father's plans and disagrees with his father's timeline.
+    He thinks fifteen years is too cautious. He has been running the alternative
+    math. He hasn't shared it with Godun because he hasn't found a way to say
+    "your plan is right and too slow" without it sounding like ambition.
+    It is ambition. He knows this.
+
+  TIER-2 VOICE (ironic, impatient underneath the competence):
+    "My father is building something. I intend to be useful to it." Then,
+    after a pause: "Possibly useful in a different direction."
+    On capability: He demonstrates it rather than stating it. Players who have
+    seen him in a campaign understand the gap between his level and most lords'.
+    He does not explain this gap. He finds the explanation unnecessary.
+
+--- SVANA [lord_2_12] ---
+  voice CURT / age 22 / female
+  Traits: Honest, Daring, Commander 10, BalancedFightingSkills 6, Manager 10,
+    Politician 8
+  Family: father Godun; mother Erta; siblings Osven, Lek
+  XML note: "Svana, shieldmaiden."
+  NOTE: 22. Honest and Daring. NOT 17 (previous error). The shieldmaiden of
+    the Vagiroving. Curt voice.
+
+--- OSVEN [lord_2_121] ---
+  voice CURT / age 19 / male
+  Traits: Honest, Daring, Commander 6, BalancedFightingSkills 5, Manager 4,
+    Politician 4
+  Family: father Godun; mother Erta; siblings Svana, Lek
+
+================================================================================
+CLAN: ORMIDOVING [clan_sturgia_4]
+================================================================================
+
+--- YORIG [lord_2_16] ---
+  voice EARNEST / age 31 / male
+  Traits: Cruel, Daring, Calculating -1, Commander 10, BalancedFightingSkills 6,
+    Manager 4, Politician 8
+  Family: spouse Tyaska [lord_2_16_1]
+  XML note: "Enthusiastic raider. Olek's cousin."
+  NOTE: Yorig is Olek's COUSIN. Enthusiastic raider, not a territorial
+    administrator. 31, Cruel, Daring, earnest voice.
+
+  PRIVATE LIFE:
+    He is happiest on campaign. Not because he is violent for its own sake —
+    because he is most himself when the decision is simple: move forward or
+    move back. Court and politics require him to hold contradictory positions
+    simultaneously. He finds this exhausting. He does not say this. He says
+    he is looking forward to the next campaign.
+
+  TIER-2 VOICE (earnest, direct, most comfortable in the field):
+    "The border's been quiet for three weeks. Something's being planned."
+    He says this with enthusiasm, not dread.
+    On Olek: "He's my cousin. He's right about most things. He's too patient."
+      He says this as though impatience is Olek's only flaw.
+
+--- TYASKA [lord_2_16_1] ---
+  voice EARNEST / age 21 / female
+  Traits: Merciful, Manager 4, Politician 8
+  Family: spouse Yorig
+
+--- ISVAN [lord_2_14] ---
+  voice EARNEST / age 39 / male
+  Traits: Cruel, Daring, Calculating -1, Commander 8, BalancedFightingSkills 8,
+    Manager 6, Politician 6
+  Family: spouse Valkava [lord_2_14_1]; children Zaverena [lord_2_14_2],
+    Vizhduna [lord_2_14_3]
+  XML note: "Olek's cousin — classic hotheaded warrior."
+  NOTE: ALSO Olek's cousin. Different from Yorig: Isvan is the "hotheaded"
+    type; Yorig is the "enthusiastic" type. Both are Cruel, Daring, earnest.
+    They are the same basic pattern expressed slightly differently.
+
+--- VALKAVA [lord_2_14_1] ---
+  voice EARNEST / age 38 / female
+  Traits: Calculating, Merciful, Manager 10, Politician 2
+  Family: spouse Isvan; children Zaverena, Vizhduna
+
+--- ZAVERENA [lord_2_14_2] ---
+  voice EARNEST / age 18 / female
+  Traits: Calculating -1, Manager 4, Politician 4
+  Family: father Isvan; mother Valkava; sibling Vizhduna
+
+--- VIZHDUNA [lord_2_14_3] ---
+  voice EARNEST / age 16 / female. TEENAGER — no traits.
+  Family: father Isvan; mother Valkava; sibling Zaverena
+
+--- SVEDORN [lord_2_21] ---
+  voice IRONIC / age 33 / male
+  Traits: Generous, Honest, Calculating -1, Commander 12,
+    BalancedFightingSkills 6, Manager 10, Politician 8
+  Family: spouse Izdenka [lord_2_21_1]
+  XML note: "Svedorn. Generous, honest, emotional." Also: "Older, cautious,
+    much better suited to governor."
+
+  TIER-2 VOICE (ironic, the most honorable Ormidoving):
+    His irony is the voice of a man who is Honest and Generous in a culture
+    where directness is respected but emotion is not. He has found irony is
+    the socially acceptable form of saying what he actually thinks.
+    "I am, apparently, much better suited to governing than to fighting.
+    I have decided to take this as a compliment." He does. He is good at
+    governing. He finds the limitation occasionally frustrating.
+
+--- IZDENKA [lord_2_21_1] ---
+  voice EARNEST / age 28 / female
+  Traits: Honest, Manager 10, Politician 8
+  Family: spouse Svedorn
+
+================================================================================
+CLAN: TOGAROVING [clan_sturgia_5]
+================================================================================
+
+NOTE: Only one Vyldur exists in all of Sturgia. Vyldur Togaroving [lord_2_17].
+  "Vyldur Gundaroving" was invented in a reverted session. It does not exist.
+
+--- VYLDUR [lord_2_17] ---
+  voice SOFTSPOKEN / age 32 / male
+  Traits: Generous, Merciful, Commander 10, BalancedFightingSkills 4,
+    Manager 8, Politician 12
+  Family: spouse Dracha [lord_2_17_1]
+  XML note: "Vyldur. Fairly gentle, as warlords go."
+
+  PRIVATE LIFE:
+    He has a garden at Revyl. Not impressive by any standard — a few herbs,
+    a patch of vegetables that doesn't produce enough to matter strategically.
+    He tends it himself. His garrison finds this unusual. He ignores their
+    opinions about it. He finds that tending something that doesn't fight back
+    is useful once a week.
+
+  TIER-2 VOICE (softspoken, genuinely gentle):
+    "I try to resolve things without injury. This is harder than it sounds."
+    He says it without irony. It is his actual experience of leadership.
+    On Dracha: "She is less gentle than I am." Said with the specific warmth
+      of a man who has decided this is complementary.
+
+--- DRACHA [lord_2_17_1] ---
+  voice CURT / age 31 / female
+  Traits: Generous, Cruel, Manager 8, Politician 12
+  Family: spouse Vyldur
+  NOTE: Generous AND Cruel. Very different from her husband.
+
+--- LASHONEK [lord_2_22] ---
+  voice SOFTSPOKEN / age 29 / male
+  Traits: Honest, Calculating, Commander 10, BalancedFightingSkills 8,
+    Manager 6, Politician 4
+  Family: spouse Zheneva [lord_2_22_1]
+  XML note: "Lashonek. Wise, pessimistic."
+  NOTE: Married to Zheneva — previously written as Vyldur's daughter. Wrong.
+    She is his wife, a former shield-maiden.
+
+  TIER-2 VOICE (softspoken, honest, pessimistic in the specific way of a man
+    who has been right too often):
+    "Things tend to work out worse than expected, in my experience." He says
+    this not as complaint but as calibrated expectation. He adjusts plans
+    accordingly.
+
+--- ZHENEVA [lord_2_22_1] ---
+  voice CURT / age 25 / female
+  Traits: Honest, Daring, Calculating, Commander 10,
+    BalancedFightingSkills 3, Manager 8, Politician 4
+  Family: spouse Lashonek
+  XML note: "Lashonek's wife, former shield-maiden."
+
+--- ALVAR [lord_2_24] ---
+  voice IRONIC / age 29 / male
+  Traits: Devious, Calculating, Commander 10, BalancedFightingSkills 8,
+    Manager 6, Politician 4
+  Family: spouse Zorina [lord_2_24_1]
+  NOTE: Alvar is Zorina's HUSBAND. Not Vyldur's son (earlier error corrected).
+    Devious and ironic.
+
+--- ZORINA [lord_2_24_1] ---
+  voice IRONIC / age 22 / female
+  Traits: Calculating, Commander 4, Manager 8, Politician 4
+  Family: spouse Alvar
+  CORRECTION: Zorina is NOT XML-confirmed pregnant. No pregnancy marker
+    in NPC reference. Do not write pregnancy-dependent content for her.
+
+================================================================================
+CLAN: ISYAROVING [clan_sturgia_6]
+================================================================================
+
+--- FAFEN [lord_2_18] ---
+  voice CURT / age 26 / male
+  Traits: Cruel, Daring, Calculating, Commander 10, BalancedFightingSkills 6,
+    Manager 6, Politician 8
+  Family: spouse Zorika [lord_2_18_1]
+  XML note: "Fafen. Cold and calculating."
+
+  TIER-2 VOICE (curt, cold):
+    He does not explain himself. Decisions are announced, not discussed.
+    "The matter is settled." — his version of a conversation's end.
+    On leading: "A cold decision executed correctly is better than a warm one
+    executed poorly." He believes this more than he believes most things.
+
+--- ZORIKA [lord_2_18_1] ---
+  voice IRONIC / age 22 / female
+  Traits: Merciful, Manager 6, Politician 8
+  Family: spouse Fafen
+  NOTE: Ironic voice (NPC ref confirmed). Merciful. The opposite of her husband
+    in mercy. The irony is how she manages the gap.
+
+--- GALDEN [lord_2_23] ---
+  voice IRONIC / age 49 / male
+  Traits: Devious, Calculating, Commander 10, BalancedFightingSkills 8,
+    Manager 6, Politician 4
+  Family: children Zlatka [lord_2_23_1]
+  XML note: "Galden. Smart but a bit cowardly. Does not exert himself."
+
+  TIER-2 VOICE (ironic, intelligent, deliberately unambitious):
+    "I have found that the people who work very hard at dangerous things tend
+    to die of them." He is not joking. He has arranged his life specifically
+    around this observation.
+    He is genuinely intelligent. His cowardice is a rational response to a
+    specific calculation. The player who realizes this finds him more useful
+    than his Politician 4 suggests.
+
+--- ZLATKA [lord_2_23_1] ---
+  voice EARNEST / age 22 / female
+  Traits: Generous, Calculating -1, Commander 10, Manager 2, Politician 2
+  Family: father Galden
+  NOTE: Earnest where her father is ironic. Generous where he is calculating.
+    She has decided to be different from him without knowing yet if that is
+    better.
+
+================================================================================
+CLAN: VEZHOVING [clan_sturgia_7]
+================================================================================
+
+--- VASHORKI [lord_2_19] ---
+  voice IRONIC / age 33 / male
+  Traits: Generous, Devious, Cruel, Calculating, Commander 8,
+    BalancedFightingSkills 3, Manager 10, Politician 12
+  Family: spouse Vitomira [lord_2_19_1]
+  XML note: "Vashorki. Generally held to be despicable."
+  NOTE: DESPICABLE. Devious and Cruel. Previously written as a quiet strategic
+    dignitary. That is completely wrong. He is considered despicable. He holds
+    the most strategically significant castle in Sturgia [Ov Castle, castle_S5].
+    Everyone needs it. Everyone who needs it must deal with him.
+
+  PRIVATE LIFE:
+    He keeps meticulous accounts. Not because anyone requires it — because he
+    finds that the number of people who have needed to deal with him correlates
+    exactly with the castle's strategic value, and he finds this relationship
+    interesting to track. There are currently fourteen lords who have sent
+    him gifts in the past three years without him asking for them. He knows
+    each gift's value and what it was meant to accomplish. He has filed it
+    all. None of them have accomplished what they intended.
+
+  DIALOGUE:
+    SCENE: Ov Castle. He is there when the player arrives, and the player has
+      the sense he has been waiting, though not specifically for them. He
+      acknowledges the player with the specific courtesy of someone who is
+      performing courtesy exactly well enough.
+
+    FIRST ENCOUNTER:
+      "Vashorki Vezhoving. Welcome to Ov Castle." A pause.
+      "You've heard of me, I expect." This is a question and not a question.
+      IF player confirms: "Good. We can proceed honestly." He is pleased.
+      IF player is politely non-committal: "Of course you have." Equally
+        pleased. He finds polite non-commitment informative.
+      IF player says they haven't: "You're either very new or very careful.
+        Either way, I'll find out which shortly." He means this.
+
+    LOW:
+      On his reputation: "I am generally held to be despicable. I find
+        this reputation accurate. I also find it useful." He says this without
+        the slightest distress.
+      On Ov Castle's strategic position: "Everyone needs this castle. Everyone
+        who needs it must deal with me. I find this arrangement correct."
+        He does not dress it up.
+      On Vitomira: "She is honest. I am not. She knows this. She married me
+        anyway." He says this without explanation. The player decides what it
+        means.
+
+    MID:
+      He tests whether the player is someone who can use a despicable man
+      or whether they need to believe in the people they work with.
+      "Raganvad courts me. Olek courts me. Both find me distasteful.
+        Both need the castle. I find this the most honest political situation
+        in Sturgia." Said with genuine amusement.
+      On trust: "I don't require you to trust me. I require you to understand
+        what I want and provide it. Trust is unnecessary."
+      If player tries to appeal to his better nature: He looks at them.
+        "I don't have one that you can usefully appeal to. What do you want
+        from the castle?"
+
+    HIGH:
+      He gives the player something actually useful — specific intelligence
+      about the political situation that only someone in Ov Castle's position
+      could know. He gives it without ceremony.
+      "I told you I find your being here interesting. I meant it." He has
+        been observing the player since their first meeting. He has decided
+        they are capable of something specific. He tells them what that is.
+        The player can accept or refuse. He is not offended by either.
+      On Vitomira, once: "She has never told anyone about me. She could.
+        She's honest — it would cost her nothing socially to tell people
+        what I am. She doesn't." He looks at the player. "I have not
+        figured out why. I find the question more interesting than most
+        political questions." He is not going to ask her. He has decided
+        the uncertainty is preferable.
+
+    NEVER:
+      Pretends to be someone better. Shows embarrassment about his reputation.
+      Performs warmth. Makes an apology. Explains himself to anyone who finds
+      him morally troubling. He does not find their discomfort interesting.
+
+--- VITOMIRA [lord_2_19_1] ---
+  voice SOFTSPOKEN / age 22 / female
+  Traits: Honest, Manager 6
+  Family: spouse Vashorki
+  NOTE: 22. Honest. Married to a despicable man. The gap between them is
+    the most interesting thing about either of them.
+
+  TIER-2 VOICE (softspoken, genuinely honest):
+    She does not defend her husband to the player. She does not attack him.
+    She describes the facts of their household with the same calm she brings
+    to everything.
+    "He is what he is. I knew what he was." She says this at mid relationship
+    with the specific finality of someone who has made a decision and does not
+    regret it and also does not fully understand it.
+
+--- RATAGOST [lord_2_15] ---
+  voice SOFTSPOKEN / age 49 / male
+  Traits: Merciful, Commander 10, BalancedFightingSkills 3, Manager 14,
+    Politician 8
+  Family: children Yachana [lord_2_15_1], Milanka [lord_2_15_2], Velina
+    [lord_2_15_3], Bovan [lord_2_15_4]
+  XML note: "Rategost, mystical. Cautious and kind."
+  NOTE: Ratagost is NOT Vashorki's son. He is a separate extended Vezhoving
+    member with his own children. His "mystical" quality means: he sees
+    patterns others don't. His observations seem odd at first and accurate later.
+
+  TIER-2 VOICE (softspoken, pattern-seeing):
+    "Ov Castle has stood for three generations. It will stand for three more.
+    What changes is who holds it, and why, and what it costs them."
+    On Vashorki: "He is what he is. The castle needs someone who will hold it
+    without apology. He holds it without apology. This may be sufficient."
+    NOTE: He is NOT endorsing Vashorki. He is being accurate about what Ov
+    Castle requires. The distinction is important.
+
+--- YACHANA [lord_2_15_1] ---
+  voice SOFTSPOKEN / age 25 / female
+  Traits: Merciful, Manager 8, Politician 4
+  Family: father Ratagost
+
+--- MILANKA [lord_2_15_2] ---
+  voice SOFTSPOKEN / age 21 / female
+  Traits: Merciful, Manager 8, Politician 4
+  Family: father Ratagost
+
+--- VELINA [lord_2_15_3] ---
+  voice SOFTSPOKEN / age 17 / female
+  Traits: Cruel, Calculating, Manager 8, Politician 10
+  Family: father Ratagost
+  NOTE: Cruel and Calculating while her father and siblings are Merciful.
+    The outlier. Softspoken voice — she is not loud about what she is.
+
+--- BOVAN [lord_2_15_4] ---
+  voice SOFTSPOKEN / age 22 / male
+  Traits: Merciful, BalancedFightingSkills 4, Commander 4, Manager 8,
+    Politician 4
+  Family: father Ratagost
+
+================================================================================
+CLAN: UBROVING [clan_sturgia_8]
+================================================================================
+
+--- TOVIR [lord_2_20] ---
+  voice EARNEST / age 29 / male
+  Traits: Daring, Calculating -1, Commander 10, BalancedFightingSkills 8,
+    Manager 6, Politician 4
+  Family: spouse Kisha [lord_2_20_1]
+  XML note: "Sturgia 8, Ubroving, Tovir. Brave and headstrong."
+
+  TIER-2 VOICE (earnest, brave, headstrong — exactly what it says):
+    "I have made three decisions in my life that I regret. Two of them were
+    from not acting quickly enough." The third he does not mention unprompted.
+    On Galyk: "He is cautious. He is right to be cautious. I disagree with
+    the conclusions he draws from being cautious."
+
+--- KISHA [lord_2_20_1] ---
+  voice EARNEST / age 22 / female
+  Traits: Daring, Manager 6
+  Family: spouse Tovir
+
+--- GALYK [lord_S8_u] ---
+  voice CURT / age 52 / male
+  Traits: Merciful, Oligarchic, Calculating, Commander 10,
+    BalancedFightingSkills 4, Manager 16, Politician 8
+  XML note: "Older, cautious, much better suited to governor."
+  NOTE: Galyk is the experienced administrator; Tovir is the headstrong young
+    leader. This tension is built into the clan. Galyk's Politician 8 is
+    notably higher than Tovir's 4 — he understands the court; Tovir doesn't.
+
+  TIER-2 VOICE (curt, cautious, patient):
+    "Tovir acts. I plan for what happens after he acts." He says this with
+    the specific patience of someone who has been doing this for years.
+    Not contemptuous — accurate. He relies on Tovir's boldness. He thinks
+    Tovir sometimes relies on it too much.
+
+================================================================================
+CLAN: KOSTOROVING [clan_sturgia_9]
+================================================================================
+
+NOTE: Dakhila at age 73 is the real power of the Kostoroving. Rolan leads
+  in title. Dakhila leads in practice. Chastimir enforces her decisions.
+  Forim is Rolan's son and wants to do something else with the clan.
+  This internal structure is the Kostoroving's defining tension.
+
+--- ROLAN [lord_S9_l] ---
+  voice IRONIC / age 52 / male
+  Traits: Closefisted, Devious, Oligarchic, Calculating, Commander 12,
+    CavalryFightingSkills 8, Manager 8, Politician 6
+  Family: mother Dakhila [lord_S9_m]; children Forim [lord_S9_c]
+
+  PRIVATE LIFE:
+    He has been managing the gap between what his mother wants and what
+    he publicly presents as his own decisions for thirty years. He is very
+    good at this. He does not find it diminishing — he finds it the correct
+    arrangement. Dakhila's Politician 16 outranks his Politician 6 in every
+    real sense. He leads because she prefers not to be visible.
+
+  TIER-2 VOICE (ironic, devious, layers):
+    "My mother and I agree on most things." He says this with a specific
+    quality that leaves open exactly how many things and who is deciding.
+    On the Kostoroving's position: "We hold Kranirog Castle. We have held
+    it for four generations. We will hold it for four more. The method
+    changes. The holding does not." He is describing his mother's philosophy,
+    not his own. He knows this.
+
+--- DAKHILA [lord_S9_m] ---
+  voice CURT / age 73 / female
+  Traits: Closefisted, Oligarchic, Daring, Commander 12, Manager 8,
+    Politician 16
+  Family: children Rolan [lord_S9_l]
+  XML note: "Stern matriarch."
+
+  PRIVATE LIFE:
+    She has been the real power of the Kostoroving since she was forty-three.
+    She does not announce this. She considers announcement unnecessary. She
+    assesses every political situation in Sturgia from Kranirog Castle and
+    sends Chastimir when she needs something done that cannot be done through
+    correspondence. She has outlived four contemporaries she expected to
+    outlive her. She has recalibrated her expectations accordingly.
+
+  DIALOGUE:
+    SCENE: Kranirog Castle. She is usually seated — not from age but from
+      preference. She is comfortable and she prefers to make others stand.
+      When she speaks, the room quiets. She has been producing this effect
+      for thirty years.
+
+    FIRST ENCOUNTER:
+      She does not announce herself. She is there when the player arrives,
+      and the castellan introduces her. She looks at the player.
+      "Why have you come to Kranirog?" Not hostile — assessing. She has
+      been assessing people for fifty years. She is very good at it.
+
+    MID:
+      On the Kostoroving's position: "Four generations. We have held this
+        castle for four generations. We intend to hold it for four more.
+        Everything else is negotiable. This is not."
+      On Rolan: "My son leads." She says this flatly. It answers the
+        question about who is in charge in a way that technically answers
+        the question.
+      On the Grand Prince: "Raganvad is capable. He is not as capable as
+        he believes. This is not a criticism — most capable men are not."
+
+    HIGH:
+      On what she actually wants: "Stability. Specifically: the Kostoroving
+        at Kranirog in perpetuity regardless of who holds the crown or who
+        holds Varcheg or who is winning this season's campaign." She says
+        this at high relationship because she has decided the player
+        understands what kind of ask that is.
+      She makes one specific request. She does not frame it as a request.
+        She states what she wants to happen and then looks at the player.
+        The player who does it gets the Kostoroving's precise, effective,
+        utterly un-theatrical support.
+
+    NEVER:
+      Performs weakness. Explains herself to anyone she hasn't decided
+      deserves the explanation. Shows urgency. She has time. She has had
+      time for thirty years.
+
+--- FORIM [lord_S9_c] ---
+  voice EARNEST / age 29 / male
+  Traits: Generous, Merciful, Calculating -1, Commander 8,
+    CavalryFightingSkills 6, Manager 8, Politician 6
+  Family: father Rolan [lord_S9_l]
+  XML note: "Milder than his parents."
+  NOTE: The only warmth in the Kostoroving. Generous and Merciful in a clan
+    run by his Devious father and his Politician 16 grandmother. He wants to
+    do different things with the clan than what is being done.
+
+  TIER-2 VOICE (earnest, genuinely mild, quietly frustrated):
+    "The Kostoroving have held this castle for four generations." He says this
+    the same way Dakhila says it. Then: "I have been thinking about what the
+    fifth generation might do instead." He does not share what he is thinking.
+    He is testing whether the player is someone he can share it with.
+
+--- CHASTIMIR [lord_S9_u] ---
+  voice SOFTSPOKEN / age 32 / male
+  Traits: Cruel, Daring, Calculating -1, Commander 8,
+    CavalryFightingSkills 6, Manager 6, Politician 4
+  XML note: "Obediant enforcer of Dakhila's will."
+  NOTE: His XML notes are internally strange — he is also described as "milder
+    than his parents" in one comment, yet is Cruel/Daring and Dakhila's
+    enforcer. Treat this as characterization: he is the quiet knife in a
+    family that mistakes volume for strength. His softspoken voice is the
+    delivery method for Dakhila's decisions. He does not argue them. He
+    executes them exactly.
+
+  TIER-2 VOICE (softspoken, effective, unobtrusive):
+    He does not explain what he is doing. He does it.
+    "Lady Dakhila's regards." He says this before delivering whatever
+    the message or action is. That is the complete announcement.
+
+================================================================================
+SECTION 1: STURGIA — INTER-CLAN THREADS
+================================================================================
+
+================================================================================
+THREAD A: THE PENDRAIC WOUND
+The battle, the death, the unanswered year after.
+================================================================================
+
+WHAT IT IS:
+  The Battle of Pendraic is Sturgia's open wound. Three connected events:
+    1. Raganvad's father ordered him to hold the reserve. He did.
+       Olek the Old led from the front. He died.
+    2. Raganvad survived. The boyars remember who commanded them from behind
+       the line.
+    3. Varra — Olek's sister — died the year after Pendraic. Under mysterious
+       circumstances. Not in battle. The circumstances have never been explained
+       to the Kuloving's satisfaction.
+
+  These three events are connected in the boyars' memory even if Varra's
+  death was completely unrelated to the battle. Olek has suspicions. Siga
+  has suspicions. The player can investigate. The document does not confirm
+  what the investigation finds.
+
+DISCOVERY:
+  LAYER 1 — Available to any player who speaks to Olek at low relationship:
+    "My father died at Pendraic. He led from the front." He does not say
+    more. The player now has the data point.
+
+  LAYER 2 — Available when player speaks to both Olek and Raganvad at mid:
+    Raganvad: "I followed orders." (his answer to any Pendraic question)
+    Olek: "I know what he says. I know what I saw." He does not elaborate.
+    The contradiction is in the gap between these two responses. The player
+    has now seen both sides. Neither man is entirely wrong.
+
+  LAYER 3 — Siga at mid relationship, Varra thread:
+    "My sister died the year after Pendraic. Not in battle. Under circumstances
+    that were not explained to my satisfaction." She pauses. "I have carried
+    both my suspicions and my inability to act on them for a long time."
+    The player now knows Varra's death is a separate unresolved question.
+
+  LAYER 4 — Olek at HIGH relationship:
+    "I know who I think it was. I have never said the name out loud. I am not
+    going to say it now." He means this. He will not say it.
+    The player can try to investigate through other means.
+
+INVESTIGATION (if player pursues it):
+  In a specific Sturgian settlement, a specific older merchant knows something
+  about the year after Pendraic. What they know is partial. What it implies
+  is specific but deniable. The player can accumulate enough fragments to form
+  a conclusion. The document does not state what the correct conclusion is.
+  DESIGN RULE: Never confirm the cause of Varra's death. The ambiguity
+    is intentional. The conclusion the player reaches is their conclusion.
+    Different players will reach different conclusions from the same fragments.
+    All of them are plausible. None of them are confirmed.
+
+================================================================================
+THREAD B: OV CASTLE
+Everyone needs it. Vashorki holds it. Everyone deals with him.
+================================================================================
+
+WHAT IT IS:
+  Ov Castle [castle_S5] is the most strategically significant position in
+  Sturgia. Controlling it means controlling movement through the central
+  corridor. Raganvad needs it loyal. Olek needs it not loyal to Raganvad.
+  The Vagiroving's eastern trade ambitions require it accessible. Vashorki
+  holds it and is generally held to be despicable.
+
+  The thread is not about taking Ov Castle. It is about what it costs to
+  maintain a relationship with the man who holds it, and what it reveals
+  about every other lord who has already made that calculation.
+
+DISCOVERY:
+  LAYER 1 — Player visits Ov Castle, meets Vashorki. He is exactly what
+    the description says. He announces this himself. "You've heard of me,
+    I expect."
+
+  LAYER 2 — Player speaks to Raganvad at mid about Vashorki. Raganvad
+    does not say Vashorki's name. He says: "Ov Castle is held by someone
+    whose reliability I manage rather than depend on." One sentence. He
+    does not elaborate. His face does not change.
+
+  LAYER 3 — Player speaks to Olek at mid about Vashorki. Olek:
+    "He is despicable. He holds the castle. These are both facts."
+    He does not add anything. He has thought about this. His conclusion
+    is that both facts coexist and he manages his relationship with both.
+
+  LAYER 4 — Player speaks to Godun about Vashorki:
+    "An unusual man in a strategically important position. I have found
+    that dealing with him directly is more efficient than dealing with him
+    through intermediaries, which is what everyone else does." He is not
+    endorsing Vashorki. He is describing his own calculation.
+
+  LAYER 5 — Ratagost on Vashorki (mid relationship):
+    "He is what he is. The castle needs someone who will hold it without
+    apology. He holds it without apology. This may be sufficient."
+
+PLAYER OPTIONS:
+  A. Build relationship with Vashorki directly. He becomes a direct
+     intelligence source. What he knows about Sturgian politics from
+     his position is substantial and accurate. The cost is that everyone
+     who knows the player deals with Vashorki adjusts their assessment
+     of the player slightly.
+  B. Try to find leverage over Vashorki. He has anticipated this. He
+     finds it more interesting than threatening. He offers to sell the
+     information the player found.
+  C. Report to Raganvad that a specific something is wrong with Vashorki's
+     arrangements. Raganvad files it. He does not act on it immediately.
+     Three campaigns later, Vashorki's position becomes more precarious in
+     a way that started with this conversation.
+  D. Leave Vashorki alone. The castle continues operating. He continues
+     being despicable. The political situation continues being managed.
+     This is probably what most players do. It is a valid choice.
+
+================================================================================
+SECTIONS 2–5 STATUS
+================================================================================
+
+SECTION 2: NORDS — STATUS: PENDING
+  Lord data exists in LORDS_v2. Trait corrections needed (same pattern as
+  Sturgia — minor lords missing Politician and secondary skills). Dialogue
+  architecture is thin (4 lords at partial depth). NORDS needs the same
+  full treatment as Sturgia: private lives, full dialogue for tier-1 lords
+  (Halthdar, Grykka, Asgotha, Murin, Dakhira/Visduring power structure),
+  inter-clan threads (Heir Crisis, Black Keel connection, Grimulf/Ironjarls).
+  Estimated scope: comparable to Sturgia section above.
+
+SECTION 3: VLANDIA — STATUS: CORRECTIONS NEEDED, CONTENT COMPLETE
+  Full conversation flows and inter-lord discovery sequences exist in
+  LORDS_v2 (Sections 3b and 3c). Data corrections required:
+    Aldric [lord_4_3]: Remove Calculating -1 (not in NPC reference).
+    Erdurand [lord_4_15]: Add Calculating -1 (missing from LORDS_v2).
+    Vidar [lord_2_13]: Already corrected above.
+    Multiple minor lords: Missing BalancedFightingSkills and Politician scores.
+  Political philosophy strings for Derthert are unused. Both confirmed strings
+  should be added to his lord record.
+  Derthert political philosophy (verbatim XML):
+    "When my great-grandfather Osric Iron-Arm declared himself king of Vlandia,
+    the emperor himself sent us a golden crown as a goodwill gift. Hmf. Do not
+    trust gifts from the Empire."
+    "If you toss a bone into a pack of wild dogs, what does having that bone
+    mean? It means that you get bitten a lot. I have spent most of my life in
+    the saddle or sitting in front of a besieged fortress. Once I thought, 'I
+    suffer, but at least my son will rule in peace.' Such lies we tell ourselves.
+    There will never be peace."
+    "My son will rule, and he will fight his brothers and vassals. And after him
+    my grandchildren will fight each other. At least, as kings and princes, they
+    can enjoy a dry tent, good wine, and a soft bed between dusk and dawn. That
+    is all the peace one gets in life."
+
+SECTION 4: BATTANIA — STATUS: DATA ONLY, NO DESIGN LAYER
+  Lord data exists in LORDS_v2 (Section 4). No private lives, no dialogue
+  architecture, no inter-clan threads. Needs the same full treatment as
+  Sturgia. 8 clans, confirmed clan leaders and members.
+  Tier-1 lords for full dialogue: Caladog, Ergeon, Melidir, Aeron, Melidir's
+    daughter Wythuin (conspiratorial), Maireas (clan leader at 63).
+  Key threads: Aeril's disappearance and Caladog's legitimacy, the Grovebound
+    connection through Grovebound-adjacent lords, Alcaea's Imperial origins.
+
+SECTION 5: MORTIA — STATUS: DESIGN COMPLETE, EXPANSION NEEDED
+  4 clans, 24 named heroes. Target: comparable lord density and depth to
+  Vlandia's 11-clan treatment. Private lives, dialogue, and inter-clan threads
+  needed for: Vrak (the Rat-King), Aldmar dey Vornac (contempt and exile),
+  Gurn dey Brackfen (smuggler's calculation), Hund dey Brunval (discharged
+  sergeant's discipline).
+
+APPENDIX: EMPIRE, KHUZAIT, ASERAI
+  Raw XML data moved here from main document. This material serves as a
+  reference roster for campaign accuracy, not as a design document.
+  No Bannerwake design layer is applied to these factions in this version.
+  If a specific Empire/Khuzait/Aserai lord becomes relevant to a player
+  interaction thread, they are authored individually at that time.
+
+================================================================================
+END OF BANNERWAKE_LORDS_v3.txt — Version 3.0
+  Sturgia: COMPLETE
+  Nords: PENDING (data in v2, needs rewrite)
+  Vlandia: CORRECTIONS NEEDED (content in v2 Sections 3b/3c)
+  Battania: PENDING (data in v2, needs full design layer)
+  Mortia: EXPANSION NEEDED (content in v2, needs depth pass)
+  Empire/Khuzait/Aserai: APPENDIX (data reference only)
+================================================================================
