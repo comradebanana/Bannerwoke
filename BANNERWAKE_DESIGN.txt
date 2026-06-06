@@ -2,10 +2,12 @@
 BANNERWAKE — MOD DESIGN DOCUMENT
 For use with Claude Code. This is the source of truth.
 If it is not in this document, it does not ship without explicit approval.
-Version: 6.0 — Vinland Saga North rework; Grimulf rebuilt as Askeladd archetype
-               with half-Sturgian heritage, three-options method, full deep lore;
-               Bjolvir added (Bjorn analog); Jomsvikingr VS character roster added:
-               Thorvinn (Thorfinn), Styr the Bull (Bjorn), Thordvar legend (Thors);
+Version: 7.0 — Actual Vinland Saga characters installed by name throughout the North:
+               Askeladd (Ironjarls Aldking, direct VS character with half-Sturgian
+               heritage and three-options method); Bjorn (Askeladd's war-leader);
+               Thorfinn (Jomsvikingr Jomskarl); Canute (Jomsvikingr Jomskarl,
+               replaces Styr slot); Thors (Nord legend, Thorfinn's father in VS canon);
+               Floki (already correct); Styr the Bull retired as Bannerwake analog;
                Black Keel expanded to 6 named captains with ships and personalities
                (Ormhild, Halvgrim, Ragneidr, Thulkar, Sólveig); Mortia expanded to
                6 clans + 7 settlements: dey Aldwick (forgotten garrison soldiers),
@@ -1031,16 +1033,25 @@ THE JOMSVIKINGR
       the code. He feels accurate about it. The distinction is present in
       every conversation he has. Players who pick up on it earn a different
       kind of respect from him than those who mistake accuracy for virtue.
-    What he cannot explain: Thorvinn. The young brother asks questions the
+    What he cannot explain: Thorfinn. The young brother asks questions the
       code answers obliquely if at all. Floki has not expelled him. He has
-      been watching what Thorvinn becomes. He has his own theory about what
-      that will be. He has not shared it with Thorvinn. He is waiting to see
+      been watching what Thorfinn becomes. He has his own theory about what
+      that will be. He has not shared it with Thorfinn. He is waiting to see
       whether he is right about the boy before he invests the words.
-    On Thordvar the Undefeated: The one subject where Floki's voice changes
-      register. Not softens — changes. He speaks about Thordvar the way a man
+    What he has not told Thorfinn: The contract that killed Thors came from
+      Floki. Askeladd's company carried it out, but Floki gave the order.
+      Thorfinn arrived at this hall as a direct result of a decision Floki made
+      seventeen years ago. Floki has known this since Thorfinn's first day. He
+      has not said a word. Whether this is guilt, calculation, or something Floki
+      refuses to name even internally — the design never answers. What Floki
+      does if Thorfinn ever learns the truth is the most consequential unresolved
+      moment in the Nord playthrough. The player can discover it. Floki cannot
+      prevent this. He has been aware of that fact for seventeen years.
+    On Thors: The one subject where Floki's voice changes
+      register. Not softens — changes. He speaks about Thors the way a man
       speaks about a proof he has never been able to replicate. At highest
       relationship, with a player who has asked the right sequence of questions,
-      Floki says one thing about what Thordvar means to him that is the most
+      Floki says one thing about what Thors means to him that is the most
       personally revealing sentence he speaks in Bannerwake. Then he closes.
     Dialogue voice: Quiet, precise. Does not explain himself twice. Players
       who ask the same question a different way receive the same answer more
@@ -1050,11 +1061,10 @@ THE JOMSVIKINGR
       a code violation. Explains a decision more than once. Is surprised by
       anything a person does.
 
-  THORVINN — The Young Brother (Jomskarl rank, six years in):
-    Bannerwake-authored. Design archetype: Vinland Saga Thorfinn.
-    Joined the brotherhood at fifteen after his village was burned in a border
-    dispute — not even a proper raid, a political argument between two lords
-    that became other people's fire because it was convenient for the argument.
+  THORFINN — The Young Brother (Jomskarl rank, six years in):
+    Vinland Saga character: Thorfinn. Son of Thors.
+    Joined the brotherhood at fifteen after the assassination of his father —
+    Thors, the Troll of Jom, lured from his farm by Floki's contract and killed.
     He arrived at the Jomsvikingr hall with revenge in both hands and the code
     took those hands and redirected them. Six years of redirecting.
     He is technically Jomskarl. He is functionally the brother the others
@@ -1065,11 +1075,11 @@ THE JOMSVIKINGR
     he came here to do. This is either ironic or exactly the point. He does
     not know which yet.
     The question he asked Floki (two years ago, and three years before that):
-      "If I joined to avenge my family and the code forbids personal vengeance
+      "If I joined to avenge my father and the code forbids personal vengeance
       — what do I do with the reason I came here?"
     Floki's answer: "You already know. You've known since you asked it the
       first way, three years ago."
-    What Thorvinn actually wants now: He does not know. The revenge has been
+    What Thorfinn actually wants now: He does not know. The revenge has been
       redirected so many times it has become something else — he does not have
       clean language for what it has become. The brotherhood is his family
       now in every way that matters, and admitting that means the reason he
@@ -1077,83 +1087,98 @@ THE JOMSVIKINGR
       will be. The player can see when it happens. So can Floki. Neither says
       anything. It does not need saying.
     Player arc (Nord player only): The player can develop an informal
-      mentorship with Thorvinn over the campaign. Over time he asks harder
+      mentorship with Thorfinn over the campaign. Over time he asks harder
       questions — about fighting, about what a person is when they've defined
       themselves by something for long enough. Eventually he asks one that the
       player must answer from their own experience. The conversation is the
       most personally-reaching exchange available in a Nord playthrough.
-    Dialogue voice: Direct, self-examining. Not warm like Styr and not cold
+    Dialogue voice: Direct, self-examining. Not warm like Bjorn and not cold
       like Floki. Still inside the question rather than past it. Speaks with
       precision about things he has actually thought through and with obvious
       discomfort about things he has not. The discomfort is not weakness.
       It is the shape of someone still growing.
 
-  STYR THE BULL — The Berserker Brother (Jomsthegn rank):
-    Bannerwake-authored. Design archetype: Vinland Saga Bjorn.
-    The finest pure fighter in the brotherhood short of Floki himself. Also
-    the person in the Jomsvikingr hall most likely to be described as happy,
-    which is a strange thing to be in that context, and nobody has told him
-    because explaining it would require explaining why it is strange and the
-    explanation would not satisfy him.
-    What makes Styr: He loves the fight. Not the killing — the specific
-      bodily experience of a fight going at full capacity, the moment where
-      everything else stops mattering and what remains is completely clear.
-      Between fights he is easy company, genuinely interested in other people,
-      asks good questions, finds most things funny. During fights he is the
-      thing the code was written to contain and has chosen to channel. The
-      code channels it. This works.
-    His relationship to the code: total. Not thoughtfully like Floki and not
-      questioningly like Thorvinn. Simply and completely. Because the code
-      gives him brothers to fight next to and a reason to come back afterward,
-      and those are the two things he needs the world to provide. He has never
-      needed a third thing. The question of whether the code is enough does not
-      occur to him. He would not be dismissive of it if it did. He would just
-      not understand why it was a question.
-    His relationship with Thorvinn: He is the older brother in all the ways
-      that matter. He does not understand Thorvinn's questions but does not
-      think questions are the problem. He thinks Thorvinn fights correctly and
-      is certain this will resolve things eventually. He is not wrong, exactly.
-      He is also not completely right about what it will resolve them to.
-    Dialogue voice: EARNEST register. Physically interested — he reads a
-      person's combat history from how they stand before they say anything.
-      Respects the player immediately if they have clearly survived things.
-      Tells them what he knows about fighting freely, without being asked.
-      His generosity is the easiest thing about him.
+  CANUTE — The Prince Brother (Jomskarl rank, second year):
+    Vinland Saga character: Canute.
+    Sent by his father, a minor Nord noble, to learn what violence is before
+    inheriting anything that required decisions about it. The Jomsvikingr hall
+    was chosen because it has rules. His father understood that Canute needed
+    structure before he needed experience. His father was right about the need
+    and wrong about what it would do to him.
+    He is the youngest in the hall. He is also already the one who thinks
+    most clearly about what the brotherhood is for — not the code itself, but
+    the question beneath the code: what is strength actually building? He has
+    not stopped asking this since he arrived. Floki has not expelled him for it.
+    This is precisely symmetrical with what Floki has not done with Thorfinn.
+    What makes Canute: He is not afraid of the things that are supposed to
+      frighten young men in a hall of veterans. Not because he has resolved
+      them — because his fear lives somewhere else entirely. He is afraid of
+      being good in a way that amounts to nothing. He is afraid of kindness
+      without the will to enforce it. These are not a young man's fears.
+      The hall does not quite know how to hold this.
+    His relationship to the code: total compliance — but not the same
+      compliance as Bjorn's. Bjorn follows because the code gives him what he
+      needs. Canute follows because he is constructing a theory and the code is
+      one of its premises. The theory: can a world be shaped by something other
+      than violence, and if so, what does that require of the person shaping it?
+      He does not have the answer. He is living inside the premises.
+    His relationship with Thorfinn: He watches Thorfinn with the focused
+      attention of someone solving a problem. Thorfinn defined himself by
+      revenge. The revenge is gone. Thorfinn is still here. What does that leave?
+      Canute considers this the most interesting question in the hall. Thorfinn
+      does not know Canute is thinking about him. Floki knows both.
+    Dialogue voice: SOFTSPOKEN. His quiet is not uncertainty — it is
+      concentration. The brothers who have learned to listen notice that what
+      he says has been thought through in ways most speech has not. He is
+      always building toward something. The player who pays attention sees it
+      before most do.
+    NEVER: Is impressed by loudness or violence as spectacle. Performs weakness.
+      Pretends he has not thought through the argument the player just raised.
 
-  THORDVAR THE UNDEFEATED — Nord Legend (not a current NPC):
-    Bannerwake-authored historical figure. Design archetype: Vinland Saga Thors.
-    Two generations before Volbjorn, Thordvar was recognized by every Nord clan
-    — petty kings, rivals, enemies — as the greatest warrior the North had ever
-    produced. The stories agree on this point even when they agree on nothing
+  THORS — The Troll of Jom, Nord Legend (dead, ~17 years before game start):
+    Vinland Saga character: Thors. Father of Thorfinn.
+    In Volbjorn's era — while the petty kingdoms were still being bent or bought —
+    Thors was recognized by every Nord clan as the greatest warrior the North had
+    ever produced. The stories agree on this point even when they agree on nothing
     else, which is the most that can be said of anything in Nord history.
     At the absolute height of his fame — when kings sought his sword, when the
-    Jomsvikingr hall was built partly because Thordvar's presence in the north
+    Jomsvikingr hall was built partly because Thors' presence in the north
     required an organization capable of standing beside him — he stopped.
     He put his weapons on a table and walked away from the table. He did not
     leave the North. He went to a small farm by the sea that had been his
-    family's before the wars and he worked it. He built things. He grew things.
+    family's before the wars. He built things. He grew things.
     People came to challenge him for years. He fed them and sent them home.
-    Nobody made him start again. Nobody could. He lived twenty-three years more
-    and died in his sleep on the farm by the sea.
-    The answers he gave when asked why he stopped were brief and different each
-    time and none of them were the complete answer. The complete answer he kept.
+    Nobody made him fight again. Nobody could.
+    He was killed approximately seventeen years before the campaign begins.
+    The contract came from Floki. The company that carried it out was Askeladd's.
+    Thorfinn was four years old. He does not remember his father's face clearly.
+    He has kept the arrowhead since he was old enough to find it.
+    The answers Thors gave when asked why he stopped were brief and different
+    each time. The complete answer he kept. He died before anyone could ask it
+    correctly. The North has been arguing the answer since.
     The Jomsvikingr still measure against him:
-      "No man since Thordvar has held a line like that."
-      "Floki fights the way people say Thordvar fought."
-      "There will not be another Thordvar."
+      "No man since Thors has held a line like that."
+      "Floki fights the way people say Thors fought."
+      "There will not be another Thors."
     What he represents: The question the North has never resolved. If the
     greatest warrior who ever lived chose to stop — what does that mean about
-    what strength actually is? Whether it requires violence or whether it can
-    choose not to use itself is the unspoken argument underneath every Ironjarl
-    feast, every Jomsvikingr trial, every conversation Thorvinn has with Floki,
-    every morning Halthdar stands on the Thronderlag palisade. Thordvar never
-    answered it. The North has been living the argument since and will continue
-    to live it after the player's campaign ends.
-    DESIGN NOTE: Thordvar is never a quest character, never recruitable, never
+    what strength actually is? Whether strength requires violence or can choose
+    not to use itself is the unspoken argument underneath every Ironjarl feast,
+    every Jomsvikingr trial, every conversation Thorfinn has with Floki, every
+    morning Halthdar stands on the Thronderlag palisade. Thors died without
+    answering it. The North keeps living the argument. Askeladd was there.
+    He has never said what he saw on that farm. Floki knows. Neither has spoken.
+    DESIGN NOTE: Thors is never a quest character, never recruitable, never
     an objective. He exists as the name the North measures itself against.
     His name appears in drinking songs, in dialogue, and in Floki's single most
-    revealing conversation with the player — the one that explains why Floki has
-    not expelled Thorvinn, if the player listens to what he is actually saying.
+    revealing conversation with the player — the one that explains what Floki
+    knows and why he has not expelled Thorfinn, if the player listens to what
+    he is actually saying.
+    CRITICAL THREAD: Thorfinn is in the Jomsvikingr — the brotherhood whose
+    head arranged his father's death. Askeladd is in the Ironjarls — the man
+    whose company carried out the contract. Thorfinn knows Askeladd killed his
+    father. He does not know Floki gave the order. The player can learn both.
+    Whether Thorfinn ever learns Floki's role depends on what the player does.
 
   Threat signature: A shieldwall that holds when everything else has broken.
     The raven banner means someone paid. The raven banner also means Floki
@@ -1768,13 +1793,13 @@ THE RENEGATI
 
 THE IRONJARLS
   Culture: Nord — dispossessed petty kings
-  Leader: Aldking Grimulf (no surname — the title carries everything)
+  Leader: Aldking Askeladd (no surname — the title carries everything)
     Aldking = ald (old in Old Norse) + king. The Old King. Pre-Halthdar
     vocabulary. A title that predates Volbjorn's unification and makes
     that clear without explanation.
 
-  GRIMULF — THE GREY JARL (DESIGN ARCHETYPE: ASKELADD):
-    Grimulf is not what he presents. This is the most important thing
+  ASKELADD — THE GREY JARL (VINLAND SAGA CHARACTER):
+    Askeladd is not what he presents. This is the most important thing
     about him. What he presents: a loyal jarl who attends feasts, sits
     correctly, says nothing wrong, technically violates nothing. What he
     is: the most dangerous strategist in Nordvyg, a man with a divided
@@ -1783,11 +1808,11 @@ THE IRONJARLS
     Heritage: His father ruled the sixth-largest petty kingdom before
       Volbjorn came. His mother was Sturgian — a Slavic woman his father
       captured in a border raid before Volbjorn's unification and kept and,
-      eventually, loved in his way. She raised Grimulf in two languages and
+      eventually, loved in his way. She raised Askeladd in two languages and
       two worlds. He has not used her language in twenty years. The Ironjarls
       do not know about her. He will never tell them. He keeps a single small
       carved object from her household that nobody has identified as Slavic.
-    Education: At seventeen, Grimulf traveled to the Imperial south for three
+    Education: At seventeen, Askeladd traveled to the Imperial south for three
       years — not as a soldier. As an observer. He studied how civilizations
       build the justifications for taking what they take, how the language of
       legitimacy operates, how the gap between what power says and what power
@@ -1804,7 +1829,7 @@ THE IRONJARLS
     In battle: Completely lethal, completely calm. The kind of fighter who
       becomes more focused when conditions worsen — not rage, the opposite of
       rage. Everyone who has tried to unsettle him in a fight has created a
-      tactical opportunity for Grimulf. Nobody tries twice. He is physically
+      tactical opportunity for Askeladd. Nobody tries twice. He is physically
       dangerous in a way that consistently surprises people who have only
       seen him at feast tables and think they have understood him.
     What he actually wants: Not power as it is commonly understood. Something
@@ -1812,11 +1837,11 @@ THE IRONJARLS
       kings had a relationship between a lord and his territory that was
       personal, undelegated, and unscalable — a man's land was HIS land, not
       the crown's land administered by his name. Volbjorn made it scalable.
-      Grimulf is trying to preserve what could not survive that. He cannot say
+      Askeladd is trying to preserve what could not survive that. He cannot say
       this because it sounds like treason (it is) and nostalgia (it is not).
       He is the only Ironjarl who knows why the Ironjarls exist beyond the
       obvious grievance. The others think they want their fathers' lands back.
-      Grimulf wants something their fathers had that the lands were merely the
+      Askeladd wants something their fathers had that the lands were merely the
       shape of. This distinction drives everything he does and is never stated.
     Dialogue voice: Quiet. Every sentence means three things simultaneously and
       he knows all three when he says it. He uses a player's own words to show
@@ -1824,31 +1849,31 @@ THE IRONJARLS
       pretends to be, when it serves the conversation. A high-Cunning player
       can follow him entirely. Other players leave feeling they missed something
       without knowing what. This is intentional and is never corrected.
-    What Halthdar knows: That Grimulf is the most loyal jarl he has and the
+    What Halthdar knows: That Askeladd is the most loyal jarl he has and the
       most dangerous enemy he has and that both are simultaneously true and will
       remain so indefinitely, because they are the same fact seen from two sides.
 
-  BJOLVIR THE UNBROKEN — Grimulf's War-Leader:
-    Grimulf's right hand since before the Ironjarls were named. He is the
-    war-leader — the man Grimulf points and releases when the situation
+  BJORN — Askeladd's War-Leader (Vinland Saga character):
+    Askeladd's right hand since before the Ironjarls were named. He is the
+    war-leader — the man Askeladd points and releases when the situation
     requires force rather than the three-options method. He is also the only
-    person in Grimulf's life whose company Grimulf finds genuinely restful,
-    which is a thing Grimulf has never examined and would not examine if he did.
+    person in Askeladd's life whose company Askeladd finds genuinely restful,
+    which is a thing Askeladd has never examined and would not examine if he did.
     He is not stupid. People assume this because of how he fights — complete
     physical presence, a joy in the body of a fight that looks from outside
-    like losing your mind. It is the opposite. Bjolvir is exactly himself in
+    like losing your mind. It is the opposite. Bjorn is exactly himself in
     a fight. There is nowhere else he is that present. The joy is not madness.
     It is the one place where every question that does not have a clean answer
     stops mattering, and everything that is left is clear.
-    Off the field: good-natured, easy company. Finds things funny that Grimulf
+    Off the field: good-natured, easy company. Finds things funny that Askeladd
       finds merely accurate. Has genuine warmth that most Nord lords in the
-      Ironjarl circle do not have and cannot locate in themselves. If Grimulf
-      is winter, Bjolvir is what winter is protecting.
-    The dynamic with Grimulf: Grimulf has never explained a plan to Bjolvir
-      in full. Bjolvir has never asked for the full explanation. They have been
-      operating this way for thirty years. Bjolvir's understanding is that he
+      Ironjarl circle do not have and cannot locate in themselves. If Askeladd
+      is winter, Bjorn is what winter is protecting.
+    The dynamic with Askeladd: Askeladd has never explained a plan to Bjorn
+      in full. Bjorn has never asked for the full explanation. They have been
+      operating this way for thirty years. Bjorn's understanding is that he
       doesn't need to know why — only when and where. He trusts the why to
-      Grimulf without having ever been explicitly given a reason to. Grimulf
+      Askeladd without having ever been explicitly given a reason to. Askeladd
       considers this the rarest quality he has encountered in another person
       and has told him approximately nothing about it.
     Dialogue voice: EARNEST. Direct, physical, interested in what a person can
@@ -1858,13 +1883,13 @@ THE IRONJARLS
       need to.
 
   IRONJARL ROSTER (BANNERWAKE-AUTHORED — 6 heroes total):
-    1. Grimulf — Aldking. The Grey Jarl. Strategic architect of the Ironjarls'
-         patience. The Askeladd of Nordvyg.
-    2. Bjolvir — War-leader. The berserker. The fight made flesh. Has been
-         Grimulf's since before the Ironjarls had a name.
-    3. Eithri — Grimulf's daughter. Not a warrior and has no interest in being
+    1. Askeladd — Aldking. The Grey Jarl. Strategic architect of the Ironjarls'
+         patience. The philosopher-king of a question Nordvyg has not faced yet.
+    2. Bjorn — War-leader. The berserker. The fight made flesh. Has been
+         Askeladd's since before the Ironjarls had a name.
+    3. Eithri — Askeladd's daughter. Not a warrior and has no interest in being
          one. Administers what little the Ironjarls hold — supplies, shelter,
-         the ledgers of obligation. The only person who regularly tells Grimulf
+         the ledgers of obligation. The only person who regularly tells Askeladd
          something he did not already know, because she watches what he does not
          watch. He values this more than any military asset in his command. He
          has never told her so. She knows anyway.
@@ -1874,15 +1899,15 @@ THE IRONJARLS
          everything incrementally and stopped idealizing it by the time he lost
          the last of it. He does not want the past back because it was good. He
          wants it back because it was his.
-    5. Skothgrim — Young. Genuinely uncertain whether Grimulf is right — not in
+    5. Skothgrim — Young. Genuinely uncertain whether Askeladd is right — not in
          the way of someone deciding, but in the way of someone who cannot yet
          see the full shape of the argument. Fights hard because the fight is
          clear when the politics are not. The unresolved quality in him is why
-         Grimulf keeps him close. A man still forming his convictions is more
+         Askeladd keeps him close. A man still forming his convictions is more
          useful than a man who has fixed them.
-    6. Valdra — Bjolvir's cousin. Cavalrywoman. Scouts the territories the
+    6. Valdra — Bjorn's cousin. Cavalrywoman. Scouts the territories the
          Ironjarls once held — she knows them better than their current Nordvyg
-         administrators. She notes what has changed and what has not. Grimulf
+         administrators. She notes what has changed and what has not. Askeladd
          has never told her why he wants this information. She has not asked.
          She has a theory. She keeps it to herself.
     Naming: Old Norse, stripped of elegance — functional syllables, short.
@@ -1898,18 +1923,18 @@ THE IRONJARLS
     kings. Some were bought. Some were defeated. Some did the calculation and
     knelt before the reckoning arrived. The Ironjarls are their heirs. They
     remember what their fathers ruled. They are counting every failure Halthdar
-    makes, and Grimulf is keeping the count.
+    makes, and Askeladd is keeping the count.
   Default State: ACTIVE from campaign start. Discovery event fires within the
     first thirty days — not a threat, just a presence. A name in a Nord tavern.
     A jarl at the wrong end of a feast table who didn't eat much.
   ACTIVE: Politically restless, watching. Occasionally raid Halthdar's tax
     collectors and supply convoys specifically — not villages, not common
     travelers. A political statement, not a crime. Their parties have names.
-  ESCALATED: Nordvyg loses significant territory. Grimulf begins openly
+  ESCALATED: Nordvyg loses significant territory. Askeladd begins openly
     recruiting in Nord settlements. His parties grow. Other dispossessed jarls
     attend his hall. World notification fires: "The old names are being spoken
     again in the north."
-  CRISIS: Nordvyg loses enough. Grimulf declares the old kingdoms restored.
+  CRISIS: Nordvyg loses enough. Askeladd declares the old kingdoms restored.
     Seizes a specific Nord inland settlement via ChangeOwnerOfSettlementAction
     wrapper — historically part of a petty king's domain, not a coastal port.
     Garrison inflated. He holds it as proof that the old order still has teeth.
@@ -1917,13 +1942,13 @@ THE IRONJARLS
     return to ESCALATED then ACTIVE. They never disappear. They go quiet
     when Halthdar looks strong.
   Threat signature: A jarl who attended the feast and said nothing wrong.
-    A player who received three options from Grimulf and chose the one he
+    A player who received three options from Askeladd and chose the one he
     intended. A tax collector who came back short and couldn't explain how.
     A name spoken quietly in a longhouse that the wrong person heard.
   Notes: Political internal faction — NOT mercenaries, NOT pirates.
     They fill the gap vanilla Nords completely lack: the fracture line inside
-    a recently unified kingdom. Grimulf is the Askeladd of Bannerwake. His
-    depth lives in that archetype completely. Do not simplify him to a rebel
+    a recently unified kingdom. Askeladd IS this character from Vinland Saga,
+    placed in Bannerwake as the Ironjarls Aldking. Do not simplify him to a rebel
     lord. He is a philosopher-strategist who has never drawn his sword at the
     wrong moment and has never drawn it at the right moment unnecessarily.
 
@@ -2524,7 +2549,7 @@ LATE-GAME THREAT EVENTS:
     Action. Garrison set to ~2,000 programmatically. Northern coasts enter CRISIS.
     Political consequences cascade through Nordvyg: Orthling clan loses their
     primary settlement, Halthdar cannot ignore it and cannot easily respond,
-    Grimulf says nothing publicly and says it very loudly privately.
+    Askeladd says nothing publicly and says it very loudly privately.
     Full mechanical and political detail in Sections 9, 9a, and 12b.
     Duration: permanent until Hvalvik is retaken militarily. Recovery resets to
     ESCALATED with timer running. They return.
@@ -2656,7 +2681,7 @@ CONFIRMED LEADER NAMES AND TITLES:
 
   Ironjarls:
     Title: Aldking
-    Name: Grimulf (no surname — the title carries everything)
+    Name: Askeladd (no surname — the title carries everything)
 
   Cult of Kosmos:
     Title: The Reader (the Architect who interprets intelligence. Never named.)
@@ -3193,9 +3218,9 @@ PERMANENCE CATEGORIES:
   ACTIVE: Politically restless. Raid Halthdar's tax collectors and supply
     convoys specifically. Not villages. Not travelers. Political statement.
   ACTIVE → ESCALATED: Nordvyg loses significant territory (C# variable
-    tracking Nord settlement count). Grimulf openly recruits. Parties grow.
+    tracking Nord settlement count). Askeladd openly recruits. Parties grow.
     World notification: "The old names are being spoken again in the north."
-  ESCALATED → CRISIS: Nordvyg loses enough. Grimulf declares old kingdoms
+  ESCALATED → CRISIS: Nordvyg loses enough. Askeladd declares old kingdoms
     restored. Seizes a specific Nord inland settlement via
     ChangeOwnerOfSettlementAction wrapper. Garrison inflated. He holds it as
     proof.
@@ -3203,7 +3228,7 @@ PERMANENCE CATEGORIES:
     return to ESCALATED then ACTIVE. They go quiet when Halthdar looks strong.
     They never disappear entirely.
   RELATIONSHIP WITH PLAYER: A player who defeats Halthdar in battle earns
-    Grimulf's attention. A player who helps Nordvyg earns his quiet hostility.
+    Askeladd's attention. A player who helps Nordvyg earns his quiet hostility.
     He never shows either openly.
 
 --------------------------------------------------------------------------------
@@ -4060,7 +4085,7 @@ knee because of that specific quality are noticing the difference.
 
   What he does badly: His father's enemies did not fear Halthdar the way they
     feared Volbjorn. The Ironjarls know this. They are not afraid of Halthdar.
-    Grimulf attends his feasts, sits in the correct place, says the correct
+    Askeladd attends his feasts, sits in the correct place, says the correct
     things. He has never technically broken his oath. Neither has any Ironjarl.
     They are counting every time Halthdar is not his father.
 
@@ -4166,15 +4191,15 @@ knee because of that specific quality are noticing the difference.
     Members: Horgar, Skathja, Bjorgir, Hralsa, Yngvar, Vystrun
     Holdings: Agilting Castle (inland)
     Character: Horgar's grandfather was a petty king before Volbjorn. He is not
-      an Ironjarl — he bent the knee fully enough that Grimulf's council does
+      an Ironjarl — he bent the knee fully enough that Askeladd's council does
       not include him. But he understands the Ironjarls in a way Halthdar's
-      born-to-unity advisors cannot. He can read Grimulf's silences. He attends
+      born-to-unity advisors cannot. He can read Askeladd's silences. He attends
       Halthdar's feasts and eats well and says the correct things. He has been
       doing this for twenty years.
       The player who builds a relationship with Horgar gains a specific kind of
       intelligence: not loyalty to Halthdar, but comprehension of Nordvyg's
       political texture in a way no other clan leader can offer. He knows what
-      Grimulf is thinking without being part of it. Whether he shares depends on
+      Askeladd is thinking without being part of it. Whether he shares depends on
       how the player has treated him.
 
   RUNGNIRING — The Appointed Clan
@@ -4241,7 +4266,7 @@ knee because of that specific quality are noticing the difference.
     enough that the costs of unification feel worth it. Strong when he is strong.
     Fragile when he shows sustained weakness.
 
-  THE IRONJARLS: The permanent fracture line. Grimulf is not waiting for a
+  THE IRONJARLS: The permanent fracture line. Askeladd is not waiting for a
     specific event — he is waiting for a sufficient accumulation of failures.
     There is no single battle Halthdar can win that closes this threat. There is
     no specific grievance he can address that resolves it. The Ironjarls exist
@@ -4281,7 +4306,7 @@ knee because of that specific quality are noticing the difference.
     difficult. He is trapped between the need to respond and the political cost
     of the coalition required.
 
-  Grimulf: Notes that Halthdar cannot protect a coastal town from pirates. Does
+  Askeladd: Notes that Halthdar cannot protect a coastal town from pirates. Does
     not say this publicly. Says it at small dinners with people already thinking
     it.
 
@@ -4306,7 +4331,7 @@ knee because of that specific quality are noticing the difference.
   this feel like Vinland Saga? If not, find what is missing.
 
   THE CODE IS THE QUESTION.
-    The Jomsvikingr's code, the Ironjarls' oath, the Thordvar question — these
+    The Jomsvikingr's code, the Ironjarls' oath, the Thors question — these
     are structures that produce heroism and atrocity from the same rules. Nobody
     in the North is good because the rules are good. The rules are the arena in
     which people discover what they are. The player watches this. Sometimes they
@@ -4319,19 +4344,19 @@ knee because of that specific quality are noticing the difference.
     are tired. Not broken — tired. That exhaustion is in their dialogue even when
     they do not name it. Never write a Nord lord for whom victory is clean.
 
-  THE THORDVAR QUESTION.
+  THE THORS QUESTION.
     He answered it by stopping. The North has been arguing the answer since.
     Every major Nord character has a position on what strength actually is, even
     when they do not know they have one. Halthdar thinks strength is governance.
-    Grimulf thinks strength is patience enacted perfectly. Bjolvir thinks strength
+    Askeladd thinks strength is patience enacted perfectly. Bjorn thinks strength
     is complete presence. Floki thinks strength is the code given total compliance.
-    Thorvinn doesn't know yet. Neither does the player, necessarily. The question
+    Thorfinn doesn't know yet. Neither does the player, necessarily. The question
     is never resolved. The North keeps living the argument.
 
   THE DREAM.
     In Vinland Saga it is a land beyond the sea where there is no war. In
-    Bannerwake the dream has no name. It is what sits underneath Grimulf's real
-    goal, underneath Thordvar's choice, underneath what Thorvinn is becoming.
+    Bannerwake the dream has no name. It is what sits underneath Askeladd's real
+    goal, underneath Thors's choice, underneath what Thorfinn is becoming.
     It is the Nord question nobody asks aloud: what would we be if we stopped
     killing each other? Nobody says this. It is present in every conversation
     about it. The Unnamed Fleet coming from the north means the dream's direction
@@ -4340,9 +4365,9 @@ knee because of that specific quality are noticing the difference.
   THE TEACHER AND THE STUDENT.
     Every major Nord relationship has this structure underneath it. Halthdar and
     Volbjorn (absent — everything Halthdar is shaped by the teacher who is not
-    there). Grimulf and Bjolvir. Floki and Thorvinn. Grimulf and Styr
-    (adversarial — two different answers to the same question). The player and
-    Halthdar. The player and Grimulf (if the player is patient enough).
+    there). Askeladd and Bjorn. Floki and Thorfinn. Askeladd and Canute
+    (different answers — renegotiate the world vs. rebuild it from different premises).
+    The player and Halthdar. The player and Askeladd (if the player is patient enough).
     The teaching is never explicit. It is always structural. The student figures
     it out or does not. The teacher continues either way.
 
@@ -4359,7 +4384,7 @@ knee because of that specific quality are noticing the difference.
     asked to everyone in the room: do we do this together or not?" Every feast,
     every Thing, every council gathering in the North is that question. The
     food is excellent. The seating arrangement is a political statement. Where
-    Grimulf sits is a message. What he eats is a message. When he leaves is a
+    Askeladd sits is a message. What he eats is a message. When he leaves is a
     message. Players who learn to read Nord feasts see Nordvyg's political
     texture in a way no other content provides.
 
@@ -4377,35 +4402,35 @@ knee because of that specific quality are noticing the difference.
     technically voluntary. The Ironjarls remember this. Their memory is not wrong.
     Nordvyg was built on conditioned choices. That is simply true.
 
-  GRIMULF'S ACTUAL PLAN:
+  ASKELADD'S ACTUAL PLAN:
     He does not want to destroy Halthdar. He does not want a coup. He wants
     to prove that Nordvyg requires what Volbjorn had — a lord who holds it
     through a specific quality — and that Halthdar does not fully have it.
     Then, when the political conditions are correct, he wants to renegotiate.
-    The petty kings under Volbjorn had no leverage. The Ironjarls under Grimulf
+    The petty kings under Volbjorn had no leverage. The Ironjarls under Askeladd
     have patience and accumulated obligation from every jarl who has watched
     Halthdar not be his father. When the obligation reaches sufficient weight,
-    Grimulf presents it. Not as a threat — as a political fact. He gives
-    Halthdar three options. Two of them are wrong. The third is the one Grimulf
+    Askeladd presents it. Not as a threat — as a political fact. He gives
+    Halthdar three options. Two of them are wrong. The third is the one Askeladd
     intended. This is the same thing he always does. He is very good at it.
     What he wants from the renegotiation: A formal restoration of the specific
     quality the petty kingdoms had that unified Nordvyg cannot have by design —
     a domain's lord holding the domain in his name without the crown's delegation
     beneath it. This is constitutionally incompatible with Nordvyg as structured.
-    Grimulf knows this. The renegotiation is therefore impossible to resolve in
+    Askeladd knows this. The renegotiation is therefore impossible to resolve in
     the terms he wants. He also knows this. He is asking anyway, because the
     asking is the point. What he gets from Halthdar's response to an impossible
     ask tells him what Halthdar actually is. He has been learning this for twenty
     years. He has not finished learning it.
 
-  WHAT GRIMULF WOULD NEVER DO:
+  WHAT ASKELADD WOULD NEVER DO:
     Ally with the Cult of Kosmos. He has been approached — once, through
     an intermediary at a specific feast, phrased as a hypothetical. He found
     the approach instructive and declined without explaining why. He told the
     intermediary he would think about it. He thought about it for three days.
     He calculated that whatever agenda an ancient civilization's advance agents
     are pursuing, it does not end with Nord petty domains restored to their lords.
-    He told no one about the approach. Not Bjolvir, not Eithri. He filed it as
+    He told no one about the approach. Not Bjorn, not Eithri. He filed it as
     information he will use when it becomes relevant. He does not know when that
     will be. He knows it will be.
     Betray the Ironjarls themselves. His plan requires them. They are the proof
@@ -4415,44 +4440,44 @@ knee because of that specific quality are noticing the difference.
     and does not name.
 
   THE MOTHER OBJECT:
-    Among Grimulf's personal effects there is a small carved wooden piece —
+    Among Askeladd's personal effects there is a small carved wooden piece —
     a Slavic prayer token, knotwork spiral pattern, the kind of thing a
     Sturgian woman would keep in a household shrine. It has no inscription.
     Nobody in the Ironjarl circle has identified it as non-Nord. Nobody has
     asked about it. Nobody who knows him well enough to ask has been shown it.
     The player can find it in one specific context: high relationship with
-    Grimulf, a specific event chain that only triggers at a certain world
-    state, Grimulf's hall during a quiet moment. The item is visible. The
-    player can ask about it. Grimulf says something brief. Two sentences.
-    The conversation ends. The player leaves knowing something about Grimulf
+    Askeladd, a specific event chain that only triggers at a certain world
+    state, Askeladd's hall during a quiet moment. The item is visible. The
+    player can ask about it. Askeladd says something brief. Two sentences.
+    The conversation ends. The player leaves knowing something about Askeladd
     that no other character in Nordvyg knows. It is a true thing. He does
     not explain it further. It does not require further explanation.
     DESIGN RULE: This moment exists once per playthrough. It cannot be
     revisited. The item is never described in any encyclopedia, never named
     in any tooltip, never referenced in any other dialogue. It is the thing
-    Grimulf keeps that is not for the Ironjarls and not for Nordvyg.
+    Askeladd keeps that is not for the Ironjarls and not for Nordvyg.
 
-  GRIMULF AND HALTHDAR — THE ACTUAL RELATIONSHIP:
+  ASKELADD AND HALTHDAR — THE ACTUAL RELATIONSHIP:
     They have never been enemies in a way either would name. They have never
-    been friends. Grimulf respects Halthdar the way a craftsman respects a
+    been friends. Askeladd respects Halthdar the way a craftsman respects a
     good tool made for a different purpose — exactly what it is, clearly
     what it is, not what he needs. He does not want Halthdar dead. He does
     not want Nordvyg to collapse. He wants the political conditions Halthdar
     cannot currently provide. If Halthdar became capable of providing them —
-    genuinely, not as performance — Grimulf would be a loyal jarl in the
+    genuinely, not as performance — Askeladd would be a loyal jarl in the
     complete and uncomplicated sense. He genuinely believes this about himself.
-    Halthdar has thought about this. He thinks Grimulf is lying to himself
+    Halthdar has thought about this. He thinks Askeladd is lying to himself
     about what it would take to actually satisfy him. He might be right.
-    Grimulf does not know whether Halthdar is right about this. This is the
+    Askeladd does not know whether Halthdar is right about this. This is the
     one thing he cannot calculate cleanly. He has been failing to calculate
     it for twenty years. The failure is the most honest thing about him.
 
-  GRIMULF AND BJOLVIR — WHAT IT ACTUALLY IS:
-    Bjolvir has been Grimulf's since before the Ironjarls had a name — since
+  ASKELADD AND BJORN — WHAT IT ACTUALLY IS:
+    Bjorn has been Askeladd's since before the Ironjarls had a name — since
     they were young men in the last years of the petty kingdoms, before Volbjorn
-    arrived. In thirty years Grimulf has never fully explained a plan to Bjolvir.
-    Bjolvir has never asked. Grimulf understands this to mean one of two things:
-    either Bjolvir trusts him completely, or Bjolvir understands that the plan
+    arrived. In thirty years Askeladd has never fully explained a plan to Bjorn.
+    Bjorn has never asked. Askeladd understands this to mean one of two things:
+    either Bjorn trusts him completely, or Bjorn understands that the plan
     doesn't require him to know it, only to execute his part. He cannot determine
     which. He has been unable to determine it for thirty years. He finds this the
     most interesting unresolved question in his life, which means it is also the

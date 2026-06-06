@@ -1,9 +1,9 @@
 ================================================================================
 BANNERWAKE - LORD DATA, PRIVATE LIVES & DIALOGUE ARCHITECTURE
-Version 3.3 - Ironjarl roster authored (Grimulf full profile, Bjolvir, 4 others);
-              Jomsvikingr Section 6 added (Floki, Thorvinn, Styr private lives +
-              dialogue); Mortia expanded to 6 clans (dey Aldwick + dey Skarwick);
-              settlement holdings updated to 7; total Mortia heroes 36.
+Version 3.4 - Actual Vinland Saga characters installed by name: Askeladd (Ironjarls
+              Aldking); Bjorn (Ironjarls war-leader); Thorfinn (Jomsvikingr Jomskarl);
+              Canute (Jomsvikingr Jomskarl, replaces Styr slot with full VS Canute
+              profile); Thors (Nord legend, Thorfinn's father); Floki (already correct).
 ================================================================================
 
 SOURCE LOCK:
@@ -343,8 +343,8 @@ SETTLEMENTS (XML confirmed):
         "My father unified these clans through wealth and will. I hold them through
         the same methods. The wealth is their own now. The will must be renewed at
         every feast, every campaign."
-      On Grimulf, to a player who has encountered Ironjarl parties:
-        "Grimulf. He attends. He says the right things. He is a good jarl."
+      On Askeladd, to a player who has encountered Ironjarl parties:
+        "Askeladd. He attends. He says the right things. He is a good jarl."
         Every word technically accurate. He looks at the player. That look is the
         real message. He wants to know how much the player has understood.
       On the Thing: "You should attend. The food is better than people expect and
@@ -364,7 +364,7 @@ SETTLEMENTS (XML confirmed):
         He will not say more. The player understands what "came back themselves"
         means. That meaning is intentional and permanent.
       On the Thing, if Ironjarls have escalated:
-        "Grimulf did not sit at the correct place at the last Thing." He says this
+        "Askeladd did not sit at the correct place at the last Thing." He says this
         to the player alone, quietly, as if noting a navigational hazard.
         "I noticed. Every jarl in the room noticed. Nothing was said."
         Pause. "Nothing is said until it is." He looks at the player.
@@ -373,7 +373,7 @@ SETTLEMENTS (XML confirmed):
     NEVER:
       Blames Volbjorn directly - Volbjorn built what Halthdar holds.
       Shows fear directly. Performs weakness. Admits the Ironjarls problem
-      as a problem within earshot of anyone who might carry it to Grimulf.
+      as a problem within earshot of anyone who might carry it to Askeladd.
 
     SAMPLE LINES:
       "A feast is not a celebration. It is a question asked to everyone in the
@@ -465,7 +465,7 @@ SETTLEMENTS (XML confirmed):
     Voice: Ironic. 32 years old. Oldest of the three heirs. Most politically
       sophisticated. She has been watching Nordvyg's fragility for longer than
       her brothers.
-    She gives the player the most direct assessment of the Ironjarls problem: "Grimulf
+    She gives the player the most direct assessment of the Ironjarls problem: "Askeladd
       is collecting an obligation from every jarl who remembers what the kingdom was
       before my grandfather came with his gold. The obligation has no due date. He
       intends to collect it when the circumstances are correct."
@@ -875,7 +875,7 @@ SETTLEMENTS (XML confirmed):
     PRIVATE LIFE:
     He writes letters he does not send. They are addressed to a person who is dead -
     killed in the political violence that preceded the Ironjarls coalescing under
-    Grimulf's leadership. He burns each letter in the morning. He keeps the current
+    Askeladd's leadership. He burns each letter in the morning. He keeps the current
     one until he writes the next. He has been doing this for years. He has not
     decided when he will stop. He continues because stopping would mean deciding
     something about the past that he has not decided.
@@ -919,8 +919,8 @@ SETTLEMENTS (XML confirmed):
         private life - he is the one who burns the letters.
         The player who presses for more: he looks at them. "That is what I said."
         The matter is closed. The one true thing was real. It was enough.
-      On Grimulf, at high relationship:
-        "Grimulf is patient. I respect patience." Pause.
+      On Askeladd, at high relationship:
+        "Askeladd is patient. I respect patience." Pause.
         "I also know what it is waiting for. He knows I know."
         Pause. "We have an understanding about the understanding."
         The player asks what the understanding is: "That neither of us moves
@@ -1112,8 +1112,8 @@ DISCOVERY:
     understands what specific weight means.
 
   HALTHDAR (high relationship, pre-crisis):
-    On the Thing, if Grimulf has not sat at the correct place:
-      "Grimulf did not sit at the correct place at the last Thing." He says it to
+    On the Thing, if Askeladd has not sat at the correct place:
+      "Askeladd did not sit at the correct place at the last Thing." He says it to
       the player alone, quietly. "I noticed. Every jarl noticed. Nothing was said."
       "Nothing is said until it is." He looks at the player.
       "This is useful information for someone who attends."
@@ -1135,7 +1135,7 @@ DISCOVERY:
       decided some names should not be said. The player does not know why.
 
 ================================================================================
-THREAD 3: THE IRONJARLS (GRIMULF / HALTHDAR / NORDVYG'S FRAGILITY)
+THREAD 3: THE IRONJARLS (ASKELADD / HALTHDAR / NORDVYG'S FRAGILITY)
   The oath that has never been broken. The count that never stops.
 ================================================================================
 
@@ -1143,31 +1143,31 @@ BACKGROUND:
   The Ironjarls are the heirs of the petty kings Volbjorn the Hungry bent to
   his will. Their fathers took his gold or submitted to his force or both. They
   remember what their fathers ruled. They are counting every failure Halthdar makes.
-  Grimulf attends every feast. He sits at the correct place. He says the correct
+  Askeladd attends every feast. He sits at the correct place. He says the correct
   things. He has never technically broken his oath. Neither has any Ironjarl.
-  Halthdar knows what Grimulf is. Grimulf knows that Halthdar knows. They have
+  Halthdar knows what Askeladd is. Askeladd knows that Halthdar knows. They have
   been maintaining this specific performance for years. It is a performance of
   loyalty that serves exactly as well as loyalty, right up until it doesn't.
 
 IRONJARLS DESIGN (from DESIGN.txt):
-  Leader: Aldking Grimulf (no surname - the title carries everything).
+  Leader: Aldking Askeladd (no surname - the title carries everything).
     Aldking = "the Old King." Pre-Halthdar vocabulary. A title that predates
     Volbjorn's unification and makes that clear without explanation.
     Authority: cultural, not democratic. He speaks for the others because
     nobody disputes his seniority. He is the most senior dispossessed jarl.
   Default state: ACTIVE from campaign start. Not yet threatening. Present.
   Escalation trigger: Nordvyg loses significant territory (C# variable tracking
-    Nord settlement count). Grimulf begins openly recruiting.
-  Crisis trigger: Grimulf declares old kingdoms restored. Seizes a specific
+    Nord settlement count). Askeladd begins openly recruiting.
+  Crisis trigger: Askeladd declares old kingdoms restored. Seizes a specific
     inland settlement via ChangeOwnerOfSettlementAction. Garrison inflated.
   De-escalation: Suppressible if Nordvyg recovers. Ironjarls never disappear.
     They go quiet when Halthdar looks strong.
 
-IRONJARL HERO ROSTER (BANNERWAKE-AUTHORED — 6 heroes total):
+IRONJARL HERO ROSTER (6 heroes — Askeladd and Bjorn are direct VS characters):
 
-  GRIMULF [bw_grimulf] — Aldking of the Ironjarls
-    BANNERWAKE-AUTHORED / male / voice IRONIC (closest available register)
-    Design archetype: Askeladd (Vinland Saga). The philosopher-strategist.
+  ASKELADD [bw_askeladd] — Aldking of the Ironjarls
+    Vinland Saga character: Askeladd. / male / voice IRONIC (closest available register)
+    The philosopher-strategist. The Grey Jarl.
     Traits: Calculating, Politician, Devious, Commander, HuscarlFightingSkills
     Heritage note (private, never stated in dialogue to other NPCs):
       Mother was Slavic — Sturgian woman his father kept after a border raid.
@@ -1182,8 +1182,8 @@ IRONJARL HERO ROSTER (BANNERWAKE-AUTHORED — 6 heroes total):
     records, a Battanian lawbook transliterated into Imperial script, two volumes
     of correspondence from a war that ended before any current kingdom existed.
     He has read each of them more than once. He reads by firelight when the hall
-    is quiet. Bjolvir is always asleep by the time Grimulf blows out the last lamp.
-    This is probably deliberate on Bjolvir's part. Grimulf has never checked.
+    is quiet. Bjorn is always asleep by the time Askeladd blows out the last lamp.
+    This is probably deliberate on Bjorn's part. Askeladd has never checked.
 
     DIALOGUE — TIER 1
     Voice profile: IRONIC register governs tone. Never warm in a way that
@@ -1217,7 +1217,7 @@ IRONJARL HERO ROSTER (BANNERWAKE-AUTHORED — 6 heroes total):
       intelligence, but testing a premise. "If Nordvyg were to be governed
       differently — not toppled, differently — what would you require for
       that to be legitimate?" He is asking the player to articulate something
-      Grimulf himself cannot state cleanly. He is not asking for advice. He is
+      Askeladd himself cannot state cleanly. He is not asking for advice. He is
       hearing himself think through another person's answer.
       If the player has found the Slavic prayer token (specific event chain):
         Two sentences. Then: closed. Full design in DESIGN.txt Section 12b.
@@ -1233,19 +1233,19 @@ IRONJARL HERO ROSTER (BANNERWAKE-AUTHORED — 6 heroes total):
       To a player who has fought well against Ironjarl parties:
         "You fought our men." Pause. "You fought them correctly."
         The word "correctly" contains everything. He moves on.
-      On the Thordvar question, high relationship only:
-        "Thordvar put down his sword at the moment it would have cost him
+      On the Thors question, high relationship only:
+        "Thors put down his sword at the moment it would have cost him
         most to do so. That is the only version of that story that matters.
         What it means is a separate question." He does not answer the
         separate question. He waits to see if the player will.
 
-  BJOLVIR [bw_bjolvir] — War-Leader of the Ironjarls
-    BANNERWAKE-AUTHORED / male / voice EARNEST
-    Design archetype: Bjorn (Vinland Saga). Loyal berserker. Grimulf's second.
+  BJORN [bw_bjorn] — War-Leader of the Ironjarls
+    Vinland Saga character: Bjorn. / male / voice EARNEST
+    Loyal berserker. Askeladd's second. The fight made flesh.
     Traits: Daring, Commander, HuscarlFightingSkills, Honest
 
     PRIVATE LIFE:
-    He mends things. Equipment, furniture, the gate latch at Grimulf's hall that
+    He mends things. Equipment, furniture, the gate latch at Askeladd's hall that
     has been wrong for six years. He mends them in the evening, working carefully
     with his hands, which are very large and surprisingly precise. He is not good
     at stillness in general. He is very good at it when he is fixing something.
@@ -1254,7 +1254,7 @@ IRONJARL HERO ROSTER (BANNERWAKE-AUTHORED — 6 heroes total):
 
     DIALOGUE — TIER 1
     Voice: EARNEST. What he says is what he means. No layers, no structure,
-      no calculation. After Grimulf, talking to Bjolvir feels like standing
+      no calculation. After Askeladd, talking to Bjorn feels like standing
       near a window that has been opened.
 
     FIRST ENCOUNTER:
@@ -1264,34 +1264,34 @@ IRONJARL HERO ROSTER (BANNERWAKE-AUTHORED — 6 heroes total):
       He will know from the answer.
 
     MID RELATIONSHIP:
-      On Grimulf: "He thinks more than he says. I trust what he doesn't say
+      On Askeladd: "He thinks more than he says. I trust what he doesn't say
         more than what other men say." He does not find this complicated.
       On the fight itself: "The best part of a fight isn't winning. It's the
         moment before you know how it ends. When everything is possible."
         He says this the way someone describes a good meal.
-      On Thordvar, unprompted: "He was the best. Then he stopped. I used to
+      On Thors, unprompted: "He was the best. Then he stopped. I used to
         think that was a waste." Pause. "I still think that. But I think about
         it differently now."
 
     HIGH RELATIONSHIP:
       He tells the player about a specific fight — one particular moment in a
-      battle seven years ago, before Grimulf's plan existed in its current form,
+      battle seven years ago, before Askeladd's plan existed in its current form,
       when he was alone against three men and something happened that he has
-      never fully explained, even to Grimulf. The story is specific. The ending
+      never fully explained, even to Askeladd. The story is specific. The ending
       is quiet. He is not proud of it. He is telling it because the player has
-      earned the telling. Then: "I don't know what it means. Grimulf would
+      earned the telling. Then: "I don't know what it means. Askeladd would
       know. I haven't asked him."
 
     NEVER: Pretends sophistication. Speaks about politics in abstract terms.
       Is anything other than what he presents.
 
-  EITHRI [bw_eithri] — Grimulf's daughter, Ironjarl administrator
+  EITHRI [bw_eithri] — Askeladd's daughter, Ironjarl administrator
     BANNERWAKE-AUTHORED / female / voice SOFTSPOKEN
-    Traits: Manager, Politician, Calculating (lower value than Grimulf)
-    She tells Grimulf things he does not already know. He values this above
+    Traits: Manager, Politician, Calculating (lower value than Askeladd)
+    She tells Askeladd things he does not already know. He values this above
     all military capacity. She is the logistical intelligence of the Ironjarls —
     the person who makes their patience sustainable rather than theoretical.
-    Her dialogue: she tells the player what she sees Grimulf missing. Not
+    Her dialogue: she tells the player what she sees Askeladd missing. Not
     disloyal — accurate. She has been doing this for her father her entire life.
     She knows when to say it and when not to. She is very good at knowing.
 
@@ -1307,18 +1307,18 @@ IRONJARL HERO ROSTER (BANNERWAKE-AUTHORED — 6 heroes total):
   SKOTHGRIM [bw_skothgrim] — Young Ironjarl, uncertainty still forming
     BANNERWAKE-AUTHORED / male / voice EARNEST
     Traits: Daring, HuscarlFightingSkills. Low Politician.
-    Still deciding. Cannot articulate whether Grimulf is right. Fights hard
-    because the fight is clear when politics are not. Grimulf keeps him close
+    Still deciding. Cannot articulate whether Askeladd is right. Fights hard
+    because the fight is clear when politics are not. Askeladd keeps him close
     because a man still forming convictions is more useful than one who has fixed them.
     Player mirror: the player can shape Skothgrim's final position through
     dialogue over the campaign. What the player says to him matters to what he
     becomes. This is not a formal quest. It is a relationship.
 
-  VALDRA [bw_valdra] — Bjolvir's cousin, cavalry scout
+  VALDRA [bw_valdra] — Bjorn's cousin, cavalry scout
     BANNERWAKE-AUTHORED / female / voice CURT
     Traits: Daring, Scout skills, knowledge of former Ironjarl territories
     Knows the claimed territories better than their current administrators.
-    Sends reports to Grimulf regularly. The reports are precise and unemotional.
+    Sends reports to Askeladd regularly. The reports are precise and unemotional.
     She has opinions about what she sees in those territories. The opinions
     are in the precision of what she chooses to describe and what she omits.
 
@@ -1331,7 +1331,7 @@ DISCOVERY:
     territories is a political statement about what those territories once were.
 
   HALTHDAR (mid relationship):
-    "Grimulf. He attends. He says the right things. He is a good jarl."
+    "Askeladd. He attends. He says the right things. He is a good jarl."
     Every word technically accurate. He looks at the player. That look is
     the entire message. He wants to know how much the player has understood.
     The player who demonstrates they have understood gets:
@@ -1342,19 +1342,19 @@ DISCOVERY:
     "There are men who count Halthdar's failures. They are not wrong to count
     them. They are wrong about what they intend to do with the count."
     He looks at the player. "Or they will be wrong. Eventually."
-    At high relationship: "Grimulf is patient. I respect patience.
+    At high relationship: "Askeladd is patient. I respect patience.
     I also know what it is waiting for. He knows I know."
     Pause. "We have an understanding about the understanding."
 
   THYRSIF (mid relationship):
-    She gives the most direct assessment: "Grimulf is collecting an obligation
+    She gives the most direct assessment: "Askeladd is collecting an obligation
     from every jarl who remembers what the kingdom was before my grandfather
     came with his gold. The obligation has no due date. He intends to collect it
     when the circumstances are correct." She delivers this as historical analysis.
     She does not advise. She does not tell Halthdar she said this.
 
   GRYKKA (mid relationship):
-    "Grimulf is patient. I respect patience. I also know what it's waiting for."
+    "Askeladd is patient. I respect patience. I also know what it's waiting for."
     He changes the subject. He has said what he intended to say.
 
   ASGOTHA (high relationship, if Ironjarls are escalated):
@@ -1365,23 +1365,23 @@ DISCOVERY:
 
 THE THING (if player attends - C# campaign event):
   The seasonal political assembly. Player attendance is an event card.
-  The player observes where Grimulf sits. If Ironjarls are escalated:
+  The player observes where Askeladd sits. If Ironjarls are escalated:
   he does not sit at the correct place. He sits at a place that was correct
   once, before the unification. Halthdar notices. Every jarl in the room
   notices. Nothing is said. The feast continues. The evening ends without
   confrontation.
   On the road home: Ironjarl parties where there were none before.
-  Grimulf has made a statement. Everyone present heard it. Nobody
+  Askeladd has made a statement. Everyone present heard it. Nobody
   addressed it. The player now knows what "nothing is said until it is" means.
 
 CRISIS RESOLUTION OPTIONS:
   A. Player helps Nordvyg recover territory: Ironjarls return to active state.
-     Grimulf attends the next Thing and sits at the correct place. He says
+     Askeladd attends the next Thing and sits at the correct place. He says
      nothing about the last Thing. Neither does anyone else.
-  B. Grimulf seizes an inland settlement: Halthdar calls the Thing. The player
+  B. Askeladd seizes an inland settlement: Halthdar calls the Thing. The player
      who has built relationships with multiple Nord clans can influence which
      jarls support the response. This is the political gameplay the thread earns.
-  C. Player supports the Ironjarls: Grimulf notes this. He is polite. He is
+  C. Player supports the Ironjarls: Askeladd notes this. He is polite. He is
      now calculating what they are worth. He does not trust them. He uses
      them. The player has made a permanent choice about Nordvyg's future.
 
@@ -1389,7 +1389,7 @@ FEASIBILITY NOTE:
   The Ironjarls sub-faction state machine is C# CampaignBehaviorBase with
   saved state. Settlement count tracking is standard. Party spawning uses
   existing minor-faction party logic. The Thing is a C# seasonal event card.
-  Grimulf's settlement seizure uses ChangeOwnerOfSettlementAction with custom
+  Askeladd's settlement seizure uses ChangeOwnerOfSettlementAction with custom
   garrison inflation. All confirmed feasible in BANNERWAKE_DESIGN.txt Section 1b.
 
 ================================================================================
@@ -2900,17 +2900,16 @@ NOTE: Mortia now holds 7 of 16 Vlandian settlements. Faction weight updated.
 SECTION 6: JOMSVIKINGR — THE BROTHERHOOD
 ================================================================================
 
-DIALOGUE STATUS: AUTHORED (Floki, Thorvinn, Styr). Vinland Saga tone target.
-  All Jomsvikingr named heroes are BANNERWAKE-AUTHORED. No XML confirmation.
+DIALOGUE STATUS: AUTHORED (Floki, Thorfinn, Canute). Vinland Saga tone target.
+  All Jomsvikingr heroes are Vinland Saga characters by name. No XML confirmation.
   XML hook: skolderbrotva (vanilla) — to be migrated or replaced by bw_jomsvikingr.
   Do not use Skolvard as an ID, heading, file name, or code symbol.
 
 JOMSVIKINGR HERO ROSTER (4 authored heroes + rank structure):
 
   FLOKI JOMSHERSIR [bw_floki_jomshersir]
-    BANNERWAKE-AUTHORED / male / voice CURT (quiet precision)
-    Design archetype: Floki Jomsvikingr (Vinland Saga). Cold, calculating,
-      absolute belief in the code as architecture, not as virtue.
+    Vinland Saga character: Floki. / male / voice CURT (quiet precision)
+    Cold, calculating. Absolute belief in the code as architecture, not as virtue.
     Traits: Calculating (very high), Commander (high), Politician, HuscarlFightingSkills
 
     PRIVATE LIFE:
@@ -2939,18 +2938,18 @@ JOMSVIKINGR HERO ROSTER (4 authored heroes + rank structure):
         Pause. "It means what it says." Pause. "Most people find that
         insufficient. They want it to mean something beyond the words.
         It means the words. The words are precise." He stops.
-      On Thordvar, if asked: This is when the pause is longest.
+      On Thors, if asked: This is when the pause is longest.
         "He was the finest. He stopped at the moment stopping would cost
         him most." Another pause. "I have thought about what that means
         for thirty years." He does not say what he has concluded.
         This is Floki's single most revealing moment. The player hears
         that he has been thinking about it. That is everything.
-      On Thorvinn, if asked: "He asks questions. The code does not forbid
+      On Thorfinn, if asked: "He asks questions. The code does not forbid
         questions." Short pause. "I am watching what he does with them."
 
     HIGH RELATIONSHIP (only achievable by Nord player, Jomsvígr rank):
       He tells the player one thing that is not about contracts or the code.
-      It is about Thordvar. It is two sentences. It is the answer to thirty
+      It is about Thors. It is two sentences. It is the answer to thirty
       years of thinking. It is genuinely the most personally revelatory thing
       Floki says in Bannerwake. Then: closed. The conversation ends.
       This moment exists once. It cannot be revisited.
@@ -2958,18 +2957,32 @@ JOMSVIKINGR HERO ROSTER (4 authored heroes + rank structure):
     NEVER: Shows warmth. Forgives a code violation. Explains himself more
       than once. Expresses surprise.
 
-  THORVINN [bw_thorvinn_jomskarl]
-    BANNERWAKE-AUTHORED / male / voice EARNEST (direct self-examination)
-    Design archetype: Thorfinn (Vinland Saga). Revenge-seeker who outgrows
-      the revenge and finds the brotherhood before he is ready to admit it.
+    CRITICAL DESIGN NOTE — THE THORS CONTRACT:
+      The contract that killed Thors came from Floki. Askeladd's company
+      carried it out, but Floki gave the order. Thorfinn arrived at this
+      hall because of a decision Floki made seventeen years ago. Floki has
+      known this since Thorfinn's first day. He has never said a word about it.
+      Thorfinn knows Askeladd killed his father. Thorfinn does not know
+      Floki arranged it. The player can discover this. The conversation that
+      follows is the most consequential in the Nord playthrough. Floki will
+      not speak of it even at highest relationship — the player must find
+      another path to the truth. What Floki does when the truth surfaces
+      is the unresolved center of this thread. He has not decided. He has
+      been not deciding for seventeen years.
+
+  THORFINN [bw_thorfinn_jomskarl]
+    Vinland Saga character: Thorfinn. Son of Thors. / male / voice EARNEST
+    Revenge-seeker who outgrows the revenge and finds the brotherhood
+      before he is ready to admit it.
     Traits: HuscarlFightingSkills (high, rising), Commander (low, rising),
       Daring, Honest
     Age: ~21 years old. Has been in the brotherhood for six years.
     Rank: Jomskarl (60 troops). Rising toward Jomsvakt.
 
     PRIVATE LIFE:
-    He keeps the arrowhead that killed his father. Not as a memorial — he
-    does not think of it that way. He keeps it because throwing it away
+    He keeps the arrowhead that killed his father — Thors, the Troll of Jom,
+    the greatest warrior the North ever produced. He was four years old.
+    He does not carry it as memorial. He keeps it because throwing it away
     feels like deciding something he is not ready to decide. It is in his
     kit. He does not take it out. He knows it is there. This has been true
     for six years. At some point in the campaign it will stop being true.
@@ -2989,10 +3002,11 @@ JOMSVIKINGR HERO ROSTER (4 authored heroes + rank structure):
       He is asking because he is still figuring out what he was before.
 
     MID RELATIONSHIP:
-      "I came here to kill a man. The man is dead. Someone else killed him
-      two years before I found the right contract." Pause. "I'm still here."
-      He says this as an observation, not a complaint or a question. He is
-      describing a fact he has not finished understanding.
+      "I came here to kill a man. The man is still alive." Pause.
+      "He attends Things. He says the correct things. He is a good jarl."
+      Short pause. "He killed my father." He says all three sentences with
+      the same flatness. He is not asking the player for anything.
+      He is saying a fact he has been carrying since he was four years old.
       On Floki: "He hasn't answered my question. He also hasn't expelled me
       for asking it. I've been thinking about what that means." Pause.
       "I think he knows what I'm becoming better than I do. I find that
@@ -3002,7 +3016,7 @@ JOMSVIKINGR HERO ROSTER (4 authored heroes + rank structure):
       He asks the player the question he cannot ask Floki: "Did you ever
       define yourself by something so long that when it was gone you didn't
       know what was left?" He asks it as though it is hypothetical. It is not.
-      The player's response shapes Thorvinn's final character arc. What the
+      The player's response shapes Thorfinn's final character arc. What the
       player says here stays with him. It affects his dialogue for the rest
       of the campaign. This is not a formal branch — it is absorbed.
 
@@ -3014,60 +3028,78 @@ JOMSVIKINGR HERO ROSTER (4 authored heroes + rank structure):
       happen to be pointed in the right direction. Floki approves every one.
       I'm not sure what that means." He is exactly sure what it means.
       He is not ready to say it.
-      "Styr thinks I fight correctly. I think Styr is easy to impress."
-      Short pause. "I don't think Styr is easy to impress."
+      "Canute rarely speaks during a fight. He watched one of mine last month."
+      Pause. "He said nothing after. Floki noticed that he stayed to watch."
+      Short pause. "I keep thinking about why that matters to me."
 
-  STYR THE BULL [bw_styr_jomsthegn]
-    BANNERWAKE-AUTHORED / male / voice EARNEST
-    Design archetype: Bjorn (Vinland Saga). Berserker who finds genuine joy in
-      the fight without being wronged by it — the human version, not the cursed
-      one. Completely different from Black Keel wrongness.
-    Traits: HuscarlFightingSkills (very high), Daring (very high), Commander,
-      Honest, Generous
-    Age: ~30. Rank: Jomsthegn (200 troops).
+  CANUTE [bw_canute_jomskarl]
+    Vinland Saga character: Canute. / male / voice SOFTSPOKEN
+    Traits: Calculating (high, rising), Honest, Cautious, Politician (low, rising)
+    Age: ~18. Rank: Jomskarl (60 troops), second year in the brotherhood.
 
     PRIVATE LIFE:
-    He sings during chores. Not well. Not quietly. Specific songs, always the
-    same ones, in a rotation that other brothers have memorized without trying.
-    When Styr is working he sings. When Styr is not singing, he is not working.
-    Or he is fighting, which is not the same as working but has a similar quality
-    of focus. The songs are old Nord sea songs from before Volbjorn. He does not
-    know who taught them to him. He has been singing them since he was a child.
-    Nobody has asked him to stop. It has not occurred to anyone to ask him to stop.
+    He prays. Not to the gods the brotherhood uses for ceremony — to something
+    that does not have a clean Nord name, a concept between divinity and the
+    logic of legitimate governance. He does this before sleep, in the corner
+    of the hall where the lamp reaches but the noise does not. The other
+    brothers have seen the stillness. Nobody has asked what it is. The question
+    would require him to explain a theology he has not finished constructing.
+    He writes when he can find material — short observations, never personal
+    record, never tactics. Questions he cannot answer yet, preserved so he will
+    not lose them. There are currently seven. Three concern war. Four concern
+    what follows war, if someone is paying attention.
 
     DIALOGUE — TIER 1
-    Voice: EARNEST. Generous. The most immediately welcoming person in the
-      Jomsvikingr hall. Players who meet Styr before Floki may have the wrong
-      impression of what the brotherhood is. This is not inaccurate — it is
-      one true thing about a two-sided reality.
+    Voice: SOFTSPOKEN. Never fills silence. The brother who has been
+      thinking about the question the player just asked, and whose answer
+      arrives later than expected and is better than expected.
 
-    FIRST ENCOUNTER (at the hall, or anywhere Jomsvikingr are camped):
-      Big reaction when the player arrives. Not performed — genuine.
-      "You survived [recent battle/event they would have heard about]?
-      How? No, sit down, tell me. I mean that." He already has food.
-      He produced it faster than was explicable.
+    FIRST ENCOUNTER (within the hall):
+      He is sitting apart from the main table. Not excluded — positioned.
+      He looks up when the player enters and holds eye contact long enough
+      to be deliberate. Then: "You've arrived at a specific time."
+      He does not explain what he means. The player who thinks about it
+      understands: news is moving. He noticed before anyone else in the hall.
+      "What do you need from us?" He says "us" with full ownership.
+      He has been in the brotherhood two years. He means every word of it.
 
     MID RELATIONSHIP:
-      On the fight: "The best moment is the one right before you know
-      how it goes. Everything is possible then." He says this regularly.
-      It is always the same words. It is always completely sincere.
-      "People think I don't think during a fight. I think about one thing
-      at a time. But I think about it completely." He shrugs. "Most people
-      think about twelve things badly. I think one thing well. It works."
-      On Thorvinn at mid relationship: "He'll figure it out. He fights
-      correctly. Everything else follows from fighting correctly."
-      This is Styr's theory of personal development. It is incomplete
-      and sincere and works for Styr specifically.
+      "My father sent me here because he believed a year among men who kill
+      professionally would resolve something in me." Pause.
+      "He was not wrong about what needed resolving. He was wrong about
+      how resolution works." He is completely calm about this. He has
+      thought about his father carefully and arrived at the specific peace
+      of someone who understands a person completely without anger.
+      On the code: "The code prevents certain things. This is useful.
+      But preventing is not the same as building. I have been trying to find
+      in the code what it is building toward." Pause.
+      "Floki says the code builds warriors. I think that is what the code
+      states it builds. I am uncertain that is what the code is for."
+      He does not offer this as challenge. He offers it as the thing he
+      is currently working out. He expects the player to have a position.
+      On Thorfinn: "He knows what he is no longer. He does not yet know
+      what he is. This is actually the most generative position a person
+      can occupy." Said with conviction, not comfort.
 
     HIGH RELATIONSHIP:
-      He tells the player about his first fight inside the brotherhood —
-      the first time he understood what the code was protecting him from
-      rather than restricting him to. The story is specific and funny in the
-      first half and quiet at the end. He does not name the thing the code
-      was protecting him from. The player knows what it was from the shape
-      of the quiet.
+      He tells the player about the man who protected him before this —
+      not by name, just "a man who cared for me before I came here."
+      He describes the specific problem of being cared for completely:
+      it shows you that complete care is possible, and then asks whether
+      you can offer it to something large enough to matter.
+      Then: "I do not yet know whether what I am building toward can exist.
+      I know what it costs if it cannot." Long pause.
+      "I am going to find out." This is not hope. It is intention.
+      The player hears the difference.
 
-    NEVER: Is angry in a fight. Performs seriousness. Misses a meal.
+    NEVER: Is impressed by violence as performance. Performs uncertainty
+      he has resolved. Retreats from a question he has already thought through.
+
+    SAMPLE LINES:
+      "The finest warriors in this hall have decided that strength is sufficient.
+      I think they are correct about strength. I am less certain about sufficient."
+      On Thorfinn: "I watch him fight. He moves like someone who has already
+      decided something and has not told the rest of himself yet."
 
 ================================================================================
 APPENDIX A: EMPIRE, KHUZAIT, ASERAI
