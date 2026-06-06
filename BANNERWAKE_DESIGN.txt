@@ -2,10 +2,12 @@
 BANNERWAKE — MOD DESIGN DOCUMENT
 For use with Claude Code. This is the source of truth.
 If it is not in this document, it does not ship without explicit approval.
-Version: 4.0 — Cult of Kosmos named, given dedicated Section 13;
-               Section 8b dissolved (Jawwal->5b, ForbiddenNames->S1,
-               DragonBanner->S9); 9b/9c/9d promoted to 10/11/12;
-               Section 12 Faction Deep Lore parent added (12a Vlandia)
+Version: 5.0 — Full creative content rework; Section 3 faction identities
+               rewritten with soul, designed event mechanics, political depth;
+               Section 7 rebuilt (cross-faction dynamics, Bandit King dup
+               removed); Section 12b Nords added; Section 12c Battania scaffold
+               added; stale Shroud references corrected throughout; thin sub-
+               factions (Drevko/Quintus/Dust Speakers) deepened; TOC updated
 ================================================================================
 
 TABLE OF CONTENTS
@@ -24,8 +26,11 @@ TABLE OF CONTENTS
   Section 9a   Mortia / Vrak the Foul
   Section 10   Karma System
   Section 11   Event System — World Events and Encounter Events
-  Section 12   Faction Deep Lore (12a Vlandia complete; 12b-12n pending)
-  Section 12a  Vlandia
+  Section 12   Faction Deep Lore (12a Vlandia, 12b Nords complete; 12c Battania
+               scaffold; 12d-12n pending)
+  Section 12b  Nords — Kingdom of Nordvyg (complete)
+  Section 12c  Battania — The Old Kingdoms (scaffold; clans 1-4 confirmed)
+  Section 12a  Vlandia (complete)
   Section 13   Cult of Kosmos — The Endgame Arc
   Section 14   Development Rules and Build Order
   Section 15   Visual Rework — Textures, Reskins, GUI, Quality Pass
@@ -310,7 +315,7 @@ EVENT CARDS / D&D ENCOUNTERS:
   Risk: content scale. Hundreds of authored cards are minimum; thousands of
     variations if every modifier layer gets bespoke prose.
 
-SHROUD / UNNAMED FLEET:
+CULT OF KOSMOS / UNNAMED FLEET:
   Feasible: yes as authored conspiracy/endgame layer.
   Surface: fragments, hidden flags, custom parties, late-game fleet spawn,
     dialogue/encounter events, naval map behavior, and player-power threshold.
@@ -414,113 +419,428 @@ Black Keel: dedicated dark salt-weathered palette — tar black, charcoal grey,
 SECTION 3: MAJOR FACTION IDENTITIES
 --------------------------------------------------------------------------------
 
-STURGIA — Kievan Rus Principality
-  Cultural inspiration: Kievan Rus with Varangian Norse elite integration.
+STURGIA — Grand Principality of the North
+  Cultural inspiration: Kievan Rus / Slavic core with Norse Varangian elite.
   Slavic at the base, Norse at the top. Grand Prince Raganvad.
+
+  Soul: Sturgia is a principality held together by tradition and managed tension.
+    Raganvad is not a weak ruler — he is a ruler whose strength has been spent
+    maintaining something that should not require this much maintenance. The
+    boyars have their own armies, their own agendas, their own ideas about what
+    Sturgia should be. He governs by balancing their ambitions against each other,
+    spending authority carefully. This works. It is also exhausting. A Sturgian
+    war that goes badly doesn't merely lose territory — it empowers the boyars
+    who questioned the decision. His precarious position is the permanent
+    condition of Sturgian kingship, not a temporary weakness.
+
+  What it FEELS like: A Sturgian army is patient. It builds its shieldwall and
+    waits. When you attack, the wall absorbs. It doesn't break — it grinds.
+    Fighting Sturgia feels like running into stone. Breaking through requires
+    something, and by the time you've used it, they have more stone.
+
   Visual: Sturgia XML colors FF1C2A50 / FF949CCC on armor dynamic sections,
-          shields, cloth, and banners; iron grey, fur trim, and high-tier
-          brocade as secondary materials. Round shields with Slavic and Norse
-          knotwork. Peaked gilded helmets at high tier.
-  Military: shieldwall infantry core. High morale, refuses retreat. Cavalry on
-            flanks. Holds ground until it costs them everything.
-  Naval: longships are their trade highway. Sturgian coasts are launch points.
-  Lore mechanic: Boyar Council. Internal politics events fire on military losses.
+    shields, cloth, and banners. Iron grey, fur trim, high-tier brocade as
+    secondary materials. Round shields with Slavic and Norse knotwork. Peaked
+    gilded helmets at high tier.
 
-VLANDIA — Norman Feudal Kingdom
-  Cultural inspiration: Norman feudal Europe. King Derthert.
+  Military: Shieldwall infantry core. High morale, holds when others rout.
+    Cavalry on flanks — not the arm that decides, the arm that preserves.
+    Wins through endurance. Loses when the enemy has longer endurance or
+    destroys the flanks before the shieldwall grinds them down.
+
+  Naval: The northern lake highway. Sturgian longships are not raiding vessels
+    — they are trade arteries. Every Sturgian river settlement depends on them.
+    Cut Sturgian river access and you cut their supply chain more effectively
+    than winning three field battles. They know this. Protecting river access
+    is a Sturgian strategic obsession.
+
+  Internal politics: The Boyar Council is Sturgia's structural vulnerability.
+    Named boyars have personal armies, personal grievances, personal ambitions.
+    Raganvad governs by managing their ambitions against each other. Too much
+    military failure tips the balance from management to crisis.
+
+  Lore mechanic: BOYAR COUNCIL [designed]:
+    Trigger: Sturgia loses 3+ settlements in a single war OR their capital city
+      is threatened. Tracked by C# settlement-count variable.
+    Event fires: Named boyars are called to council. Each has a position:
+      Unified Warpath (the confident boyar who believes he knows better than
+        Raganvad about military targets), Internal Independence (the boyar who
+        sees Raganvad's weakness and considers succession alternatives),
+        Diplomatic Fracture (the pragmatist who wants to negotiate before
+        losing more).
+    Player role: If present in a Sturgian city, the player receives an
+      invitation. Past interactions with each boyar shape available options.
+      Attendance is optional. Absence means decisions are made without you.
+    Outcomes:
+      Unified Warpath wins: Sturgia mobilizes aggressively. Raganvad retains
+        authority. Next major campaign is more coordinated.
+      Internal Independence wins: A boyar moves toward semi-independence.
+        Sturgian military effectiveness drops. May open a Karakhergit-parallel
+        fracture path if sustained.
+      Diplomatic Fracture wins: Raganvad negotiates a peace. Buys time. The
+        underlying tension remains.
+      Player actively backs Raganvad's position: He remembers. It costs him
+        political capital with the dissenting boyars. He spends it. Whether
+        this was the right call depends on what comes next.
+
+
+VLANDIA — The Kingdom of the Lion
+  Cultural inspiration: Norman feudal Europe. King Derthert dey Meroc.
+
+  Soul: Vlandia is a kingdom that looks like strength and is quietly losing its
+    coherence. The heraldry is immaculate, the cavalry is the finest in Calradia,
+    the king's court has more formality than anyone needs. Under it all, four
+    barons pulling in opposite directions have created permanent managed dissent,
+    a criminal king holds five of their best settlements, and the actual king is
+    a decent man who cannot make anyone afraid of him. Vlandia should be the
+    dominant faction. It is not, because everyone in it is too busy watching
+    everyone else.
+
+  What it FEELS like: Meeting a Vlandian lord is meeting a performance. Every
+    word is weighed, every gesture calculated. The king himself is the exception
+    — Derthert asks real questions and waits for real answers, which is why the
+    barons consistently underestimate him. On the battlefield, a Vlandian army
+    is a mechanism: each element designed to enable the others. Disrupting any
+    one piece disrupts all three.
+
   Visual: Vlandia XML colors FF5C2017 / FFECBA44 on armor dynamic sections,
-          shields, cloth, and banners. Kite and heater shields with lion.
-          Heavy plate at elite tier. Every unit belongs to someone's banner.
-  Military: heavy cavalry charge with crossbow suppression. Disrupt the line
-            and Vlandia bleeds. Infantry holds, cavalry decides.
-  Naval: amphibious invasion specialists. Their galleys carry knights. A Vlandian
-         naval landing is not a raid — it is a conquest.
-  Lore mechanic: Feudal Obligation. Lord loyalty to Derthert tracked. Extended
-                 campaigns strain it. Weak kings lose vassals.
+    shields, cloth, and banners. Kite and heater shields with heraldic lion.
+    Heavy plate at elite tier. Every unit looks like it belongs to someone's
+    banner — because it does.
 
-THE EMPIRE (all three factions)
-  Cultural inspiration: Late Roman / early Byzantine.
-  Visual: each Empire variant uses its local XML colors on dynamic armor
-          sections, shields, cloth, and banners; silver scale, crested helmets,
-          and eagle shields remain the shared Imperial material language.
-    Northern:  FF39223F / FFDE9953
-    Southern:  FF9382D0 / FFDE9953
-    Western:   FF9E5072 / FFDE9953
-  Military: formation warfare. Spear lines, archers, flanking cavalry. Hard to
-            rout cleanly. Wins by not making mistakes.
-  Naval: harbor control and supply chain warfare. Economic, not raiding.
-  Lore mechanic: Imperial Legitimacy. Three claimants, one throne. Territory
-                 triggers legitimacy crisis events.
+  Military: Heavy cavalry charge with crossbow suppression. Crossbows create
+    the conditions; cavalry exploits them. Infantry holds the flanks while this
+    plays out. Disrupting the coordination is the only way to beat them — the
+    parts individually are each good; the combination is exceptional.
 
-BATTANIA — Celtic Highlands
+  Naval: Amphibious invasion specialists. Vlandian galleys carry knights.
+    A Vlandian naval landing does not scatter to loot — it forms and marches.
+    The difference between a Vlandian coastal landing and a Nord raid is the
+    difference between an invasion and a robbery. The Renegati operate Vlandia's
+    southern sea lanes. Vlandia's relationship with naval trade is therefore
+    complicated.
+
+  Internal politics: Full political design in Section 12a. The Ingalther-Aldric-
+    Calatild triangle, Vrak's destabilization, Derthert's precarious position,
+    Ferrand's intelligence network, Cult of Kosmos infiltration — all authored.
+
+  Lore mechanic: FEUDAL OBLIGATION CRISIS [designed]:
+    Trigger: Derthert loses any major siege (own clan's settlement OR the
+      capital city Pravend). Tracked by specific battle-outcome flag in C#.
+    Event fires: Parchment card. Lord loyalty scores for low-loyalty barons
+      drop. Player notified of "rumblings at court."
+    Player role: If in Pravend within 5 days of the siege loss, can attend an
+      informal council. Correct responses (based on relationship and karma axes)
+      can stabilize the most affected lords.
+    Outcomes:
+      Without player intervention: 1-2 barons begin operating more
+        independently. Campaign decisions less coordinated.
+      With player stabilization: Crisis deferred. Derthert creates conditions
+        — a more favorable contract, a piece of intelligence the player needed.
+        He doesn't thank directly. The world shifts slightly.
+      Long-term instability (crisis fires 3+ times): A formal defection event
+        fires. A baron leaves Derthert's service. This cannot be undone without
+        significant player intervention.
+
+
+THE EMPIRE — Three Claimants, One Legacy
+  Cultural inspiration: Late Roman / early Byzantine. Three heirs to a shattered
+  civilization. Northern: Lucon, Southern: Rhagaea, Western: Garios.
+
+  Soul: The Empire's tragedy is being right about everything while still losing.
+    The Imperial administrative model — bureaucracy, formation warfare, supply
+    chain discipline, cultural assimilation — is objectively the most effective
+    governing system in Calradia. None of this helps when the empire is three
+    factions instead of one and every advantage requires unified direction. Each
+    claimant believes their legitimacy is real. Each is correct in a different
+    way. Each is wrong in a different way. The tragedy is genuine.
+
+  What it FEELS like: An Imperial army is uncomfortable to fight. It does not
+    make obvious mistakes. It doesn't break when you expect it to, doesn't
+    pursue when pursuit would be dangerous, doesn't commit cavalry until the
+    moment is exactly right. Beating an Empire army once feels like you got
+    away with something. A second battle with the same general feels completely
+    different — they remembered what you did and they prepared for it.
+
+  Visual: Each Empire faction uses its local XML colors on dynamic armor sections,
+    shields, cloth, and banners; silver scale, crested helmets, and eagle shields
+    are the shared Imperial material language.
+    Northern:  FF39223F / FFDE9953 — slate and gold, the most austere
+    Southern:  FF9382D0 / FFDE9953 — lighter purple, more ornate, the richest
+    Western:   FF9E5072 / FFDE9953 — dark burgundy, the most embattled
+
+  Military: Formation warfare. Infantry holds. Archers punish movement.
+    Cavalry exploits gaps at exactly the right moment. The Empire wins by not
+    making mistakes and by having the supply chain to outlast every other faction
+    in a long campaign. The most disciplined and versatile army in Calradia.
+    Losing to three smaller factions because discipline requires unified command.
+
+  Naval: Harbor control and supply chain warfare. The Empire wins naval
+    engagements by denying ports and maintaining supply lines, not by sinking
+    ships. Not glamorous. Devastatingly effective in long campaigns.
+
+  Internal politics: Three legitimate claimants. Each believes their claim is
+    correct. Each is wrong in a different way.
+
+  Lore mechanic: IMPERIAL LEGITIMACY [designed]:
+    Trigger: One Empire faction controls 60%+ of former Imperial territory.
+      Tracked by settlement-count variable per faction.
+    Event fires: World-wide parchment card. The controlling faction formally
+      claims the title of Restored Empire. All other Imperial factions and
+      eligible players have a response window.
+    Response options:
+      Contest the claim (military): Other factions declare joint war on the
+        claimant. Temporary military alliance between rivals.
+      Recognize the claim: Massive political concession. The recognizing
+        faction subordinates or merges. World-altering consequence.
+      Counter-claim: A second faction asserts their own legitimacy.
+        Generates a double legitimacy crisis — two "Restored Empires," neither
+        recognized by the other. Conflict follows. Everything accelerates.
+      Player vote: If player is a senior vassal of any Empire faction,
+        their faction's response is influenced by player preference and
+        existing relationship quality.
+
+
+BATTANIA — The Old Kingdoms
   Cultural inspiration: Pictish, Irish, Welsh Celtic. King Caladog.
-  Religion: Ca fál — Bannerwake-authored Battanian religious layer unless a
-            vanilla string ID is later cited. Current design canon: two primary
-            gods, sacred groves, Holy Men who travel freely by ancient law,
-            ancestor-speaking through sacred lake water, and yew-branch human
-            sacrifice at the grove outside Dunglanys. Local XML search did not
-            confirm "Ca fál," the yew sacrifice, or the Dunglanys grove as
-            literal vanilla strings; keep the layer, but do not call it
-            XML-confirmed vanilla evidence.
+
+  Soul: Battania lives by older rules than anyone else in Calradia, and those
+    rules are the source of both its strength and its absolute limits. The Ca fál
+    gives the Battanians something no other faction has: a moral framework that
+    the land itself enforces. Groves that cannot be burned without consequence.
+    Holy men who travel freely through enemy territory by ancient right. Gatherings
+    that respond to desecration with overwhelming force. None of this translates
+    to conventional military-political power. All of it shapes everything.
+
+  What it FEELS like: You do not find Battanian armies. They find you. They
+    choose the ground, choose the moment, and attack from directions you didn't
+    know existed. On open plains they are dangerous. In forests they are something
+    else entirely — the trees start moving and then it's over.
+
+  Religion: Ca fál — Bannerwake-authored Battanian religious layer. Two primary
+    gods, sacred groves, Holy Men who travel freely by ancient law, ancestor-
+    speaking through sacred lake water, yew-branch sacrifice at the grove outside
+    Dunglanys. Not XML-confirmed vanilla strings. Bannerwake design canon.
+
   Visual: Battania XML colors FF2D3F1D / FFBFCBB0 on armor dynamic sections,
-          shields, cloth, and banners; grey linen and dark iron as secondary
-          materials. Celtic knotwork on shields and cloaks. Woad at elite tier.
-          Lean silhouettes
-          — a Battanian does not look armored because they don't want to be seen.
-  Military: ambush and terrain exploitation. Lethal in forests and broken ground.
-            Vulnerable on open plains. Desired AI behavior: avoid open pitched
-            battle unless advantaged. This requires MobilePartyAI/model or
-            Harmony behavior work, not XML-only troop design.
-  Naval: river raiders and estuarine harassment. Fast shallow vessels. They
-         disappear into waterways and strike when unwatched.
-  Lore mechanic: Grove Councils. Slow to commit, unbreakable once committed.
-                 Sacred sites on the map carry gameplay weight.
+    shields, cloth, and banners. Grey linen and dark iron as secondary materials.
+    Celtic knotwork on shields and cloaks. Woad at T1-T2 only — the regular
+    Battanian army is disciplined and armored, not a rabble. Lean silhouettes.
+    A Battanian does not look armored because they don't want to be seen.
+    From T3 upward: armored, proud, culturally distinct.
 
-ASERAI — Desert Sultanate
-  Cultural inspiration: Arab caliphate and Bedouin. Sultan Unqid.
+  Military: Ambush and terrain exploitation. Lethal in forests and broken ground.
+    Vulnerable on open plains. All troops carry throwing weapons — javelins or
+    throwing axes — used in the moment before melee contact. A short-range volley
+    followed by immediate melee charge. The effect is devastating in the right
+    terrain and predictable in the wrong terrain. Desired AI behavior: avoid
+    pitched battle on open ground unless advantaged. Requires MobilePartyAI/
+    Harmony behavior work, not XML-only troop design.
+
+  Naval: Rivers and estuaries. Battanian boats are small, fast, go where heavier
+    ships cannot. They appear from river mouths, strike specific targets, vanish
+    upstream. Not a naval power. A coastal threat that becomes significant if
+    ignored long enough.
+
+  Internal politics: Caladog holds Battania through the Ca fál's political
+    weight more than through military dominance. The Grove Council must approve
+    major wars. Slow to commit. Unbreakable once committed.
+
+  Lore mechanic: GROVE COUNCIL [designed]:
+    Trigger: Battania attempts to declare war on any major faction.
+    Event fires: The Grove Council convenes. Named clan chiefs present their
+      positions. The player, if in Battanian territory with standing, may attend.
+    Duration: 5-7 in-game days of deliberation. The war cannot be declared
+      during this window. Enemies can prepare. This is the price of the old law.
+    Outcomes:
+      Council approves unanimously: Battania declares war with every clan
+        committed. Their military effectiveness is higher than usual — the wall
+        that chose to fight is different from one that was ordered to.
+      Council declines: Caladog cannot override the Grove Council. War does
+        not happen. A player lobbying for it must find another path.
+      Split decision: Some clans committed, some abstained. Partial military
+        support. Uncommitted lords do not appear in Battanian army compositions
+        for that war. Their absence is felt in every pitched battle.
+
+
+ASERAI — The Sultanate of the Desert
+  Cultural inspiration: Arab caliphate and Bedouin tradition. Sultan Unqid.
+
+  Soul: The Aserai are among the oldest surviving civilizations in Calradia and
+    carry that history like armor. Their confidence is not arrogance — it is the
+    settled certainty of a culture that has outlasted everything thrown at it.
+    The desert is not an obstacle for the Aserai. It is their home and their
+    primary weapon. Armies that enter the sultanate without understanding the
+    desert don't fight their way out. They run out of water and make mistakes
+    and eventually stop being armies.
+
+  What it FEELS like: Aserai cavalry is the most elegantly dangerous force in
+    Calradia. Composite archers thin your formation while you're still too far
+    to respond; Faris cavalry waits until you're committed and can't easily
+    retreat; Mameluke lancers arrive when the decision has already been made.
+    There are no wasted movements. Everything was planned before your scouts
+    reported your position.
+
   Visual: Aserai XML colors FF965228 / FF4F2212 on armor dynamic sections,
-          shields, cloth, and banners; white linen over mail and brass metals
-          as secondary materials. Turbaned helmets. Round calligraphic shields.
-  Military: mounted harassment into decisive cavalry charge. Composite archers
-            thin formations, mamluk cavalry finishes them. Poor in sieges,
-            exceptional in open mobile warfare.
-  Naval: merchant-raider duality. Dhow fleets. Southern sea lanes are Aserai
-         territory in all but name.
-  Lore mechanic: Caravan Economy. Destroying Aserai caravans systematically
-                 weakens their armies within ~60 in-game days through a custom
-                 C# disruption tracker tied to economy, party spawning, and
-                 wage/recruitment pressure. Do not treat this as a vanilla
-                 automatic consequence of caravan loss.
+    shields, cloth, and banners. White linen over mail and brass metals as
+    secondary materials. Turbaned helmets throughout. Round calligraphic shields.
+    Not light desert skirmishers — a proud sultanate military. The wallpaper
+    shows what they should look like at T3-T4. Use it.
 
-KHUZAIT — Steppe Khanate
-  Cultural inspiration: Mongol and central Asian steppe. Monchug Khan.
+  Military: Mounted harassment into decisive cavalry charge. Composite archers
+    thin formations, Faris cavalry exploits the thinning, Mameluke lancers
+    finish. Poor in sieges, exceptional in open mobile warfare. The desert
+    terrain multiplies every advantage.
+
+  Naval: The Aserai are the southern sea's masters by tradition and geography.
+    Dhow fleets control trade routes. Every southern port has an Aserai merchant
+    presence that shades into an Aserai intelligence presence. Their navy is
+    commercial and threatening simultaneously — trade partners who could become
+    something else if the relationship changes.
+
+  Internal politics: Sultan Unqid is unchallenged and competent. The weakness
+    is economic, not political. The Caravan Economy is the structural
+    vulnerability. The Beni Zilal's legitimacy challenge only becomes real
+    when the economic disruption creates political instability.
+
+  Lore mechanic: CARAVAN DISRUPTION [designed]:
+    Trigger: Player or enemy systematically destroys Aserai caravans. C#
+      caravan-destruction tracker counts losses over a rolling 30-day window.
+    Phases:
+      Economic pressure (10+ caravans destroyed): Aserai party wages become
+        harder to maintain. Recruitment from certain towns drops. Small
+        prosperity penalties to urban settlements.
+      Military strain (20+ caravans): Aserai armies spawn at reduced size.
+        Wage pressure fires internal events — soldiers not paid on time.
+        The Beni Zilal stir if already ACTIVE.
+      Crisis (30+ caravans in 30 days): Formal event fires. The Sultan
+        declares trade routes a military priority. Dedicated patrol armies
+        assembled. If a player caused the disruption, those patrols have
+        specific intelligence about the player.
+    Recovery: Caravans rebuild if disruption stops for 30 days. Sustained
+      disruption is much harder to recover from than a short burst.
+
+
+KHUZAIT — The Steppe Khanate
+  Cultural inspiration: Mongol and central Asian steppe tradition. Monchug Khan.
+
+  Soul: The Khuzait are the most dangerous cavalry force in Calradia and cannot
+    hold a city without making everyone in it miserable, including themselves.
+    This is not a limitation — it is the entire dynamic. Monchug Khan unified
+    the clans through military genius that has no peacetime application. On the
+    steppe, the Khuzait are sovereign. Everywhere else they are an occupying
+    force waiting for someone to make holding the territory more expensive than
+    leaving it.
+
+  What it FEELS like: A Khuzait army is not an army. It is weather. It appears
+    from multiple directions before you're oriented, surrounds you while you're
+    still deciding what direction to face, and vanishes the moment you commit to
+    pursuit. If you stay still, it circles until your supply runs out. If you
+    advance, it retreats faster than you can follow. The only way to fight Khuzait
+    is to be somewhere they absolutely must be, force them to commit, and win
+    fast before they recalculate. They know you know this. They account for it.
+
   Visual: Khuzait XML colors FF468C7C / FFCCBB89 on armor dynamic sections,
-          shields, cloth, and banners; lamellar with steppe aesthetic and
-          horse-hair plumes. Small round shields. On a ship, they look wrong.
-          Intentional.
-  Military: swarm, feign retreat, encircle. Cannot be caught or pinned. Weak in
-            sustained sieges and narrow terrain.
-  Naval: NONE. River boats and ferry crossings only. Cannot threaten by sea.
-         This strategic fact must be felt by the player.
-  Lore mechanic: Khan's Unity. Khuzait power tied to internal cohesion. Military
-                 weakness triggers clan fragmentation events.
+    shields, cloth, and banners. Lamellar with steppe aesthetic and horse-hair
+    plumes. Small round shields. On a ship, Khuzait troops look wrong.
+    Intentional. They belong on horses.
+
+  Military: Swarm, feign retreat, encircle. Cannot be caught or pinned. Weak in
+    sustained sieges and narrow terrain. Every Khuzait infantry unit is a cavalry
+    warrior who dismounted — carrying the same aesthetics, the same mobility
+    mindset, in a context that punishes both.
+
+  Naval: NONE. River boats and ferry crossings only. Khuzait cannot threaten
+    by sea. This strategic fact must be felt by the player as a permanent
+    constraint — a faction that controls vast territory cannot project that
+    power across water.
+
+  Internal politics: Khan's Unity. Monchug Khan holds the clans together through
+    personal military authority that has no civilian equivalent. Military failure
+    gives clan chiefs room to question the arrangement. Karakhergit is the most
+    active fracture line. It will not be the last.
+
+  Lore mechanic: KHAN'S UNITY [designed]:
+    Trigger: Khuzait loses 4+ settlements to any enemy. Tracked by C# variable.
+    Event fires: A clan chief publicly questions the strategic direction.
+      World event parchment card fires. Player notified.
+    Phases:
+      Single challenge (4-6 settlements lost): Monchug addresses it.
+        The challenger is brought back into line by demonstration of competence.
+        Smoothed over. Tension remains.
+      Multiple challenges (7-9 settlements lost): A formal challenge to Khan's
+        authority fires. Player present in Khuzait territory can witness or
+        participate. The outcome shapes Khuzait's political stability for 90 days.
+      Collapse (10+ settlements lost): Karakhergit formally declares their
+        ancestral steppe range. One clan chief announces independence. Khan's
+        Unity becomes Khan's Crisis. Multiple factions become available to
+        exploit the political vacuum.
+
 
 NORDS — Kingdom of Nordvyg (War Sails DLC)
   Cultural inspiration: Norse/Scandinavian. King Halthdar the Golden.
   Unified a generation ago by his father Volbjorn the Hungry.
+
+  Soul: The Nords are the newest major faction and the most confidently
+    assertive. Halthdar's father Volbjorn built Nordvyg from twenty petty
+    kingdoms through twenty years of war, gold, and relentless pressure.
+    The current generation inherited something their fathers bled for and
+    don't fully understand what it cost. Halthdar governs well — better at
+    peace than his father, better at diplomacy than any previous Nord king.
+    The Ironjarls are counting every moment this isn't quite enough.
+
+  What it FEELS like: A Nord engagement starts with throwing axes at close
+    range, transitions immediately to melee, and ends when one side has no one
+    standing. There is no cavalry, no maneuver, no organized retreat. The shield
+    wall advances. It hits. If it doesn't break you immediately, it reforms and
+    hits again. You can win the second engagement. The fourth is harder than the
+    second by exactly the amount that surprises you.
+
   Visual: Nord kingdom colors FF202931 / FFb7623c on armor dynamic sections,
-          shields, cloth, banners, and cloaks. Round shields with geometric
-          patterns. Axes everywhere. Fur cloaks. Built their own armor.
-  Military: aggressive forward infantry. Shield wall that MOVES, not holds.
-            Axe-throwing at close range before melee. Nords do not defend.
-  Naval: THE most sea-native faction. Every unit comfortable on a ship. Their
-         longships are faster and more maneuverable than Sturgian equivalents.
-         Raider loot advantage is a Bannerwake-coded campaign behavior or loot
-         model modifier, not an XML culture fact. Tune the number in testing;
-         the old 30% figure is a starting balance target, not a locked rule.
-  Lore mechanic: The Thing. Seasonal political assembly. Player can attend,
-                 influence warpath priorities, observe internal Nord politics.
-                 Missing it means decisions were made without you.
+    shields, cloth, banners, and cloaks. Round shields with geometric patterns.
+    Axes everywhere. Fur cloaks. Their armor was made by people who live in
+    weather that would end a Vlandian campaign in November.
+
+  Military: Pure infantry — NO cavalry. The sea is their mobility. Every Nord
+    unit is a mariner by default. No separate mariner line needed. All units
+    fight on ships with full effectiveness. Aggressive forward infantry. Shield
+    wall that MOVES, not holds. They do not defend — they press.
+
+  Naval: Complete dominance in northern waters. Nord longships are faster,
+    lighter, and more maneuverable than anything else on the northern sea.
+    Their crews are comfortable in weather that grounds other factions. Nords
+    don't have a navy — they ARE a navy. Their naval skill is so embedded it
+    is not a specialization; it is the baseline assumption of Nord military
+    thought.
+
+  Internal politics: The Ironjarls represent the permanently available threat
+    of Nordvyg's political fracture. Nine petty kingdoms, twenty years ago.
+    Some bent the knee completely. Some are still remembering. The relationship
+    between Halthdar, the Ironjarls, and the Jomsvikingr creates Nordvyg's
+    political texture — three distinct Nord power centers with different and
+    occasionally contradictory relationships to the unified kingdom. Full detail
+    in Section 12b.
+
+  Lore mechanic: THE THING [designed]:
+    The seasonal Nord political assembly. Fires in spring and autumn each campaign
+    year — two sessions per year, four sessions per typical campaign.
+    Each session has:
+      A primary agenda set by world state — war preparation, trade dispute,
+        clan conflict, Black Keel response, Ironjarl activity, Jomsvikingr
+        status change. The agenda reflects the current most pressing Nord
+        political issue. It is not predetermined.
+      3-5 named speakers drawn from active clan leaders most affected by the
+        agenda item. Who speaks tells the player something about the faction's
+        current political balance.
+      Player attendance option: if in a Nord settlement within range, the player
+        receives notification. Attendance is optional. Absence has consequences.
+      Speaking rights: depend on relationship with Halthdar and relevant clan
+        leaders. A player with high Nord standing can speak. Low standing: observe.
+      An outcome fires regardless of player presence — but presence and speaking
+        shift the probability distribution of outcomes.
+    Missing The Thing: decisions were made without you. Attending means you can
+      influence them, not control them. Halthdar makes final calls. His calls
+      reflect what he heard. Your presence is a variable in that calculation.
 
 
 --------------------------------------------------------------------------------
@@ -609,6 +929,29 @@ LAKE RATS
     skirmisher), Harbormaster's Guard (heavy enforcer, elite tier)
   Threat signature: A ship you didn't know was in trouble. A beacon where no
     lighthouse should be. The wreckage in the morning.
+  DREVKO — The Harbormaster:
+    No surname. Sturgian underclass — born below the boyar line, found the lake
+    more profitable than whatever alternative was available. Has been Harbormaster
+    for eleven years, which means he outlasted two predecessors and three attempts
+    to replace him through the internal seniority system he himself designed.
+    The system that promotes by seniority happened to keep Drevko at the top long
+    enough that he became genuinely irreplaceable. Coincidence, he would tell you.
+    Personality: Patient, methodical, unexpectedly well-informed. The Lake Rats'
+    intelligence network — every boat that works the lake, every merchant who
+    pays tribute, every survivor who found staying preferable to leaving — gives
+    Drevko a picture of northern Sturgian commerce that rivals Raganvad's own
+    intelligence. He sells pieces of this, selectively, to people who prove
+    they're worth selling to.
+    He does not give speeches. He asks questions. When someone arrives wanting
+    to use the Lake Rats for something, Drevko learns more from the hiring
+    conversation than from the offer itself. By the time he names a price he
+    already knows whether the job will succeed.
+    False-beacon mechanic (designed): When ESCALATED, a specific campaign event
+    fires — a ship the player knows about is redirected by a false beacon at
+    night. The player learns about it through aftermath (missing cargo, missing
+    crew, a lamp hung facing the wrong direction on the drifting hull). They can
+    investigate. The investigation leads to the beacon network. Destroying the
+    network pushes Lake Rats back to ACTIVE. Drevko survives. He rebuilds.
   Notes: KEEP THE NAME EXACTLY. Keep the vibe exactly. Deepen the hierarchy
     and give them the false-beacon mechanic as real gameplay. Accepts fugitives
     from any culture who arrive — they are not ethnically Sturgian only.
@@ -910,11 +1253,48 @@ DUST SPEAKERS
   Threat signature: A camp you ride through at dusk where everyone watches you
     leave and none of them speak. Three days later you know something about an
     enemy position you couldn't have known.
+  SUKHBAT THE STILL — Bone-Reader:
+    The title Bone-Reader is not a ceremony — it is a description. Sukhbat reads
+    the steppe's patterns the way others read text. Dust behavior. Hoof-patterns
+    in dried mud. The specific silence of a camp that has been warned. He has
+    been reading these things for forty years and has not needed to change his
+    methods.
+    He does not recruit. He does not argue. He does not explain why the Dust
+    Speakers care about a given steppe burial ground. He explains that they do.
+    The distinction matters to him.
+    Intelligence quality: Sukhbat knows about the Veil Riders before any other
+    faction. He has seen their patterns on the steppe. He knows what they are
+    not, which narrows considerably what they might be. He does not share this
+    freely. He shares it with someone who has demonstrated they understand that
+    some information should be handled carefully.
+
+  BURIAL GROUND MECHANIC [designed]:
+    The steppe contains burial grounds that are not marked on any lord's map.
+    Some are within contested territory. A player army marching through the
+    steppe has a chance of passing through one unknowingly — this is not a
+    guaranteed event, but a weighted probability that increases with:
+      Khuzait war active in the region (armies moving through steppe frequently)
+      Player army large (more people, larger footprint)
+      Player karma Pragmatism high (less likely to instinctively avoid)
+    Event fires: "Your army camped at the edge of a rocky formation. In the
+    morning your scouts report disturbed ground — low mounds, old stones, the
+    shape of deliberate arrangement. Some of your men don't know what they're
+    looking at. Some do."
+    Options:
+      Move the camp immediately and post guards against looting. [No consequence.
+        Mercy +1. Dust Speakers note this eventually.]
+      Investigate carefully without disturbing anything. [Learn a steppe burial
+        custom. Dust Speaker standing improves slightly.]
+      Allow foraging in the area. [Burial ground disturbed. Dust Speakers become
+        PERMANENT IMPLACABLE ENEMY. This is a permanent state. They never forgive.
+        Never de-escalate. Their intelligence network closes entirely.]
+      Actively loot. [As above, but with additional camp morale events as soldiers
+        report wrong feelings about what they found. The wrongness is not named.]
   Notes: Named for the dust their horses raise on the steppe — heard before
     seen, then not seen at all. Their intelligence is unmatched. They know about
     the Veil Riders, Cult of Kosmos, and the Unnamed Fleet before these events occur.
-    Getting information from them requires a quest chain through steppe burial
-    rites. KEEP THE NAME "Dust Speakers" EXACTLY.
+    Getting information from them requires demonstrated respect through a quest chain
+    of steppe burial rites. KEEP THE NAME "Dust Speakers" EXACTLY.
 
 --- IMPERIAL SUB-FACTIONS ---
 
@@ -986,6 +1366,27 @@ THE LAST LEGION
     infantry, T4), Praetorian (elite, full Imperial armor, T5)
   Threat signature: A fort that was abandoned six months ago now has a garrison,
     a flag, and a toll gate on the road outside it.
+  QUINTUS PALLAROS — The Legate:
+    Latin name, military bearing, the kind of man who keeps his armor maintained
+    because it is the correct thing to do, not because anyone is watching. His
+    regiment has been at full military discipline for three years in an abandoned
+    fort with no one to report to and no order to stand down. This is what
+    Quintus Pallaros is.
+    He was a mid-career officer when the Empire fractured. His general gave him
+    three options: follow Northern, follow Western, or follow Southern. He chose
+    a fourth: wait for the correct answer. He has been waiting. His men are still
+    with him because they made the same choice and don't know how to unmake it.
+    The fort is maintained. The drills run every morning. The rolls are called.
+    No one has been dismissed.
+    Personality: Formal, precise, deeply tired in a way he will not show. When
+    the player encounters him, he treats the meeting like a formal military review
+    — correct protocol at every turn. This is not performance. It is the only
+    thing holding the regiment together. The day Quintus stops performing
+    correctness is the day the Last Legion stops being the Last Legion.
+    What he wants: To be given a reason that his choice was right. Not a reward.
+    A reason. That is all he has been asking for three years. The Istiana path
+    gives him this reason. The Arzagos path tells him the reason was never coming.
+    Both responses to these paths should feel earned.
   Notes: Varangian Guard-to-mercenary inspiration. They want to be the army
     again. Disciplined, tragic, genuinely useful. Replaces Legion of the Betrayed.
 
@@ -1684,66 +2085,105 @@ THE UNNAMED FLEET (late-game event):
 SECTION 7: LORE-DRIVEN CAMPAIGN MECHANICS
 --------------------------------------------------------------------------------
 
-MAJOR FACTION EVENTS (these are world behaviors, not random rolls):
-  Boyar Council (Sturgia): fires on significant military losses. Surviving
-    boyars assess Grand Prince Raganvad. Outcomes: unified warpath, internal
-    tension, or diplomatic fracture the player can influence.
+NOTE ON INDIVIDUAL FACTION MECHANICS:
+  Each major faction's lore-driven campaign mechanic is fully designed in
+  Section 3 alongside the faction's identity:
+    Boyar Council (Sturgia) — Section 3
+    Feudal Obligation Crisis (Vlandia) — Section 3
+    Imperial Legitimacy (Empire) — Section 3
+    Grove Council (Battania) — Section 3
+    The Thing (Nords) — Section 3
+    Caravan Disruption (Aserai) — Section 3
+    Khan's Unity (Khuzait) — Section 3
+  This section covers the campaign-scale events that cross faction boundaries
+  and the late-game escalation arcs.
 
-  Feudal Obligation Crisis (Vlandia): fires when Derthert loses a major siege.
-    Low-loyalty lords may seek independence.
+CROSS-FACTION DYNAMICS (events that require multiple factions to interact):
 
-  Imperial Legitimacy (Empire): fires when one faction controls 60%+ of former
-    Imperial territory. Cross-faction recognition or contest event.
-    Player vote carries weight if eligible.
+  Karakhergit vs. Khuzait active war:
+    When Khan's Unity reaches CRISIS, Karakhergit formally declares their
+    ancestral steppe range. If this escalates to military conflict, the player
+    may find themselves at war with one and allied to the other. The Khuzait
+    campaign AI treats this differently from a normal minor faction fight — it
+    is a civil war, and steppe civil wars have specific rules about who may be
+    neutral. Dust Speakers will not take sides. If the steppe becomes a
+    battlefield they grow significantly less communicative with everyone involved.
 
-  Grove Council (Battania): before Battania can declare war on a major faction,
-    the Grove Council convenes. Slow to decide, unbreakable once committed.
+  Hidden Hand vs. Undying Flame:
+    When the Undying Flame reaches ESCALATED, the Hidden Hand moves against
+    them. Not publicly — the Hand doesn't do public. They begin systematically
+    undermining Flame cells: paid informants, diverted tribute, counterfeited
+    instructions that send Flame parties to the wrong locations at wrong times.
+    The player may discover this operation and be asked to choose a side or
+    broker a truce. There is no clean option. The Hand's methods are criminal.
+    The Flame's goals are worse.
 
-  The Thing (Nords): seasonal assembly. Player can attend, present cases,
-    observe internal Nord politics. Missing it = world decided without you.
+  Jomsvikingr independence and Nordvyg's response:
+    If Nordvyg loses enough territory that the Jomsvikingr independence threshold
+    triggers, Halthdar faces an impossible choice: treat them as a breakaway
+    faction (politically disastrous — they have done nothing wrong under any
+    law), or recognize their independence (creates a precedent the Ironjarls note
+    immediately). He does neither. He reduces contact. The Jomsvikingr continue
+    operating. The silence between them is loud. Players in both orbits feel
+    this tension in every conversation.
 
-  Caravan Disruption (Aserai): systematic caravan destruction weakens Aserai
-    armies within ~60 in-game days. Tracked by C# variable.
+  Renegati and Vlandian southern trade:
+    Servic dey Valant's arrangement with the Renegati surfaces eventually —
+    through player action, world events, or Ferrand's intelligence network.
+    When it does: Derthert is publicly furious. The Vlandian council debates it.
+    Servic explains his reasoning. He is not entirely wrong — the Renegati were
+    going to extract tribute regardless; Servic formalized it and kept the routes
+    open. This is a political scandal with a functional justification. Players who
+    have interacted with both Servic and the Renegati can speak specifically to
+    the arrangement in council. This matters.
+
+  Cult of Kosmos and major faction political destabilization:
+    Faces embedded in major factions are not passive observers. They actively
+    cultivate the instabilities that serve the arrangement. Vlandia's fracture
+    is partly natural; it is partly assisted. Sturgia's boyar tensions are partly
+    cultural; they are partly cultivated. The player who has assembled enough
+    Kosmos fragments begins to see these patterns. Correlation is not proof.
+    Nothing in this arc is ever proof. That is the design.
 
 LATE-GAME THREAT EVENTS:
-  The Reaver Tide: Black Keel ignored long enough. Hrothgar consolidates.
-    Seizes a port. Northern coasts enter Crisis state.
 
-  The Vessel: Undying Flame spreads unchecked. They elect a Vessel of Darusos.
-    Declare Fourth Empire. Fire everywhere.
+  THE REAVER TIDE (Black Keel CRISIS):
+    Hrothgar the Damned reveals himself. The world notification fires. Black
+    Keel seizes Hvalvik via Bannerwake wrapper around ChangeOwnerOfSettlement
+    Action. Garrison set to ~2,000 programmatically. Northern coasts enter CRISIS.
+    Political consequences cascade through Nordvyg: Orthling clan loses their
+    primary settlement, Halthdar cannot ignore it and cannot easily respond,
+    Grimulf says nothing publicly and says it very loudly privately.
+    Full mechanical and political detail in Sections 9, 9a, and 12b.
+    Duration: permanent until Hvalvik is retaken militarily. Recovery resets to
+    ESCALATED with timer running. They return.
 
-  The Gathering: A sacred Battanian site is desecrated. Grovebound summon
-    every Ca fál adherent simultaneously. Temporary, overwhelming.
+  THE VESSEL (Undying Flame CRISIS):
+    A Flame-converted Imperial town elects the Vessel — living avatar of Emperor
+    Darusos. Fourth Empire declared. Fire spreads more aggressively. Party
+    composition changes: Flame parties field higher-tier units at greater
+    frequency. The Vessel is a unique NPC encounter — meetable once under specific
+    conditions. They are sincere. They are not wrong about everything. This is
+    the most unsettling thing about them and it should be written that way.
 
-  Cult of Kosmos Revealed: Enough fragments assembled. Cult of Kosmos' military arm
-    becomes visible. Unnamed Fleet appears. Endgame threat layer activates.
+  THE GATHERING (Grovebound CRISIS):
+    A Battanian sacred site is desecrated. The Grovebound summon every Ca fál
+    adherent. An overwhelming wave descends on the responsible party or settlement
+    — then silence. They return to the forest. The Gathering does not claim
+    territory. It does not occupy. It responds, punishes, withdraws.
+    Players who cause desecrations receive the Gathering as consequence.
+    Players who watch an NPC desecrate a sacred site can choose to intervene
+    before the threshold is crossed — delaying or preventing the Gathering while
+    earning Grovebound relationship. Every choice here is simultaneously moral
+    and mechanical.
 
-  THE BANDIT KING EVENT — Vrak the Foul:
-    Trigger conditions (all must be true, tracked by C# campaign variables):
-      - Bandit party count in Vlandian territory exceeds a threshold
-      - No major faction or player has cleared bandit parties in X days
-      - At least three distinct bandit types active simultaneously in region
-    World notification: "Word comes from the Vlandian forests. Someone has
-      given the wolves a name to follow."
-    Vrak the Foul emerges — common-born, brutal, twenty years building a
-      network of looter bands. Vlandian borderlands origin.
-    His army: majority cheap looter-tier troops, but with a hardened veteran
-      core that has been with him for years. A mob with a dangerous center.
-    Settlement seizure: Vrak seizes a specific Vlandian border castle via a
-      Bannerwake wrapper around ChangeOwnerOfSettlementAction. Garrison set
-      high programmatically.
-    AI patch: his clan's AI is patched to refuse abandoning the castle under
-      normal NPC raiding logic. Lords will not casually siege it. It requires
-      the player or a major faction to actively campaign against it.
-    Behavior: not political. Does not want a kingdom. Uses the castle as a
-      base of operations. If ignored, begins systematically raiding surrounding
-      Vlandian villages and cutting road trade.
-    Resolution: Defeating, routing, or driving out Vrak scatters his army back
-      into normal bandit parties within days. Vrak himself does not die; the
-      campaign assumes NO DEATH and his re-emergence logic remains available.
-      The castle returns to normal ownership logic.
-    He is friendly to looters and has a looter/bandit-based army — this is
-      intentional. He gives the scattered wolves a name, not a purpose.
+  CULT OF KOSMOS REVEALED (endgame layer activation):
+    Fragments assembled AND Veil Riders encountered. The picture coheres.
+    The Unnamed Fleet appears on the coastal map. The game never tells the
+    player what to do about it. Five player response options are designed in
+    Section 13. The world continues regardless of which the player chooses.
+    This is Bannerwake's Prophecy of Pendor equivalent. The difference: there
+    is no correct answer, and the mod never tells the player otherwise.
 
 
 --------------------------------------------------------------------------------
@@ -3047,9 +3487,438 @@ DESIGN PRINCIPLES:
 SECTION 12: FACTION DEEP LORE
 --------------------------------------------------------------------------------
 
-Pending sections: 12b Sturgia, 12c Nords, 12d Battania, 12e Aserai,
-12f Khuzait, 12g Empire, 12h-12n sub-factions — authored as each faction
-receives its full treatment. See pending task list.
+Pending sections: 12b Nords (complete below), 12c Battania (scaffold below),
+12d Sturgia, 12e Aserai, 12f Khuzait, 12g Empire, 12h-12n sub-factions —
+authored as each faction receives its full treatment. See pending task list.
+
+
+--------------------------------------------------------------------------------
+SECTION 12b: NORDS — THE KINGDOM OF NORDVYG
+--------------------------------------------------------------------------------
+
+Nordvyg is twenty years old. This is the most important thing about it. Twenty
+years ago there were twenty petty kings. Volbjorn the Hungry spent a decade in
+the Empire as a Vaegar Guard — accumulating wealth, studying how civilizations
+are built, understanding what Nordvyg could be. He returned and built it. Some
+petty kings were bought. Some were outmaneuvered. Some were defeated in battle.
+Some did the calculation themselves and bent the knee before the reckoning came.
+
+Halthdar inherited a kingdom that works. His problem is that it works because
+his father made it work, and Volbjorn's tools — personal terror, overwhelming
+pressure, the implicit threat of what he was willing to do — are not Halthdar's
+tools. Halthdar is better at governance than his father. He is better at
+diplomacy. He is not frightening in the same way, and some people who bent the
+knee because of that specific quality are noticing the difference.
+
+--- HALTHDAR DEY THROSNIRING — THE GOLDEN KING ---
+
+  XML traits: Generous, Daring, Impulsive (Calculating -1).
+  The Golden is his hair and his father's name for him. He took the name and
+  made it mean something different — not wealth but aspiration.
+
+  What he does well: Governance. Halthdar is genuinely good at administration,
+    at finding the settlement that every clan chief can accept without anyone
+    being fully satisfied, at making the unified kingdom feel like a continuous
+    choice rather than a historical fact imposed by force.
+
+  What he does badly: His father's enemies did not fear Halthdar the way they
+    feared Volbjorn. The Ironjarls know this. They are not afraid of Halthdar.
+    Grimulf attends his feasts, sits in the correct place, says the correct
+    things. He has never technically broken his oath. Neither has any Ironjarl.
+    They are counting every time Halthdar is not his father.
+
+  His impulsiveness (Calculating -1) is the one way he resembles Volbjorn —
+    he makes decisions quickly, commits before the political calculation is
+    complete. Sometimes this is the right call. Sometimes it gives the Ironjarls
+    something new to count.
+
+  The Jomsvikingr relationship: Halthdar respects Floki because Floki is the
+    kind of man Volbjorn would have respected, which is its own kind of
+    complication. The Jomsvikingr's hall predates Nordvyg by generations.
+    Halthdar's kingdom was built over something that was already there. He
+    acknowledges this by leaving them alone. They acknowledge it by not causing
+    problems. This arrangement is stable until Nordvyg loses enough territory
+    that the Jomsvikingr calculate independence is worth more than neutrality.
+
+  The Black Keel question: Halthdar is aware something is wrong with Hrothgar's
+    crew. He has been aware since the first reports came back from fishing boats.
+    He does not know what it is. Nobody does. He has considered that the
+    Jomsvikingr might know — Floki's intelligence network covers the northern
+    coast extensively. He has not asked Floki directly. He is not certain he
+    wants the answer Floki would give.
+
+  Dialogue voice: Daring and direct. He does not perform the elaborate Vlandian-
+    style political positioning. He says what he means, asks what he needs, and
+    makes decisions in front of you. High karma players (Honor, Valor) earn his
+    genuine respect. Players who maneuver politically around him earn his
+    wariness. He notices the difference.
+
+--- THE NINE CLANS OF NORDVYG ---
+
+  THROSNIRING — The Royal Clan
+    Leader: Halthdar
+    Members: Ilrika, Halthdar, Jarminja, Mjalrik, Sidunric, Thyrsif, Orvi,
+      Gunjadrid, Yfinja, Morgunja, Valmua
+    Holdings: Thronderlag (capital), Skarthness Castle
+    Character: The ruling clan contains two capable and ambitious members in
+      Mjalrik and Sidunric — both understand what the kingdom is worth and both
+      have opinions about how to govern it. Neither has challenged Halthdar
+      openly. Both are watching the Ironjarls the same way the Ironjarls are
+      watching Halthdar — counting failures, remaining technically loyal, waiting
+      for the calculus to shift.
+
+  KJOLDING — The Sea Clan
+    Leader: Grykka
+    Members: Grykka, Gautgar, Iridrun, Heimkir, Agrynja, Dyfa
+    Holdings: Gretysfjord, Tharklif Castle
+    Character: Grykka earned her position through twenty years of sea-raiding.
+      She is one of the hardest-bitten clan leaders in Nordvyg — not cruel, but
+      impatient with weakness and deeply unimpressed by those who haven't paid
+      the same price. Currently loyal to Halthdar because his governance is
+      competent and his protection of sea lanes benefits her clan directly.
+      If Halthdar's competence becomes less obvious, Grykka reassesses. She has
+      made pragmatic calculations her entire career. This is another one.
+      Black Keel angle: Grykka has more sea-going intelligence than any other
+      clan leader. She has heard things from her fishing fleet about Black Keel
+      that she hasn't told Halthdar. Her reasons are not disloyalty — she is
+      not sure she believes what she's heard. If the player has good standing
+      with her and asks directly, she tells them. She has been wanting someone
+      with standing to ask.
+
+  ORTHLING — The Dispossessed Clan
+    Leader: Asgotha
+    Members: Asgotha, Vulthir, Kjarvon, Aelfeyja, Njasnir
+    Holdings: Hvalvik (until Black Keel seizure), Hakarshus Castle
+    Character: Asgotha is the single most plot-relevant clan leader in Nordvyg.
+      His clan holds Hvalvik — the settlement Black Keel seizes at CRISIS — and
+      he has a history with the northern waters that makes Black Keel's wrongness
+      personal before it becomes political.
+      Before the seizure: Asgotha is cautious and observant. His coastal position
+      has exposed his clan to things he doesn't have words for. He has reported
+      certain fishing vessel encounters to Halthdar and been told to wait for
+      more evidence. He has been waiting.
+      After Hvalvik falls: Asgotha loses a town to something he cannot describe
+      to the council without sounding wrong himself. He knows what Black Keel
+      is in the sense of what they do. He does not know WHAT Black Keel is.
+      The distinction matters and he lives with it.
+      Player relationship: A player who treats Asgotha's early warnings with
+      seriousness — before Hvalvik falls — is the one person in Nordvyg who
+      was listening. This creates the deepest available relationship with a Nord
+      clan leader. He trusts the player with what he knows. What he knows is
+      fragmentary. Together it is more than either had alone.
+
+  SKYLFING — The Harbor Clan
+    Leader: Gornlautir
+    Members: Gornlautir, Gulsyf, Alrika, Stohrith, Kautas, Alsa, Svorni,
+      Bjolablum
+    Holdings: Hargard, Haugr Castle
+    Character: Hargard is the other major Nord coastal town. Gornlautir is
+      wealthy, cautious, and acutely aware that Black Keel and Renegati operate
+      in waters adjacent to his settlements. His political positions consistently
+      track his economic interests: he supports any policy that protects maritime
+      trade and resists any policy that would alienate potential naval partners
+      without clear military benefit.
+      He is not craven. He is maritime. The sea is his livelihood and he
+      understands it pragmatically rather than romantically.
+      If Black Keel reaches CRISIS: Hargard is the logistics base for any
+      campaign against Hvalvik. Gornlautir extracts political concessions for
+      this positioning. He is not wrong to do so.
+
+  GAUTING — The Old Blood
+    Leader: Horgar
+    Members: Horgar, Skathja, Bjorgir, Hralsa, Yngvar, Vystrun
+    Holdings: Agilting Castle (inland)
+    Character: Horgar's grandfather was a petty king before Volbjorn. He is not
+      an Ironjarl — he bent the knee fully enough that Grimulf's council does
+      not include him. But he understands the Ironjarls in a way Halthdar's
+      born-to-unity advisors cannot. He can read Grimulf's silences. He attends
+      Halthdar's feasts and eats well and says the correct things. He has been
+      doing this for twenty years.
+      The player who builds a relationship with Horgar gains a specific kind of
+      intelligence: not loyalty to Halthdar, but comprehension of Nordvyg's
+      political texture in a way no other clan leader can offer. He knows what
+      Grimulf is thinking without being part of it. Whether he shares depends on
+      how the player has treated him.
+
+  RUNGNIRING — The Appointed Clan
+    Leader: Gafnir
+    Members: Gafnir, Vitharsura, Karlek, Ulvirinja, Olvira
+    Holdings: Ykerslund Castle
+    Character: Gafnir got his position through Halthdar's direct appointment —
+      the previous Rungniring leader died without naming an heir. This makes
+      Gafnir specifically loyal to Halthdar and specifically resented by other
+      clan leaders who view his appointment as Halthdar placing a personal client
+      in a position that should have been determined by traditional succession.
+      The resentment is quiet. It comes out in small ways at The Thing.
+      If Halthdar is politically weakened: Gafnir's position becomes vulnerable.
+      His legitimacy depends entirely on Halthdar's authority. He knows this.
+      He is more loyal to Halthdar than any other clan leader for this
+      specific reason.
+
+  HULDRING — The Memory Clan
+    Leader: Murin
+    Members: Unjort, Tovsja, Gudrinja, Svalsa, Orthogar, Liljan, Murin
+    Holdings: Ulikshorn Castle
+    Character: Murin is old enough to remember Volbjorn's wars as a young man.
+      Not a child — young enough to have been shaped by them, old enough to
+      understand what they actually were. He serves Halthdar because Halthdar
+      is better than what came before. This is not enthusiasm. It is a
+      comparative assessment made by someone with genuine historical range.
+      He has no nostalgia for the petty kingdoms. He also has no illusions about
+      unified Nordvyg — it is better, it is fragile, it requires maintenance.
+      Dialogue: Murin is the most historically grounded perspective available
+      to the player on Nordvyg's origins. He talks about Volbjorn the way people
+      talk about weather — something that happened, shaped things, and is neither
+      good nor bad but explains the current conditions.
+
+  DVARROVING — The Small Clan
+    Leader: Toverik
+    Members: Toverik, Hvana
+    Holdings: Brunmark Castle
+    Character: The smallest clan in Nordvyg with only two confirmed members.
+      Their loyalty is quiet, their demands minimal, their political profile almost
+      invisible. They have survived previous major political transitions by being
+      small enough to be non-threatening and useful enough to be worth keeping.
+      Toverik is the best example of what successful political smallness looks
+      like in a unified kingdom — it is not weakness; it is strategy.
+
+  VISDURING — The Isolated Clan
+    Leader: Dagvi
+    Members: Dagvi, Drivana, Otfar, Anle, Triven
+    Holdings: Fimbulgard Castle (most isolated castle in Nordvyg)
+    Character: Dagvi's clan has held Fimbulgard's geographic position since before
+      Volbjorn. They survive through geography and the strategy of not making
+      enemies. Three political regimes have washed over Nordvyg. Visduring is
+      still there afterward, correctly aligned, having offended no one who ended
+      up winning. Dagvi is not passive. He is strategically invisible.
+      If a player needs something from Nordvyg's northern inland region and wants
+      a reliable point of contact outside the Ironjarl/Halthdar political drama,
+      Dagvi is the correct choice.
+
+--- NORDVYG POLITICAL WEB ---
+
+  Three distinct Nord power centers, three distinct relationships to the kingdom:
+
+  HALTHDAR'S NORDVYG: The unified kingdom trying to become more than its origin.
+    Dependent on Halthdar's personal authority and his ability to govern well
+    enough that the costs of unification feel worth it. Strong when he is strong.
+    Fragile when he shows sustained weakness.
+
+  THE IRONJARLS: The permanent fracture line. Grimulf is not waiting for a
+    specific event — he is waiting for a sufficient accumulation of failures.
+    There is no single battle Halthdar can win that closes this threat. There is
+    no specific grievance he can address that resolves it. The Ironjarls exist
+    because some people's fathers were kings and those people have not forgotten
+    it. That condition only ends when they run out of patience or alternatives.
+
+  THE JOMSVIKINGR: Independent of both. Floki's hall predates Nordvyg. The
+    Jomsvikingr's independence is not political — it is older than the politics.
+    They stay out of Ironjarl/Halthdar dynamics deliberately. The code prohibits
+    taking positions in internal political conflicts; mercenary neutrality is both
+    rule and doctrine. They can be hired by either side. This has happened. It
+    will happen again.
+
+  HOW THEY INTERACT:
+    Ironjarls vs. Halthdar: A cold war with formal compliance. Every Ironjarl
+      attends Halthdar's events. None have technically violated their oaths.
+      The pressure is real. The conflict is latent. It erupts when Nordvyg
+      loses enough.
+    Jomsvikingr neutrality: Floki has been offered a position in Nordvyg's
+      formal military structure. He declined. In language that was technically
+      respectful. This is the most pointed possible rejection and everyone
+      present understood it.
+    Black Keel — the third variable: Black Keel is not part of Nordvyg. They
+      are not Ironjarls. They predate even the Jomsvikingr's current arrangement.
+      Whatever Hrothgar is now, he was once something else. Who he was before —
+      his relationship to the north, to specific clan leaders, to the waters he
+      sailed — is a question the player can investigate but never fully answer.
+
+--- BLACK KEEL AND THE NORD CLANS ---
+
+  The seizure of Hvalvik is the most specific political wound in Nordvyg.
+  Asgotha holds that town. The political consequences cascade:
+
+  Halthdar: Cannot let this stand. Cannot immediately address it. The garrison
+    Black Keel installs at Hvalvik is enormous. Any campaign against it requires
+    Nord clans to commit together in a way that the Ironjarl dynamic makes
+    difficult. He is trapped between the need to respond and the political cost
+    of the coalition required.
+
+  Grimulf: Notes that Halthdar cannot protect a coastal town from pirates. Does
+    not say this publicly. Says it at small dinners with people already thinking
+    it.
+
+  Grykka: Has known something was wrong with Black Keel crews for months. When
+    Hvalvik falls she becomes the most important voice in Nord war councils.
+    Her intelligence about northern sea conditions is unmatched. She has
+    conditions for contributing her fleet. The conditions are specific. They
+    involve her clan's political status. She is not wrong to attach them.
+
+  Asgotha: The one who lost it. His subsequent state — whether he is broken by
+    it, sharpened by it, or transformed by what he's seen — is the most
+    important individual character arc in Nordvyg. The player's relationship
+    with Asgotha determines how this plays out. A player who listened before
+    Hvalvik fell is already in a different relationship than one who shows up
+    after the crisis to help recapture the town. Asgotha notices the difference.
+
+
+--------------------------------------------------------------------------------
+SECTION 12c: BATTANIA — THE OLD KINGDOMS
+--------------------------------------------------------------------------------
+
+Battania is not one thing. It is eight clans that have been agreeing on certain
+things since before anyone can remember, disagreeing on everything else, and
+calling the combination a kingdom when outsiders need a word for it. The Ca fál
+is the architecture — the religious-legal framework that makes Battanian political
+cooperation possible without requiring a strong central government. Caladog is
+the king. He governs by the Ca fál's rules more than by his own authority. This
+is both the source of his legitimacy and the permanent limit of his power.
+
+--- CALADOG FEN MORRIGAN — KING OF BATTANIA ---
+
+  He was chosen by the Grove Council, not born to the position. This is the
+  most important fact about him. He was selected because the eight clan chiefs
+  agreed he was the best available option for keeping the Battanian clans from
+  tearing each other apart long enough to present a unified face to three
+  separate Empire factions, each of which wants different pieces of Battanian
+  territory for different reasons.
+
+  Caladog knows exactly why he was chosen. He has been king for eleven years
+  by making himself indispensable — not through military dominance, not through
+  political maneuvering, but through being the one person no other clan chief
+  can argue is unnecessary. That is a fragile kind of authority. It requires
+  continuous maintenance.
+
+  What he actually believes: The Ca fál is real. Not performatively — actually
+    real. He was a Gwylwatcher before he was a political figure; he spent years
+    in deep forest training, learning the tradition from inside it. He understands
+    Ca fál theology and law from genuine practice, not political convenience. This
+    is his greatest political asset (the Grovebound respect him as someone who
+    has done the work) and his greatest personal constraint (he cannot violate
+    Ca fál principles without losing the legitimacy that comes from that respect,
+    and he genuinely does not want to).
+
+  His relationship with Brenach fen Ashyr: Mutual respect, genuine tension.
+    Brenach believes Caladog has made too many pragmatic compromises. Caladog
+    believes Brenach has the luxury of purity because he doesn't have to govern
+    eight clans simultaneously. Both are correct. This is never said directly.
+    It doesn't need to be.
+
+  His relationship with the Empire: Caladog is not afraid of the Empire. He
+    is exhausted by it. Three factions, each making territorial demands, each
+    offering different and contradictory arrangements, each trying to use
+    Battanian territory as buffer or prize in their internal conflict. He has
+    spent eleven years being courted by all three while giving none of them what
+    they want. The Grove Council supports this approach. It is the correct
+    approach. It is also interminable.
+
+  Dialogue: Caladog speaks carefully and at length. He is the only major king
+    who quotes Ca fál precedent in political conversations — not to impress, but
+    because he thinks in those terms. High Faith karma players can follow these
+    references. He asks hard questions and waits for real answers. A player who
+    gives him a real answer, even an unwelcome one, earns more from him than
+    one who performs the expected deference.
+
+--- CA FÁL AS POLITICAL STRUCTURE ---
+
+  The Ca fál is Battania's constitution. It predates every current clan chief,
+  every current king, every current political arrangement. It does not change
+  quickly. It does not change because one person argues for the change.
+
+  The Grove Council: The Ca fál's primary political institution. All eight clan
+    chiefs hold seats. Groveseers attend as observers with speaking rights but
+    not votes. Major decisions require supermajority — six of eight clans must
+    agree for declaring war, enacting formal treaties, changing sacred-site
+    status. Four clans can veto any major action.
+
+  Sacred sites: Specific locations throughout Battanian territory hold Ca fál
+    designation. The grove outside Dunglanys is the most significant — it holds
+    the year's most important rite. Attacking a sacred site is not a political
+    act in Battanian understanding; it is a crime against the gods themselves.
+    The Gathering is the Ca fál's enforcement mechanism.
+
+  Groveseers' travel rights: Any Groveseer may travel through any territory
+    in Calradia without hindrance, by ancient law that no one officially
+    recognizes but most find too costly to violate. A Groveseer harmed in an
+    enemy city is a political crisis for that city, not for Battania. This has
+    happened twice in living memory. Both times it ended badly for the city.
+
+  Ca fál law and mercy: The Ca fál has specific provisions about mercy in battle,
+    treatment of prisoners, and what constitutes legitimate war. These are not
+    suggestions. Battanian lords who violate them face Grove Council review.
+    Caladog has had to enforce this twice, against clan chiefs whose military
+    victories he needed. He enforced it anyway. This is why the Grovebound
+    respect him.
+
+--- THE BATTANIAN CLANS ---
+
+  Eight clans hold Battanian territory. Their personalities shape Caladog's
+  governance as much as any decision he makes. Full clan rosters and individual
+  character development to be authored as each clan receives full treatment.
+  Priority order for authoring: fen Morrigan, fen Uvain, fen Eingal, fen Morcar,
+  then remaining four clans in order of NPC reference confirmation.
+
+  FEN MORRIGAN — The Royal Clan
+    Leader: Caladog
+    Holds: Dunglanys (primary sacred site). The most politically significant
+      Battanian settlement. Whoever holds it holds the most important ritual
+      location in Battania. Caladog has never permitted a non-Battanian to
+      attend the Dunglanys rites. He has been asked twice. His refusal both
+      times was not hostile. It was complete.
+
+  FEN UVAIN — The Forest Clan
+    Confirmed members: Culharn [lord_5_9] (Honest, Impulsive), Melidir
+      [lord_5_5] (Generous, Devious, Cautious), Alcaea [lord_5_6] (Cautious,
+      Empire culture note — pending authoring)
+    Melidir's trait combination (Generous + Devious + Cautious) suggests someone
+      who wants the best for his clan and has made compromises to achieve it.
+      The combination of generosity and deviousness is not contradiction — it is
+      a specific political type: someone who genuinely wants good outcomes and
+      has decided that means doing things that look bad. Whether he is right
+      is a question the player can explore through direct interaction.
+    Culharn remains active fen Uvain unless a specific authored event changes
+      him. Do NOT write him as Grovebound without an explicit event.
+
+  FEN EINGAL — The Northern Clan
+    Confirmed members: Taorse [lord_5_21_2] (age 18, Honest), Wythuin (Tier-1
+      priority character), Brighan [lord_5_17_1] (Calculating)
+    Taorse is young, softspoken, honorable — three traits that in Battanian
+      politics represent genuine idealism that has not yet been tested by
+      governance. She is Carfyd and Beathag's daughter. Her trajectory will
+      be shaped by the events she witnesses in the coming decade. She is among
+      the most interesting Battanian characters to author precisely because she
+      has not yet become whatever she will become.
+    CORRECTION LOCK: Taorse is NOT the Grovebound elder. She is an active young
+      noble. Grovebound elder content uses Bannerwake-invented names only.
+
+  FEN MORCAR — The Eastern Clan
+    Confirmed member: Branoc [lord_5_18] (spouse Seonag, son of Pryndor)
+    CORRECTION LOCK: Branoc is NOT a Grovebound leader. Active fen Morcar noble.
+    Full clan roster pending NPC reference confirmation.
+
+  Remaining four clans: Pending full roster confirmation from NPC reference.
+    Do not invent clan names; confirm from the authoritative NPC reference file
+    before authoring any character.
+
+--- THE GROVEBOUND AND REGULAR BATTANIA ---
+
+  The Grovebound are not separate from Battanian society. They are its deepest
+  expression — the people who took the Ca fál seriously enough to observe it
+  completely. Every Battanian knows what the Grovebound are. Most Battanians
+  have a complex relationship with them: respect for the commitment, discomfort
+  with the extremity, gratitude that someone is doing it rather than everyone
+  having to. The Grovebound don't find this gratitude satisfying. They don't
+  do it to be thanked.
+
+  Brenach fen Ashyr has not left the sacred grove in forty years. He has more
+  political influence than any clan chief who hasn't visited Caladog in a year.
+  The grove is his parliament. Clan chiefs come to him.
+
+  Caladog's relationship with Brenach is Battania's defining political dynamic
+  — the tension between governing pragmatically and maintaining the Ca fál's
+  integrity. Caladog manages this tension. He does not resolve it. It cannot be
+  resolved. It is the condition of governing Battania. Any writer authoring
+  Battanian content should understand this tension and write from inside it.
 
 
 --------------------------------------------------------------------------------
@@ -3353,7 +4222,7 @@ Correct triggers for behavior changes:
 - Kingdom loses ALL settlements → clans go independent
 - Individual clan defection (requires relationship, leverage, bribing)
 - Player power threshold crossed
-- Specific world events (Shroud revealed, Gathering fires, etc.)
+- Specific world events (Cult of Kosmos revealed, Gathering fires, etc.)
 - Specific quest completions
 
 --- CALATILD DEY ARROMANC — DYNAMIC LAYERS ---
@@ -4117,7 +4986,7 @@ CULT OF KOSMOS VISUAL IDENTITY (Phase 7 art task):
     anything fantasy-specific. Remove or retexture completely.
     Target palette: dark slate grey, almost black. No bright metal. No faction
     colors. No insignia anywhere. Armor that absorbs light rather than reflects.
-    The silver sigil — the only Shroud identifying mark — appears as a small
+    The silver sigil — the only Kosmos identifying mark — appears as a small
     detail on high-tier Veil Rider units only.
     At distance a Veil Rider looks like a shadow with a horse.
   THE VISUAL WRONGNESS (must be preserved):
@@ -4280,5 +5149,5 @@ Roster:
   separate copy here. The NPC reference file is always more complete.
 
 ================================================================================
-END OF BANNERWAKE DESIGN DOCUMENT v4.0
+END OF BANNERWAKE DESIGN DOCUMENT v5.0
 ================================================================================
