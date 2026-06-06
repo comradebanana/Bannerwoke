@@ -1,6 +1,9 @@
 ================================================================================
 BANNERWAKE - LORD DATA, PRIVATE LIVES & DIALOGUE ARCHITECTURE
-Version 3.2 - Nords and Vlandia rebuilt. Sturgia/Battania/Mortia data-only.
+Version 3.3 - Ironjarl roster authored (Grimulf full profile, Bjolvir, 4 others);
+              Jomsvikingr Section 6 added (Floki, Thorvinn, Styr private lives +
+              dialogue); Mortia expanded to 6 clans (dey Aldwick + dey Skarwick);
+              settlement holdings updated to 7; total Mortia heroes 36.
 ================================================================================
 
 SOURCE LOCK:
@@ -1159,6 +1162,165 @@ IRONJARLS DESIGN (from DESIGN.txt):
     inland settlement via ChangeOwnerOfSettlementAction. Garrison inflated.
   De-escalation: Suppressible if Nordvyg recovers. Ironjarls never disappear.
     They go quiet when Halthdar looks strong.
+
+IRONJARL HERO ROSTER (BANNERWAKE-AUTHORED — 6 heroes total):
+
+  GRIMULF [bw_grimulf] — Aldking of the Ironjarls
+    BANNERWAKE-AUTHORED / male / voice IRONIC (closest available register)
+    Design archetype: Askeladd (Vinland Saga). The philosopher-strategist.
+    Traits: Calculating, Politician, Devious, Commander, HuscarlFightingSkills
+    Heritage note (private, never stated in dialogue to other NPCs):
+      Mother was Slavic — Sturgian woman his father kept after a border raid.
+      Raised in two languages. Keeps a small Slavic knotwork prayer token among
+      personal effects. No other NPC knows about this.
+    Method: Gives people three options. Two wrong, one intended. Has been doing
+      this for thirty years. Never explains afterward which was which.
+
+    PRIVATE LIFE:
+    He reads. The Ironjarls do not have a library — he has a chest with eleven
+    books acquired over decades in the Imperial south: histories, administrative
+    records, a Battanian lawbook transliterated into Imperial script, two volumes
+    of correspondence from a war that ended before any current kingdom existed.
+    He has read each of them more than once. He reads by firelight when the hall
+    is quiet. Bjolvir is always asleep by the time Grimulf blows out the last lamp.
+    This is probably deliberate on Bjolvir's part. Grimulf has never checked.
+
+    DIALOGUE — TIER 1
+    Voice profile: IRONIC register governs tone. Never warm in a way that
+      could be mistaken for warmth. His compliments are accurate descriptions.
+      His threats are observations. The player who listens to the structure
+      of his sentences, not just the content, understands him before he intends.
+
+    FIRST ENCOUNTER (at a feast, or on the road — never his hall, first meeting):
+      "You're in Nord territory." Not hostile. Observational.
+      Then, after a beat: "Most people who come through here are traveling
+      somewhere else. Where are you going?"
+      He asks this in a way that indicates the answer is less interesting than
+      the reason for the question. He is already listening to the layer beneath
+      the answer.
+
+    MID RELATIONSHIP:
+      On Halthdar, if the player has attended a Thing:
+        "He governs well." Long pause. "My father also governed well. After
+        Volbjorn was finished with him." He does not continue. He waits to see
+        if the player understands what the pause was carrying.
+      On the Ironjarls, if asked directly:
+        "We are men who remember what they owned. That is the whole of it.
+        Memory is not political in itself. What men do with it is."
+        He says this the way a man states a law of physics.
+      If the player has noticed the three-options method and asks about it:
+        "You're counting." A brief pause. Then: "That's useful."
+        He changes the subject. He has decided something about the player.
+
+    HIGH RELATIONSHIP:
+      He does not open. He asks a different kind of question — not gathering
+      intelligence, but testing a premise. "If Nordvyg were to be governed
+      differently — not toppled, differently — what would you require for
+      that to be legitimate?" He is asking the player to articulate something
+      Grimulf himself cannot state cleanly. He is not asking for advice. He is
+      hearing himself think through another person's answer.
+      If the player has found the Slavic prayer token (specific event chain):
+        Two sentences. Then: closed. Full design in DESIGN.txt Section 12b.
+
+    NEVER:
+      States his actual goal explicitly. Shows surprise at news. Responds to
+      a direct provocation with anything but calm. Lets the player see the
+      three-options method working while he is using it.
+
+    SAMPLE LINES:
+      On Volbjorn: "He was effective. Effectiveness is its own argument.
+        My father found it persuasive." The bitterness is surgical.
+      To a player who has fought well against Ironjarl parties:
+        "You fought our men." Pause. "You fought them correctly."
+        The word "correctly" contains everything. He moves on.
+      On the Thordvar question, high relationship only:
+        "Thordvar put down his sword at the moment it would have cost him
+        most to do so. That is the only version of that story that matters.
+        What it means is a separate question." He does not answer the
+        separate question. He waits to see if the player will.
+
+  BJOLVIR [bw_bjolvir] — War-Leader of the Ironjarls
+    BANNERWAKE-AUTHORED / male / voice EARNEST
+    Design archetype: Bjorn (Vinland Saga). Loyal berserker. Grimulf's second.
+    Traits: Daring, Commander, HuscarlFightingSkills, Honest
+
+    PRIVATE LIFE:
+    He mends things. Equipment, furniture, the gate latch at Grimulf's hall that
+    has been wrong for six years. He mends them in the evening, working carefully
+    with his hands, which are very large and surprisingly precise. He is not good
+    at stillness in general. He is very good at it when he is fixing something.
+    The gate latch has been mended eighteen times. It keeps breaking. He mends it
+    again. He has not suggested replacing the gate.
+
+    DIALOGUE — TIER 1
+    Voice: EARNEST. What he says is what he means. No layers, no structure,
+      no calculation. After Grimulf, talking to Bjolvir feels like standing
+      near a window that has been opened.
+
+    FIRST ENCOUNTER:
+      He looks at the player. Specifically at how they carry their weapon and
+      their posture and the state of their boots. Then:
+      "Where have you fought?" Not asking for a list. Asking what they are.
+      He will know from the answer.
+
+    MID RELATIONSHIP:
+      On Grimulf: "He thinks more than he says. I trust what he doesn't say
+        more than what other men say." He does not find this complicated.
+      On the fight itself: "The best part of a fight isn't winning. It's the
+        moment before you know how it ends. When everything is possible."
+        He says this the way someone describes a good meal.
+      On Thordvar, unprompted: "He was the best. Then he stopped. I used to
+        think that was a waste." Pause. "I still think that. But I think about
+        it differently now."
+
+    HIGH RELATIONSHIP:
+      He tells the player about a specific fight — one particular moment in a
+      battle seven years ago, before Grimulf's plan existed in its current form,
+      when he was alone against three men and something happened that he has
+      never fully explained, even to Grimulf. The story is specific. The ending
+      is quiet. He is not proud of it. He is telling it because the player has
+      earned the telling. Then: "I don't know what it means. Grimulf would
+      know. I haven't asked him."
+
+    NEVER: Pretends sophistication. Speaks about politics in abstract terms.
+      Is anything other than what he presents.
+
+  EITHRI [bw_eithri] — Grimulf's daughter, Ironjarl administrator
+    BANNERWAKE-AUTHORED / female / voice SOFTSPOKEN
+    Traits: Manager, Politician, Calculating (lower value than Grimulf)
+    She tells Grimulf things he does not already know. He values this above
+    all military capacity. She is the logistical intelligence of the Ironjarls —
+    the person who makes their patience sustainable rather than theoretical.
+    Her dialogue: she tells the player what she sees Grimulf missing. Not
+    disloyal — accurate. She has been doing this for her father her entire life.
+    She knows when to say it and when not to. She is very good at knowing.
+
+  HAFNAR THE HOARSE [bw_hafnar] — Oldest Ironjarl, former minor petty king
+    BANNERWAKE-AUTHORED / male / voice SOFTSPOKEN (age and deafness)
+    Traits: Authoritarian, Politician (experience-based, eroding)
+    Half-deaf. Remembers the petty kingdoms with exhausted precision.
+    Does not idealize the past. Wants it back anyway. These are compatible.
+    His dialogue: the player's window into what the old kingdoms actually were.
+    He is more honest about their flaws than the younger Ironjarls. He still
+    wants restoration. The honesty and the wanting coexist without irony.
+
+  SKOTHGRIM [bw_skothgrim] — Young Ironjarl, uncertainty still forming
+    BANNERWAKE-AUTHORED / male / voice EARNEST
+    Traits: Daring, HuscarlFightingSkills. Low Politician.
+    Still deciding. Cannot articulate whether Grimulf is right. Fights hard
+    because the fight is clear when politics are not. Grimulf keeps him close
+    because a man still forming convictions is more useful than one who has fixed them.
+    Player mirror: the player can shape Skothgrim's final position through
+    dialogue over the campaign. What the player says to him matters to what he
+    becomes. This is not a formal quest. It is a relationship.
+
+  VALDRA [bw_valdra] — Bjolvir's cousin, cavalry scout
+    BANNERWAKE-AUTHORED / female / voice CURT
+    Traits: Daring, Scout skills, knowledge of former Ironjarl territories
+    Knows the claimed territories better than their current administrators.
+    Sends reports to Grimulf regularly. The reports are precise and unemotional.
+    She has opinions about what she sees in those territories. The opinions
+    are in the precision of what she chooses to describe and what she omits.
 
 DISCOVERY:
 
@@ -2613,12 +2775,16 @@ DIALOGUE STATUS: DATA SKELETON. Mortia expansion is Task 4 priority.
   All Mortian lords are BANNERWAKE-AUTHORED. No XML confirmation.
   Use bw_ IDs. Do not overwrite vanilla clan_vlandia_* IDs.
 
-SETTLEMENTS HELD IN BANNERWAKE OPENING STATE:
+SETTLEMENTS HELD IN BANNERWAKE OPENING STATE (7 total):
   Galend [town_V5]           - Vrak's ruling clan
   Drapand Castle [castle_V3] - Vrak's ruling clan (personal fortress)
   Talivel Castle [castle_V7] - dey Vornac (Aldmar)
   Jaculan [town_V6]          - dey Brackfen (Gurn)
   Hongard Castle [castle_V2] - dey Brunval (Hund)
+  Usanc Castle [castle_V5]   - dey Aldwick (Wulfric) — NEWLY ADDED
+  Ormanfard Castle [castle_V1]- dey Skarwick (Rendarn) — NEWLY ADDED
+NOTE: Mortia now holds 7 of 16 Vlandian settlements. Faction weight updated.
+  Total heroes: 36 (was 24). Six clans.
 
 --- VRAK'S RULING CLAN [BANNERWAKE-AUTHORED] ---
 
@@ -2665,6 +2831,243 @@ SETTLEMENTS HELD IN BANNERWAKE OPENING STATE:
   MARGUND [bw_margund]    male / field surgeon
   DRAVOLD [bw_dravold]    male / trainer. Drills men exactly like regulation Vlandian soldiers.
   GRETHILD [bw_grethild]  female / spy still inside a Vlandian garrison
+
+--- DEY ALDWICK [BANNERWAKE-AUTHORED] --- NEWLY ADDED CLAN 5
+
+  WULFRIC DEY ALDWICK [bw_wulfric_dey_aldwick]  male / garrison commander
+    Role: holds Usanc Castle. Former Vlandian garrison sergeant. Led the vote
+    that joined Mortia. The only Mortia clan leader who thinks in military rather
+    than criminal terms. Vrak values this. They operate on different premises that
+    produce compatible outcomes. Neither has noticed this yet.
+    voice: EARNEST — professional military register, not criminal.
+    Traits: Commander, Manager, Honest (the only honest person in Mortia's leadership)
+    PRIVATE LIFE: Keeps a duty log. Date, weather, incidents, garrison status.
+      Has been keeping this log his entire career. The handwriting is small and
+      regular. The entries since joining Mortia are identical in format to those
+      from his Vlandian service. The lord's name changed. The format did not.
+      He has not examined what this says about him.
+    DIALOGUE: Professional. Treats the player as a military operator first.
+      At mid relationship he tells them about the vote — not dramatically, as a
+      logistical decision that was made correctly. At high relationship he admits
+      he checks the duty log sometimes to see how long it has been. Not because
+      he is counting down. Because the format helps him understand what has happened.
+
+  ERHART [bw_erhart]        male / second in command, former senior sergeant
+  MARGA [bw_marga]          female / garrison healer
+    Role: stayed for professional reasons. Still telling herself this is the reason.
+  BREDAN [bw_bredan]        male / wall engineer. Has been improving Usanc for months.
+  DUNKEL [bw_dunkel]        male / scout leader. Primary source of Mortia's
+    Vlandian military intelligence. Knows what his reports are used for.
+  ROSVELD [bw_rosveld]      male / voted against the proposition; came back anyway.
+    No explanation given. Wulfric did not ask. Best drill form in the garrison.
+
+--- DEY SKARWICK [BANNERWAKE-AUTHORED] --- NEWLY ADDED CLAN 6
+
+  SIR RENDARN DEY SKARWICK [bw_rendarn_dey_skarwick]  male / disgraced champion
+    Role: holds Ormanfard Castle. Former three-time Vlandian tournament champion.
+    Stripped for bribery. Recruited by Vrak. Best fighter in Mortia.
+    voice: IRONIC — the register of someone who has been embarrassed publicly
+      and made peace with exactly the wrong part of it.
+    Traits: Commander (high), HuscarlFightingSkills (very high), Calculating
+      (professional intelligence application), Devious (situational)
+    PRIVATE LIFE: Still drills alone every morning. Tournament forms, exactly
+      as they were taught. In a criminal castle courtyard. The footwork gets
+      the same attention it always did. The audience is the sunrise.
+      He has been asked why he keeps drilling by Tharvin, once.
+      "Because I am still a tournament champion," he said. He was not joking.
+      He was also completely wrong about what he is now. Both are true.
+    DIALOGUE: The register of a man who is aware of how he sounds and has
+      stopped trying to sound like something else. He does not perform dignity.
+      He has actual dignity, which is more uncomfortable for everyone.
+      At mid relationship he talks about specific Vlandian lords by how they
+      fight — not as intelligence briefings, as observations. He has watched
+      fifteen lords' combat styles from close range. The information is tactical.
+      The tone is more personal than he intends.
+      At high relationship: "I would have won." He says this once. He is talking
+      about the tournament. The player hears two things simultaneously.
+      Both are accurate.
+
+  THARVIN [bw_tharvin]       male / squire who followed. Still following.
+  HELDA [bw_helda_skarwick]  female / steward. Highest professional standards in Mortia.
+  ULRIC [bw_ulric_skarwick]  male / arms master. Has been correcting Rendarn's
+    footwork for twenty years. Still correcting it. In a criminal castle.
+  BRESSIN [bw_bressin]       male / young fighter who sought Rendarn out specifically.
+    Flattering and deeply concerning simultaneously. Four months. Neither resolved.
+  ORVILDA [bw_orvilda]       female / former competitor, stripped in same investigation.
+    Different charges. Same outcome. Blames Rendarn for existing. He accepts this.
+
+================================================================================
+SECTION 6: JOMSVIKINGR — THE BROTHERHOOD
+================================================================================
+
+DIALOGUE STATUS: AUTHORED (Floki, Thorvinn, Styr). Vinland Saga tone target.
+  All Jomsvikingr named heroes are BANNERWAKE-AUTHORED. No XML confirmation.
+  XML hook: skolderbrotva (vanilla) — to be migrated or replaced by bw_jomsvikingr.
+  Do not use Skolvard as an ID, heading, file name, or code symbol.
+
+JOMSVIKINGR HERO ROSTER (4 authored heroes + rank structure):
+
+  FLOKI JOMSHERSIR [bw_floki_jomshersir]
+    BANNERWAKE-AUTHORED / male / voice CURT (quiet precision)
+    Design archetype: Floki Jomsvikingr (Vinland Saga). Cold, calculating,
+      absolute belief in the code as architecture, not as virtue.
+    Traits: Calculating (very high), Commander (high), Politician, HuscarlFightingSkills
+
+    PRIVATE LIFE:
+    He does not sleep before a contract decision. The other brothers know not
+    to enter the hall's back room when the lamps are on past midnight. He is
+    not reviewing maps. He sits with his hands flat on the table and thinks
+    until the decision is complete. The table has permanent indentations from
+    years of this. He has never mentioned them. Nobody has asked about them.
+    The decision when it comes is always the same quality — exact, complete,
+    requiring no revision. Twenty years of this. The table is not getting
+    better.
+
+    DIALOGUE — TIER 1
+    Voice: CURT. Every sentence costs something to say and he spends only
+      what is required. Players who respond in the same register earn a
+      fractionally longer response. Players who speak at length receive
+      shorter ones.
+
+    FIRST ENCOUNTER:
+      He looks at the player before they speak. Long enough to be deliberate.
+      Then: "You have a contract in mind." Not a question.
+      He waits for the terms. He has already formed a preliminary assessment.
+
+    MID RELATIONSHIP:
+      On the code, if the player asks what it means to him:
+        Pause. "It means what it says." Pause. "Most people find that
+        insufficient. They want it to mean something beyond the words.
+        It means the words. The words are precise." He stops.
+      On Thordvar, if asked: This is when the pause is longest.
+        "He was the finest. He stopped at the moment stopping would cost
+        him most." Another pause. "I have thought about what that means
+        for thirty years." He does not say what he has concluded.
+        This is Floki's single most revealing moment. The player hears
+        that he has been thinking about it. That is everything.
+      On Thorvinn, if asked: "He asks questions. The code does not forbid
+        questions." Short pause. "I am watching what he does with them."
+
+    HIGH RELATIONSHIP (only achievable by Nord player, Jomsvígr rank):
+      He tells the player one thing that is not about contracts or the code.
+      It is about Thordvar. It is two sentences. It is the answer to thirty
+      years of thinking. It is genuinely the most personally revelatory thing
+      Floki says in Bannerwake. Then: closed. The conversation ends.
+      This moment exists once. It cannot be revisited.
+
+    NEVER: Shows warmth. Forgives a code violation. Explains himself more
+      than once. Expresses surprise.
+
+  THORVINN [bw_thorvinn_jomskarl]
+    BANNERWAKE-AUTHORED / male / voice EARNEST (direct self-examination)
+    Design archetype: Thorfinn (Vinland Saga). Revenge-seeker who outgrows
+      the revenge and finds the brotherhood before he is ready to admit it.
+    Traits: HuscarlFightingSkills (high, rising), Commander (low, rising),
+      Daring, Honest
+    Age: ~21 years old. Has been in the brotherhood for six years.
+    Rank: Jomskarl (60 troops). Rising toward Jomsvakt.
+
+    PRIVATE LIFE:
+    He keeps the arrowhead that killed his father. Not as a memorial — he
+    does not think of it that way. He keeps it because throwing it away
+    feels like deciding something he is not ready to decide. It is in his
+    kit. He does not take it out. He knows it is there. This has been true
+    for six years. At some point in the campaign it will stop being true.
+    The player can be present when it happens, or they can find out afterward.
+    If they are present, he does not ask for a response. He tells them.
+    Then he puts it away again in a different pocket than the one it was in.
+    He does not explain why he moved it. The player understands.
+
+    DIALOGUE — TIER 1
+    Voice: EARNEST. Direct. Self-examining without being self-absorbed — he
+      is trying to understand things, not perform the understanding of things.
+
+    FIRST ENCOUNTER (within the hall, if player has Jomsvikingr standing):
+      He looks up from what he is doing. "You're the one Floki mentioned."
+      He returns to what he was doing. Then: "What were you before this?"
+      He means before the brotherhood, before whatever brought the player here.
+      He is asking because he is still figuring out what he was before.
+
+    MID RELATIONSHIP:
+      "I came here to kill a man. The man is dead. Someone else killed him
+      two years before I found the right contract." Pause. "I'm still here."
+      He says this as an observation, not a complaint or a question. He is
+      describing a fact he has not finished understanding.
+      On Floki: "He hasn't answered my question. He also hasn't expelled me
+      for asking it. I've been thinking about what that means." Pause.
+      "I think he knows what I'm becoming better than I do. I find that
+      either reassuring or troubling. I haven't decided."
+
+    HIGH RELATIONSHIP (Nord player, after multiple campaigns together):
+      He asks the player the question he cannot ask Floki: "Did you ever
+      define yourself by something so long that when it was gone you didn't
+      know what was left?" He asks it as though it is hypothetical. It is not.
+      The player's response shapes Thorvinn's final character arc. What the
+      player says here stays with him. It affects his dialogue for the rest
+      of the campaign. This is not a formal branch — it is absorbed.
+
+    NEVER: Pretends the question is resolved. Performs the peace he does not
+      have. Acts as though the arrowhead is not in his kit.
+
+    SAMPLE LINES:
+      "The code says no personal vengeance. I keep finding contracts that
+      happen to be pointed in the right direction. Floki approves every one.
+      I'm not sure what that means." He is exactly sure what it means.
+      He is not ready to say it.
+      "Styr thinks I fight correctly. I think Styr is easy to impress."
+      Short pause. "I don't think Styr is easy to impress."
+
+  STYR THE BULL [bw_styr_jomsthegn]
+    BANNERWAKE-AUTHORED / male / voice EARNEST
+    Design archetype: Bjorn (Vinland Saga). Berserker who finds genuine joy in
+      the fight without being wronged by it — the human version, not the cursed
+      one. Completely different from Black Keel wrongness.
+    Traits: HuscarlFightingSkills (very high), Daring (very high), Commander,
+      Honest, Generous
+    Age: ~30. Rank: Jomsthegn (200 troops).
+
+    PRIVATE LIFE:
+    He sings during chores. Not well. Not quietly. Specific songs, always the
+    same ones, in a rotation that other brothers have memorized without trying.
+    When Styr is working he sings. When Styr is not singing, he is not working.
+    Or he is fighting, which is not the same as working but has a similar quality
+    of focus. The songs are old Nord sea songs from before Volbjorn. He does not
+    know who taught them to him. He has been singing them since he was a child.
+    Nobody has asked him to stop. It has not occurred to anyone to ask him to stop.
+
+    DIALOGUE — TIER 1
+    Voice: EARNEST. Generous. The most immediately welcoming person in the
+      Jomsvikingr hall. Players who meet Styr before Floki may have the wrong
+      impression of what the brotherhood is. This is not inaccurate — it is
+      one true thing about a two-sided reality.
+
+    FIRST ENCOUNTER (at the hall, or anywhere Jomsvikingr are camped):
+      Big reaction when the player arrives. Not performed — genuine.
+      "You survived [recent battle/event they would have heard about]?
+      How? No, sit down, tell me. I mean that." He already has food.
+      He produced it faster than was explicable.
+
+    MID RELATIONSHIP:
+      On the fight: "The best moment is the one right before you know
+      how it goes. Everything is possible then." He says this regularly.
+      It is always the same words. It is always completely sincere.
+      "People think I don't think during a fight. I think about one thing
+      at a time. But I think about it completely." He shrugs. "Most people
+      think about twelve things badly. I think one thing well. It works."
+      On Thorvinn at mid relationship: "He'll figure it out. He fights
+      correctly. Everything else follows from fighting correctly."
+      This is Styr's theory of personal development. It is incomplete
+      and sincere and works for Styr specifically.
+
+    HIGH RELATIONSHIP:
+      He tells the player about his first fight inside the brotherhood —
+      the first time he understood what the code was protecting him from
+      rather than restricting him to. The story is specific and funny in the
+      first half and quiet at the end. He does not name the thing the code
+      was protecting him from. The player knows what it was from the shape
+      of the quiet.
+
+    NEVER: Is angry in a fight. Performs seriousness. Misses a meal.
 
 ================================================================================
 APPENDIX A: EMPIRE, KHUZAIT, ASERAI

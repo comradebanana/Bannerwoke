@@ -2,12 +2,15 @@
 BANNERWAKE — MOD DESIGN DOCUMENT
 For use with Claude Code. This is the source of truth.
 If it is not in this document, it does not ship without explicit approval.
-Version: 5.0 — Full creative content rework; Section 3 faction identities
-               rewritten with soul, designed event mechanics, political depth;
-               Section 7 rebuilt (cross-faction dynamics, Bandit King dup
-               removed); Section 12b Nords added; Section 12c Battania scaffold
-               added; stale Shroud references corrected throughout; thin sub-
-               factions (Drevko/Quintus/Dust Speakers) deepened; TOC updated
+Version: 6.0 — Vinland Saga North rework; Grimulf rebuilt as Askeladd archetype
+               with half-Sturgian heritage, three-options method, full deep lore;
+               Bjolvir added (Bjorn analog); Jomsvikingr VS character roster added:
+               Thorvinn (Thorfinn), Styr the Bull (Bjorn), Thordvar legend (Thors);
+               Black Keel expanded to 6 named captains with ships and personalities
+               (Ormhild, Halvgrim, Ragneidr, Thulkar, Sólveig); Mortia expanded to
+               6 clans + 7 settlements: dey Aldwick (forgotten garrison soldiers),
+               dey Skarwick (disgraced champion); VS Tone Directive added to S12b;
+               Ironjarls Deep Lore section added; LORDS v3 updated with all new heroes
 ================================================================================
 
 TABLE OF CONTENTS
@@ -1010,6 +1013,148 @@ THE JOMSVIKINGR
     like that series — the code creating monsters and heroes simultaneously,
     human reality beneath absolute rules, Floki as a calculating force of
     nature rather than a simple warrior-king.
+
+  JOMSVIKINGR CHARACTER ROSTER:
+
+  FLOKI JOMSHERSIR — Full Character Profile:
+    Twenty years as Jomshersir. Before that, seven years as a senior brother
+    who everyone in the hall knew would be Jomshersir before Floki himself
+    decided it. He did not campaign for the position. He accepted it because
+    no one else was suited and the code required someone suited. That is the
+    only reason he has ever given. It is also the complete reason.
+    He believes in the code absolutely — not as performance, as genuine
+    architecture. He has watched the code make men into something remarkable
+    and watched the same code destroy those same men and found both outcomes
+    appropriate. The code is not kind. It is correct. He does not confuse
+    these properties.
+    What Floki is not: righteous. He does not feel virtuous about enforcing
+      the code. He feels accurate about it. The distinction is present in
+      every conversation he has. Players who pick up on it earn a different
+      kind of respect from him than those who mistake accuracy for virtue.
+    What he cannot explain: Thorvinn. The young brother asks questions the
+      code answers obliquely if at all. Floki has not expelled him. He has
+      been watching what Thorvinn becomes. He has his own theory about what
+      that will be. He has not shared it with Thorvinn. He is waiting to see
+      whether he is right about the boy before he invests the words.
+    On Thordvar the Undefeated: The one subject where Floki's voice changes
+      register. Not softens — changes. He speaks about Thordvar the way a man
+      speaks about a proof he has never been able to replicate. At highest
+      relationship, with a player who has asked the right sequence of questions,
+      Floki says one thing about what Thordvar means to him that is the most
+      personally revealing sentence he speaks in Bannerwake. Then he closes.
+    Dialogue voice: Quiet, precise. Does not explain himself twice. Players
+      who ask the same question a different way receive the same answer more
+      quietly. A question he finds genuinely interesting earns a pause before
+      the answer — that pause is all the acknowledgment he gives.
+    NEVER: Shows warmth in a way that could be mistaken for warmth. Forgives
+      a code violation. Explains a decision more than once. Is surprised by
+      anything a person does.
+
+  THORVINN — The Young Brother (Jomskarl rank, six years in):
+    Bannerwake-authored. Design archetype: Vinland Saga Thorfinn.
+    Joined the brotherhood at fifteen after his village was burned in a border
+    dispute — not even a proper raid, a political argument between two lords
+    that became other people's fire because it was convenient for the argument.
+    He arrived at the Jomsvikingr hall with revenge in both hands and the code
+    took those hands and redirected them. Six years of redirecting.
+    He is technically Jomskarl. He is functionally the brother the others
+    watch without quite knowing why. He fights with controlled aggression that
+    has never resolved into berserker state and has never needed to — he is
+    technically brilliant in a way that frustrates opponents who expect rage
+    and receive precision instead. The code has made him better at the thing
+    he came here to do. This is either ironic or exactly the point. He does
+    not know which yet.
+    The question he asked Floki (two years ago, and three years before that):
+      "If I joined to avenge my family and the code forbids personal vengeance
+      — what do I do with the reason I came here?"
+    Floki's answer: "You already know. You've known since you asked it the
+      first way, three years ago."
+    What Thorvinn actually wants now: He does not know. The revenge has been
+      redirected so many times it has become something else — he does not have
+      clean language for what it has become. The brotherhood is his family
+      now in every way that matters, and admitting that means the reason he
+      came here is dead, and he is not ready for the reason to be dead. He
+      will be. The player can see when it happens. So can Floki. Neither says
+      anything. It does not need saying.
+    Player arc (Nord player only): The player can develop an informal
+      mentorship with Thorvinn over the campaign. Over time he asks harder
+      questions — about fighting, about what a person is when they've defined
+      themselves by something for long enough. Eventually he asks one that the
+      player must answer from their own experience. The conversation is the
+      most personally-reaching exchange available in a Nord playthrough.
+    Dialogue voice: Direct, self-examining. Not warm like Styr and not cold
+      like Floki. Still inside the question rather than past it. Speaks with
+      precision about things he has actually thought through and with obvious
+      discomfort about things he has not. The discomfort is not weakness.
+      It is the shape of someone still growing.
+
+  STYR THE BULL — The Berserker Brother (Jomsthegn rank):
+    Bannerwake-authored. Design archetype: Vinland Saga Bjorn.
+    The finest pure fighter in the brotherhood short of Floki himself. Also
+    the person in the Jomsvikingr hall most likely to be described as happy,
+    which is a strange thing to be in that context, and nobody has told him
+    because explaining it would require explaining why it is strange and the
+    explanation would not satisfy him.
+    What makes Styr: He loves the fight. Not the killing — the specific
+      bodily experience of a fight going at full capacity, the moment where
+      everything else stops mattering and what remains is completely clear.
+      Between fights he is easy company, genuinely interested in other people,
+      asks good questions, finds most things funny. During fights he is the
+      thing the code was written to contain and has chosen to channel. The
+      code channels it. This works.
+    His relationship to the code: total. Not thoughtfully like Floki and not
+      questioningly like Thorvinn. Simply and completely. Because the code
+      gives him brothers to fight next to and a reason to come back afterward,
+      and those are the two things he needs the world to provide. He has never
+      needed a third thing. The question of whether the code is enough does not
+      occur to him. He would not be dismissive of it if it did. He would just
+      not understand why it was a question.
+    His relationship with Thorvinn: He is the older brother in all the ways
+      that matter. He does not understand Thorvinn's questions but does not
+      think questions are the problem. He thinks Thorvinn fights correctly and
+      is certain this will resolve things eventually. He is not wrong, exactly.
+      He is also not completely right about what it will resolve them to.
+    Dialogue voice: EARNEST register. Physically interested — he reads a
+      person's combat history from how they stand before they say anything.
+      Respects the player immediately if they have clearly survived things.
+      Tells them what he knows about fighting freely, without being asked.
+      His generosity is the easiest thing about him.
+
+  THORDVAR THE UNDEFEATED — Nord Legend (not a current NPC):
+    Bannerwake-authored historical figure. Design archetype: Vinland Saga Thors.
+    Two generations before Volbjorn, Thordvar was recognized by every Nord clan
+    — petty kings, rivals, enemies — as the greatest warrior the North had ever
+    produced. The stories agree on this point even when they agree on nothing
+    else, which is the most that can be said of anything in Nord history.
+    At the absolute height of his fame — when kings sought his sword, when the
+    Jomsvikingr hall was built partly because Thordvar's presence in the north
+    required an organization capable of standing beside him — he stopped.
+    He put his weapons on a table and walked away from the table. He did not
+    leave the North. He went to a small farm by the sea that had been his
+    family's before the wars and he worked it. He built things. He grew things.
+    People came to challenge him for years. He fed them and sent them home.
+    Nobody made him start again. Nobody could. He lived twenty-three years more
+    and died in his sleep on the farm by the sea.
+    The answers he gave when asked why he stopped were brief and different each
+    time and none of them were the complete answer. The complete answer he kept.
+    The Jomsvikingr still measure against him:
+      "No man since Thordvar has held a line like that."
+      "Floki fights the way people say Thordvar fought."
+      "There will not be another Thordvar."
+    What he represents: The question the North has never resolved. If the
+    greatest warrior who ever lived chose to stop — what does that mean about
+    what strength actually is? Whether it requires violence or whether it can
+    choose not to use itself is the unspoken argument underneath every Ironjarl
+    feast, every Jomsvikingr trial, every conversation Thorvinn has with Floki,
+    every morning Halthdar stands on the Thronderlag palisade. Thordvar never
+    answered it. The North has been living the argument since and will continue
+    to live it after the player's campaign ends.
+    DESIGN NOTE: Thordvar is never a quest character, never recruitable, never
+    an objective. He exists as the name the North measures itself against.
+    His name appears in drinking songs, in dialogue, and in Floki's single most
+    revealing conversation with the player — the one that explains why Floki has
+    not expelled Thorvinn, if the player listens to what he is actually saying.
+
   Threat signature: A shieldwall that holds when everything else has broken.
     The raven banner means someone paid. The raven banner also means Floki
     decided this contract was worth keeping. That distinction matters.
@@ -1025,9 +1170,9 @@ THE JOMSVIKINGR
 
 BLACK KEEL
   Culture: Nord — cursed pirate confederation
-  Leader: Seajarl Hrothgar the Damned + Captain council beneath him
-    (three named captains is the current design budget, not a proven engine
-    limit; local minor-faction XML commonly has four leader templates)
+  Leader: Seajarl Hrothgar the Damned + Captain council of six beneath him.
+    Multi-clan pseudo-kingdom structure. Each captain is their own clan leader.
+    Implemented as bw_ custom kingdom following Section 9's architecture.
   Region: Northern seas and Nordvyg/Sturgian coasts. PRIMARILY REGIONAL.
     Occasional parties appear near Imperial coasts — rare, alarming, never
     explained. They should not appear in southern Aserai waters.
@@ -1039,6 +1184,124 @@ BLACK KEEL
     they should be hard to remove.
     Port becomes a Black Keel stronghold with their own culture and troop spawns.
     Retaking it requires a coordinated military campaign.
+
+  HROTHGAR THE DAMNED — Seajarl. Ship: GRAVEWATER.
+    Was Nordvyg's finest sea captain before the voyage. Volbjorn's right hand
+    on the northern sea — the man who kept the trade lanes open while Volbjorn
+    was unifying on land. His name was respected. His reputation was clean.
+    He sailed into the uncharted north on a specific voyage. He came back.
+    Not everyone came back. Those who did came back wrong.
+    He has never explained what they found out there. Has never been asked
+    twice. His ship sits lower in the water than its apparent load justifies.
+    He does not discuss this. His crew has stopped noticing.
+    What he was before the voyage lives in the Gravewater's design — it was
+    built by a skilled shipwright's hand, maintained to a standard that the
+    current crew maintains out of habit more than purpose. The care is visible.
+    The man who ordered that care is not entirely present anymore.
+    Dialogue: He speaks rarely. When he does, what he says is accurate in ways
+    that should not be possible — he knows things about players and situations
+    he has no means of knowing. He does not explain the source. He may not
+    know the source himself. The wrongness may have given him something in
+    exchange for everything it took.
+
+  CAPTAIN ORMHILD THE PALE — Ship: COLDTHORN.
+    The only female captain in the council. Was strange before she joined —
+    the crew who sailed with her before the Black Keel says so, though those
+    sailors are difficult to find and give inconsistent reports. The wrongness
+    made her stranger in a direction different from the others: where they
+    are wrong-urgent, wrong-twitchy, wrong-laughing, Ormhild is wrong-calm.
+    She does not react to things quickly. She reacts to them exactly as much
+    as they require, after a pause that is slightly too long, with actions
+    that are slightly too precise. Her crew claims she has not slept in three
+    years. They say this with pride, not concern. The pride is wrong.
+    She is the most tactically patient of the captains. She does not engage
+    until the geometry of an encounter is completely in her favor. Captains
+    who have fought alongside her report that she begins maneuvering before
+    the enemy has done anything that should indicate they are a threat.
+    She declines to explain how she knows.
+
+  CAPTAIN HALVGRIM NOEYES — Ship: THE PATIENT.
+    Named for what his crew calls him — he has eyes, they are just the wrong
+    color now: completely grey, no iris distinction visible at normal distance.
+    Up close it is profoundly wrong. At distance he looks like a shadow wearing
+    a man's face.
+    The most tactically dangerous captain after Hrothgar. Does not speak during
+    battle except when necessary. When he speaks, his crew stops fighting to
+    listen, then acts. The coordination this produces should not be possible
+    without signals. There are no signals. The crew does not find this strange.
+    Before the voyage he had a family in a Nord coastal village. The village
+    still exists. His family lives there. They have not seen him since the
+    voyage returned. He knows where they are. He has not gone to them. He
+    has sent nothing. This is the most human thing about him and the most
+    wrong thing about him simultaneously. He keeps it. He doesn't know why.
+
+  CAPTAIN RAGNEIDR THE LAUGHER — Ship: SALTGRAVE.
+    Laughs constantly. Wrong timing. Wrong volume. Wrong reason. The wrongness
+    reached into Ragneidr and found where laughter lives and replaced it with
+    something that uses laughter's shape for different purposes. He sounds
+    like a man having the best time of his life during a boarding action. The
+    enemies who experience this for the first time are never ready for it.
+    The enemies who survive to experience it a second time report that it is
+    worse when you know it is coming.
+    Note on calibration: Ragneidr's wrong-laughter is categorically different
+    from Vrak's wrong-timing laughter in Mortia. Vrak's is nervous human
+    psychology — a man whose control occasionally slips. Ragneidr's is not
+    a slip. It is not nervous. It is what replaced something else. The
+    distinction matters for dialogue and encounter writing: Vrak is
+    recognizably human. Ragneidr is recognizably wrong.
+
+  CAPTAIN THULKAR — Ship: THE UNMARKED (no name visible on hull).
+    The one who was possibly already wrong before the voyage. Possibly
+    the source rather than a recipient of what the voyage found. Possibly
+    the reason Hrothgar sailed north in the first place. The crew who
+    survived that voyage gives inconsistent reports about Thulkar's role.
+    The inconsistency is not the typical failing of frightened memory — it
+    is the inconsistency of people who cannot agree on whether Thulkar was
+    there at the beginning, the middle, or the end of the event. All of them
+    are certain of different things. Some of them are certain of things that
+    cannot both be true.
+    He is always at the edge of whatever space he occupies. Never center room.
+    Never where you'd expect him. The first time you see him in any encounter
+    he is already there, slightly behind where you were looking.
+    DESIGN RULE: Do not give a definitive explanation for Thulkar. Not even
+    a strongly implied one. He is the fragment that raises the question of
+    what exactly happened on that voyage, and that question must remain open.
+
+  CAPTAIN SÓLVEIG DARKWATER — Ship: NIGHTBROOK.
+    The youngest captain. She did not sail on the original voyage. She joined
+    Black Keel afterward — after the wrongness was established, after Hrothgar
+    was already Hrothgar the Damned, after the grey-pallored crew were already
+    wrong in the specific ways they are wrong. She sought them out. She found
+    them. She asked to sail with them.
+    Whatever happened to the others happened from the outside in — something
+    reached them from the north and changed them. Sólveig walked toward it.
+    This is the most unsettling thing about her and it is the first thing that
+    is apparent from ten minutes of conversation. The crew who was changed
+    against their will and the captain who chose it are both wrong now, but
+    the texture of their wrongness is different in a way the player can sense
+    without being able to name.
+    Why she sought them: She will tell you, if asked. Her answer is different
+    each time in ways that should not be possible for a true statement. One of
+    the answers is true. The others are also true. They cannot all be true.
+    She knows this and finds it interesting.
+
+  CAPTAIN COUNCIL DYNAMICS:
+    Hrothgar speaks last. Everyone else speaks first. This is the arrangement.
+    Ormhild and Halvgrim defer to each other on tactical questions before
+    any other captain is consulted. Ragneidr is consulted for morale questions
+    in the same way a person consults a weather indicator — not because his
+    answer is coherent, but because his reaction predicts how the crew will
+    react.
+    Thulkar has not been seen to disagree with Hrothgar. Nobody can remember
+    a time when he did. Sólveig disagrees whenever she has a reason. Her
+    reasons are always good. Hrothgar has reversed a decision based on her
+    argument twice. This is known across the captain council. No one discusses
+    what it implies about Hrothgar's state.
+    The council's consensus: they do not hold votes. They sit together until
+    something becomes apparent to all of them simultaneously. This takes
+    longer than it should. The outcome is always the same as what Hrothgar
+    would have chosen alone. Nobody has tested whether Hrothgar would choose
+    differently if he sat alone.
   TROOP TREE (full, confirmed design):
     Black Keel Deckhand (T1) — weak starter, barely armed, wrong eyes
       ↓                              ↓
@@ -1509,53 +1772,160 @@ THE IRONJARLS
     Aldking = ald (old in Old Norse) + king. The Old King. Pre-Halthdar
     vocabulary. A title that predates Volbjorn's unification and makes
     that clear without explanation.
-    Grimulf is the most senior dispossessed jarl. His father ruled the
-    largest territory before Volbjorn came with his gold and his pressure.
-    He speaks for the others not because they elected him but because nobody
-    disputes his seniority. That distinction matters — his authority is
-    cultural, not democratic.
-    He attends Halthdar's feasts when summoned. Sits at the correct place.
-    Says the correct things. Has never technically broken his oath. Neither
-    has any Ironjarl. They are the most dangerous kind of enemy — the ones
-    who haven't moved yet.
+
+  GRIMULF — THE GREY JARL (DESIGN ARCHETYPE: ASKELADD):
+    Grimulf is not what he presents. This is the most important thing
+    about him. What he presents: a loyal jarl who attends feasts, sits
+    correctly, says nothing wrong, technically violates nothing. What he
+    is: the most dangerous strategist in Nordvyg, a man with a divided
+    heritage he has never acknowledged, and the reason the Ironjarls remain
+    coherent rather than a collection of separately-nursing grudges.
+    Heritage: His father ruled the sixth-largest petty kingdom before
+      Volbjorn came. His mother was Sturgian — a Slavic woman his father
+      captured in a border raid before Volbjorn's unification and kept and,
+      eventually, loved in his way. She raised Grimulf in two languages and
+      two worlds. He has not used her language in twenty years. The Ironjarls
+      do not know about her. He will never tell them. He keeps a single small
+      carved object from her household that nobody has identified as Slavic.
+    Education: At seventeen, Grimulf traveled to the Imperial south for three
+      years — not as a soldier. As an observer. He studied how civilizations
+      build the justifications for taking what they take, how the language of
+      legitimacy operates, how the gap between what power says and what power
+      does can be maintained indefinitely as long as no one names it aloud.
+      He came back with knowledge nobody in the petty kingdoms expected him to
+      have. He has spent thirty years needing it exactly when he expected to.
+    Method: He gives people options. Three options, always. Two of them are
+      wrong in ways the person will not realize until after they have chosen.
+      The third is the one he intended them to choose. He has been doing this
+      his entire adult life. People keep falling for it — not because they are
+      foolish, but because the options are always genuinely reasonable. Both
+      wrong ones are reasonable. That is the craft. He finds it informative
+      every time. People reveal what they are by which wrong option they take.
+    In battle: Completely lethal, completely calm. The kind of fighter who
+      becomes more focused when conditions worsen — not rage, the opposite of
+      rage. Everyone who has tried to unsettle him in a fight has created a
+      tactical opportunity for Grimulf. Nobody tries twice. He is physically
+      dangerous in a way that consistently surprises people who have only
+      seen him at feast tables and think they have understood him.
+    What he actually wants: Not power as it is commonly understood. Something
+      that no longer has a word in the unified kingdom's vocabulary. The petty
+      kings had a relationship between a lord and his territory that was
+      personal, undelegated, and unscalable — a man's land was HIS land, not
+      the crown's land administered by his name. Volbjorn made it scalable.
+      Grimulf is trying to preserve what could not survive that. He cannot say
+      this because it sounds like treason (it is) and nostalgia (it is not).
+      He is the only Ironjarl who knows why the Ironjarls exist beyond the
+      obvious grievance. The others think they want their fathers' lands back.
+      Grimulf wants something their fathers had that the lands were merely the
+      shape of. This distinction drives everything he does and is never stated.
+    Dialogue voice: Quiet. Every sentence means three things simultaneously and
+      he knows all three when he says it. He uses a player's own words to show
+      them what they actually meant. He is never surprised — he sometimes
+      pretends to be, when it serves the conversation. A high-Cunning player
+      can follow him entirely. Other players leave feeling they missed something
+      without knowing what. This is intentional and is never corrected.
+    What Halthdar knows: That Grimulf is the most loyal jarl he has and the
+      most dangerous enemy he has and that both are simultaneously true and will
+      remain so indefinitely, because they are the same fact seen from two sides.
+
+  BJOLVIR THE UNBROKEN — Grimulf's War-Leader:
+    Grimulf's right hand since before the Ironjarls were named. He is the
+    war-leader — the man Grimulf points and releases when the situation
+    requires force rather than the three-options method. He is also the only
+    person in Grimulf's life whose company Grimulf finds genuinely restful,
+    which is a thing Grimulf has never examined and would not examine if he did.
+    He is not stupid. People assume this because of how he fights — complete
+    physical presence, a joy in the body of a fight that looks from outside
+    like losing your mind. It is the opposite. Bjolvir is exactly himself in
+    a fight. There is nowhere else he is that present. The joy is not madness.
+    It is the one place where every question that does not have a clean answer
+    stops mattering, and everything that is left is clear.
+    Off the field: good-natured, easy company. Finds things funny that Grimulf
+      finds merely accurate. Has genuine warmth that most Nord lords in the
+      Ironjarl circle do not have and cannot locate in themselves. If Grimulf
+      is winter, Bjolvir is what winter is protecting.
+    The dynamic with Grimulf: Grimulf has never explained a plan to Bjolvir
+      in full. Bjolvir has never asked for the full explanation. They have been
+      operating this way for thirty years. Bjolvir's understanding is that he
+      doesn't need to know why — only when and where. He trusts the why to
+      Grimulf without having ever been explicitly given a reason to. Grimulf
+      considers this the rarest quality he has encountered in another person
+      and has told him approximately nothing about it.
+    Dialogue voice: EARNEST. Direct, physical, interested in what a person can
+      do rather than what they say. He respects demonstrated capability before
+      anything else. Players who have a visible combat history earn his
+      attention immediately. He does not maintain a poker face. He does not
+      need to.
+
+  IRONJARL ROSTER (BANNERWAKE-AUTHORED — 6 heroes total):
+    1. Grimulf — Aldking. The Grey Jarl. Strategic architect of the Ironjarls'
+         patience. The Askeladd of Nordvyg.
+    2. Bjolvir — War-leader. The berserker. The fight made flesh. Has been
+         Grimulf's since before the Ironjarls had a name.
+    3. Eithri — Grimulf's daughter. Not a warrior and has no interest in being
+         one. Administers what little the Ironjarls hold — supplies, shelter,
+         the ledgers of obligation. The only person who regularly tells Grimulf
+         something he did not already know, because she watches what he does not
+         watch. He values this more than any military asset in his command. He
+         has never told her so. She knows anyway.
+    4. Hafnar the Hoarse — The eldest Ironjarl. Was a minor petty king himself,
+         briefly, before Volbjorn. Half-deaf now. Remembers every detail of the
+         old kingdoms with the specific, exhausted precision of someone who lost
+         everything incrementally and stopped idealizing it by the time he lost
+         the last of it. He does not want the past back because it was good. He
+         wants it back because it was his.
+    5. Skothgrim — Young. Genuinely uncertain whether Grimulf is right — not in
+         the way of someone deciding, but in the way of someone who cannot yet
+         see the full shape of the argument. Fights hard because the fight is
+         clear when the politics are not. The unresolved quality in him is why
+         Grimulf keeps him close. A man still forming his convictions is more
+         useful than a man who has fixed them.
+    6. Valdra — Bjolvir's cousin. Cavalrywoman. Scouts the territories the
+         Ironjarls once held — she knows them better than their current Nordvyg
+         administrators. She notes what has changed and what has not. Grimulf
+         has never told her why he wants this information. She has not asked.
+         She has a theory. She keeps it to herself.
+    Naming: Old Norse, stripped of elegance — functional syllables, short.
+      The Ironjarls do not have Norman-French pretension or Slavic cadence.
+      They sound like the north before anyone tried to make it sound like
+      something else.
+
   Region: Nord territory, inland. They hold no settlements but their parties
-    patrol the territories their fathers once ruled.
-  Origin: Local NavalDLC lore confirms this foundation: Halthdar's father
-    Volbjorn the Hungry
-    spent a decade accumulating wealth in the Empire's Vaegar Guard before
-    returning
-    to subjugate the petty kings. Some bent the knee. Some are still angry.
-    The Ironjarls are their heirs. They remember what their fathers ruled.
-    They are counting every failure Halthdar makes.
-  Default State: ACTIVE from campaign start. Discovery event fires early —
-    not a threat, just a presence. A name mentioned in a Nord tavern. A jarl
-    who sat at the wrong end of Halthdar's feast table and didn't eat much.
+    patrol the territories their fathers once ruled. The patrols are not
+    aggressive. They are deliberate. They are memory enacted as behavior.
+  Origin: Halthdar's father Volbjorn the Hungry spent a decade accumulating
+    wealth in the Empire's Vaegar Guard before returning to subjugate the petty
+    kings. Some were bought. Some were defeated. Some did the calculation and
+    knelt before the reckoning arrived. The Ironjarls are their heirs. They
+    remember what their fathers ruled. They are counting every failure Halthdar
+    makes, and Grimulf is keeping the count.
+  Default State: ACTIVE from campaign start. Discovery event fires within the
+    first thirty days — not a threat, just a presence. A name in a Nord tavern.
+    A jarl at the wrong end of a feast table who didn't eat much.
   ACTIVE: Politically restless, watching. Occasionally raid Halthdar's tax
     collectors and supply convoys specifically — not villages, not common
-    travelers. A political statement, not a crime. Their parties exist on
-    the map as named presences.
-  ESCALATED: Nordvyg loses significant territory (C# variable tracking Nord
-    settlement count). Grimulf begins openly recruiting in Nord settlements.
-    His parties grow. Other dispossessed jarls attend his hall.
-    World notification fires: "The old names are being spoken again in
-    the north."
-  CRISIS: Nordvyg loses enough that the threshold is crossed. Grimulf
-    declares the old kingdoms restored. Seizes a specific Nord inland
-    settlement via a Bannerwake wrapper around ChangeOwnerOfSettlementAction
-    — a town or castle historically part of a petty king's domain, not a
-    coastal port. Garrison inflated.
-    He holds it as proof that the old order still has teeth.
-  DE-ESCALATION: Suppressible. If Nordvyg recovers militarily — recaptures
-    territory, wins significant battles — Ironjarls return to ESCALATED then
-    ACTIVE. They never disappear. They go quiet when Halthdar looks strong.
+    travelers. A political statement, not a crime. Their parties have names.
+  ESCALATED: Nordvyg loses significant territory. Grimulf begins openly
+    recruiting in Nord settlements. His parties grow. Other dispossessed jarls
+    attend his hall. World notification fires: "The old names are being spoken
+    again in the north."
+  CRISIS: Nordvyg loses enough. Grimulf declares the old kingdoms restored.
+    Seizes a specific Nord inland settlement via ChangeOwnerOfSettlementAction
+    wrapper — historically part of a petty king's domain, not a coastal port.
+    Garrison inflated. He holds it as proof that the old order still has teeth.
+  DE-ESCALATION: Suppressible. If Nordvyg recovers militarily, Ironjarls
+    return to ESCALATED then ACTIVE. They never disappear. They go quiet
+    when Halthdar looks strong.
   Threat signature: A jarl who attended the feast and said nothing wrong.
-    A tax collector who came back short and couldn't explain why. A name
-    spoken quietly in a longhouse that the wrong person heard.
-  Notes: The Ironjarls are a political internal faction, distinct from both
-    Black Keel (hostile pirates) and Jomsvikingr (mercenary brotherhood).
-    They fill the gap that vanilla Nords completely lack — internal political
-    tension within a recently unified kingdom. They make Nordvyg feel fragile
-    in a way that is historically accurate to the Norse petty king tradition.
+    A player who received three options from Grimulf and chose the one he
+    intended. A tax collector who came back short and couldn't explain how.
+    A name spoken quietly in a longhouse that the wrong person heard.
+  Notes: Political internal faction — NOT mercenaries, NOT pirates.
+    They fill the gap vanilla Nords completely lack: the fracture line inside
+    a recently unified kingdom. Grimulf is the Askeladd of Bannerwake. His
+    depth lives in that archetype completely. Do not simplify him to a rebel
+    lord. He is a philosopher-strategist who has never drawn his sword at the
+    wrong moment and has never drawn it at the right moment unnecessarily.
 
 
 
@@ -3091,8 +3461,161 @@ SECTION 9a: MORTIA — VRAK THE FOUL, RAT-KING OF VLANDIA
       Naming: Military Germanic compounds. Sound like unit designations
         more than people. They would consider this a compliment.
 
+    CLAN 5 — DEY ALDWICK (the forgotten garrison):
+      Leader: Wulfric dey Aldwick (self-titled; Vrak knighted him too)
+      Background: A Vlandian border garrison that stopped receiving pay
+        eight months before Vrak arrived. Not deserters — they waited.
+        Sent three official letters of inquiry. The third was returned
+        unopened because the administrative address had been reassigned
+        in a Vlandian bureaucratic consolidation that nobody thought to
+        notify the garrison about. When Vrak appeared at the gates with
+        food, gold, and a proposition, the garrison sergeant called a
+        vote. Forty-one men. Thirty-nine voted for the proposition. One
+        was already drunk and abstained. One voted against and was
+        allowed to leave. He reached Sargot. His report was dismissed as
+        deserter fabrication.
+      Why they matter: Dey Aldwick is Mortia's military backbone. Every
+        other Mortia clan is criminals, exiled nobles, or opportunists.
+        These are actual trained soldiers who chose this side deliberately,
+        after due process, with a quorum. They drill with regulation
+        Vlandian military formations. They maintain equipment on schedule.
+        They know how to hold a wall because they were paid to hold walls
+        for twenty years before the pay stopped.
+      What makes them the most dangerous thing Vrak commands: Loyalty
+        through professional satisfaction rather than fear or money.
+        Wulfric made one condition when joining — the garrison stays
+        together as a unit. No splitting for different assignments.
+        No using individual soldiers as hired muscle. They serve as a
+        unit or not at all. Vrak agreed immediately. He has honored this
+        exactly. Wulfric believes Vrak is honoring the agreement because
+        Vrak is a man of his word. Vrak is honoring it because a coherent
+        military unit is worth more than its parts and Wulfric's condition
+        also happens to maximize their value. Both beliefs produce the same
+        behavior. Neither man has noticed they're working from different
+        premises.
+      Holds: USANC CASTLE [castle_V5] — Wulfric selected this from the
+        options Vrak offered him. He selected it because it had the best
+        sight lines, the most defensible curtain wall, and the least
+        maintainable structural weakness. This is not the choice a criminal
+        makes. Usanc is now the most improved minor fortification in the
+        Vlandian region, which is either reassuring or alarming depending
+        on who you serve.
+      Members (6 total):
+        Wulfric dey Aldwick — garrison commander. Methodical. Has not
+          stopped thinking of himself as a soldier serving an unusual lord.
+          Has recently started wondering when this became his actual life.
+          Manages the transition by not examining it.
+        Erhart — second in command. Was the senior sergeant the day of the
+          vote. Takes Wulfric's orders without resentment because the chain
+          of command is the chain of command. Has not changed his opinion
+          about chains of command.
+        Marga — garrison healer. Stayed with the unit because injured
+          soldiers need treatment regardless of who they serve. Has been
+          telling herself this for eight months. It remains true. She has
+          stopped checking whether it is the real reason.
+        Bredan — wall engineer. Improved Usanc's fortification within two
+          weeks of arrival. Has not stopped improving it. Has begun improving
+          the approach road. Has begun thinking about the approach to the
+          approach road. This is fine. This is professional.
+        Dunkel — scout leader. Former cavalry outrider. Most of the military
+          intelligence Vrak receives about Vlandian troop movements comes from
+          Dunkel's riders. Dunkel is aware of this. Has not decided if it
+          matters. Checks in with Wulfric about it occasionally.
+        Rosveld — the one who voted against the proposition. Did not leave.
+          Got to Sargot, made the report, was dismissed. Came back. Has said
+          nothing about why. Wulfric did not ask. They are in the same unit
+          as before. Nobody discusses this. Rosveld's drill form is the best
+          in the garrison. It always was.
+      Naming: Military Germanic, functional, sound like unit designations
+        or service records. Sound like soldiers. Because they are.
+
+    CLAN 6 — DEY SKARWICK (the champion's fall):
+      Leader: Sir Rendarn dey Skarwick — The Twice-Fallen
+      Background: Three-time Vlandian tournament champion. Stripped of
+        all titles, estate, and the name dey Skarwick (which he kept anyway
+        because Vrak said "keep it, it's useful," and Vrak was correct)
+        when a marshal's investigation found bribery evidence in the final
+        round of the Grand Melee two years ago.
+        The bribe was real. Rendarn arranged it not because he doubted his
+        ability to win — he was going to win — but because a mid-tournament
+        injury risk had a small probability of preventing him from reaching
+        the final, and the prize money was committed to a debt that would
+        have cost him the estate if he lost the final by injury rather than
+        competition. He removed a small probability. He got caught.
+        Stripped of title. Stripped of estate. Stripped of the circuit.
+        Vrak found him at the bottom of a six-day bottle in a Sargot tavern
+        and made the offer three days later when the worst of it had passed.
+        The offer was: you know how every Vlandian lord's guard fights because
+        you have trained with them, competed against them, and beaten most of
+        them. That knowledge. In Vrak's service. In exchange for a castle and
+        the title, which Vrak will give him in the same ceremony he gave
+        Hund and Gurn. Which is to say: theatrically, in a criminal courtyard,
+        with a sword on a kneeling champion's shoulder.
+        Rendarn finds this intensely humiliating. He said yes anyway.
+      Relationship with Vrak: Vrak refers to "the bribe situation" in
+        conversation in front of others and then moves immediately on. Not
+        cruelly — with exactly the precision needed to establish and maintain
+        the power balance he wants. Rendarn has learned to recognize this
+        method. He hates it. He cannot argue against it because the bribe
+        situation is real and he did commit it. This is the cage. He stays
+        in it because the alternative is the bottom of a different bottle in
+        a different city and he has tried that and it does not hold.
+        He is the best fighter in Mortia. Vrak tells him this periodically.
+        This is also the cage.
+      What he brings: He knows the personal fighting style of fifteen active
+        Vlandian lords. He knows which guards run light on which shifts at six
+        Vlandian castles because he attended the social functions that went
+        long into the night. He knows which castellans' attention drifts on
+        certain days. The knowledge was tournament social. The application is
+        intelligence. He found this repurposing more natural than he expected.
+        That naturalness bothers him. He manages this by not examining it.
+      Holds: ORMANFARD CASTLE [castle_V1] — taken from a Vlandian minor
+        noble Rendarn knew from the tournament circuit. He knew exactly
+        which approach to use and when. The castellan didn't see it coming
+        from a direction that felt social rather than military until it was
+        too late to be military in response.
+      Members (6 total):
+        Rendarn dey Skarwick — champion. Best swordsman Mortia fields.
+          Knows it. Gets no satisfaction from knowing it in this context.
+          Drills the castle guard every morning at the regulation forms
+          because it is the only thing that feels like it is supposed to
+          feel.
+        Tharvin — squire. Followed Rendarn out of the tournament world
+          because Tharvin was his squire and squires follow their knight.
+          Has been examining what "following your knight" means since the
+          knight started taking castles for criminals. Has not finished
+          the examination.
+        Helda — steward. Managed Rendarn's estate before it was stripped.
+          Manages Ormanfard now. Her professional standards are the highest
+          in Mortia. She has not lowered them. She has not been asked to.
+          Vrak finds this useful. She is aware he finds it useful. This
+          is satisfactory to both of them. They do not discuss the rest.
+        Ulric — arms master. Has been correcting Rendarn's footwork since
+          Rendarn was twelve. Still corrects it. In a criminal castle in
+          a criminal kingdom. The footwork has been technically incorrect
+          for twenty years. It is still being corrected.
+        Bressin — a young fighter who sought Rendarn out specifically after
+          the disgrace. Came from the legitimate tournament world to train
+          under the best technical swordsman available, who is now here.
+          His reasoning: if Rendarn is fighting in a criminal castle then
+          this is where the real fights are. Rendarn finds this flattering
+          and deeply concerning simultaneously. Both feelings have been
+          present for four months. Neither has resolved.
+        Orvilda — former competitor. Was stripped in the same investigation
+          that caught Rendarn, for different reasons — she was present at
+          the compromised round, her presence was documented, the
+          documentation was legally sufficient, and the distinction between
+          witnessing and participating was ruled insufficient. She did not
+          bribe anyone. She blames Rendarn for being someone worth fixing
+          a tournament around, which put her in the wrong place. He accepts
+          that this is approximately the correct assignment of blame.
+          They do not discuss it. They work in the same castle.
+      Naming: Tournament Norman-French with "dey Skarwick" suffix for those
+        Vrak has formally titled. Sound like tournament announcements.
+        Completely wrong context. Vrak finds this funny. Rendarn does not.
+
   HERO NAMING NOTES FOR CLAUDE CODE:
-    No name appears twice across all four clans — verified.
+    No name appears twice across all six clans — verify before adding new heroes.
     Female members present in every clan for social plausibility, dialogue,
       family ties, and encyclopedia depth. Do NOT build birth-dependent
       succession around them; Bannerwake campaign mode assumes no birth/death.
@@ -3100,10 +3623,10 @@ SECTION 9a: MORTIA — VRAK THE FOUL, RAT-KING OF VLANDIA
     Dey Vornac names: legitimate Norman-French, sound like Vlandia
     Dey Brackfen names: short, rough, some dey suffix for knighted members
     Dey Brunval names: military Germanic, sound like unit designations
-    Total named heroes across all four clans: 24 heroes
-    This is appropriate for a small criminal kingdom — enough to populate
-      the map believably without inflating Vrak's faction beyond its
-      actual territorial holdings.
+    Dey Aldwick names: military Germanic functional, sound like soldiers
+    Dey Skarwick names: tournament Norman-French, wrong in context
+    Total named heroes across all six clans: 36 heroes
+    Six clans, six distinct naming registers — every clan sounds like what it is.
 
 
       Vrak knights people because he can't and does anyway. He cannot grant
@@ -3175,7 +3698,7 @@ SECTION 9a: MORTIA — VRAK THE FOUL, RAT-KING OF VLANDIA
     remember the man's eyes."
 
   SETTLEMENT HOLDINGS — CONFIRMED:
-    Mortia controls 5 settlements total:
+    Mortia controls 7 settlements total:
     GALEND (town) — Vrak's ruling clan.
       Vanilla owner: dey Meroc (Derthert's clan). Vrak took Derthert's
       second town. This is deeply humiliating for the Vlandian crown and
@@ -3197,11 +3720,24 @@ SECTION 9a: MORTIA — VRAK THE FOUL, RAT-KING OF VLANDIA
       from inside when Calatild was away at a council session in Pravend.
       She received the news by messenger. The messenger was one of Gurn's
       people. She received it late.
+    USANC CASTLE — Wulfric dey Aldwick.
+      Vanilla owner: minor Vlandian noble (uncontested lord). The garrison
+      that stopped receiving pay selected this castle when Vrak offered them
+      a choice of holdings. Wulfric chose the most defensible position
+      available. It is now demonstrably more defensible than when he found it.
+    ORMANFARD CASTLE — Sir Rendarn dey Skarwick.
+      Vanilla owner: minor Vlandian noble known from the tournament circuit.
+      Rendarn used social knowledge of the castle's routines as operational
+      intelligence. The castellan has been replaced. The routines have not
+      changed. Rendarn finds the irony functional rather than satisfying.
 
-    Vlandia controls remaining 11 active Vlandian settlements:
-    Towns (6): Charas, Ocs Hall, Ostican, Pravend, Rovalt, Sargot
-    Castles (5): Caleus Castle, Ormanfard Castle, Tirby Castle,
-      Usanc Castle, Verecsand Castle
+    Vlandia controls remaining 9 active Vlandian settlements:
+    Towns (4): Charas, Ocs Hall, Ostican, Pravend, Rovalt, Sargot
+      (Galend and Jaculan are Mortia-controlled)
+    Castles (5): Caleus Castle, Tirby Castle, Verecsand Castle
+      (Drapand, Talivel, Hongard, Usanc, Ormanfard are Mortia-controlled)
+    NOTE: Mortia holds 7 of 16 Vlandian settlements at campaign start. This
+    is a regional power, not a bandit problem. Vlandia is functionally split.
 
   POLITICAL IMPLICATIONS OF VRAK'S SEIZURES:
     Vrak has destabilized Vlandia's internal balance by taking settlements
@@ -3762,9 +4298,167 @@ knee because of that specific quality are noticing the difference.
     Hvalvik fell is already in a different relationship than one who shows up
     after the crisis to help recapture the town. Asgotha notices the difference.
 
+--- VINLAND SAGA — TONE DIRECTIVE FOR ALL NORD CONTENT ---
 
---------------------------------------------------------------------------------
-SECTION 12c: BATTANIA — THE OLD KINGDOMS
+  The Kingdom of Nordvyg should feel like Vinland Saga. This is a directive
+  for writing, dialogue, and event scripting for all Nord content. Not an
+  influence. A tone target. When writing anything set in the North, ask: does
+  this feel like Vinland Saga? If not, find what is missing.
+
+  THE CODE IS THE QUESTION.
+    The Jomsvikingr's code, the Ironjarls' oath, the Thordvar question — these
+    are structures that produce heroism and atrocity from the same rules. Nobody
+    in the North is good because the rules are good. The rules are the arena in
+    which people discover what they are. The player watches this. Sometimes they
+    are inside it.
+
+  VIOLENCE HAS WEIGHT.
+    Fights in the North cost something. Not mechanically — narratively. A lord
+    who wins a battle has done something, not achieved a resource. Winning and
+    losing both carry forward. The Nords who have been fighting for thirty years
+    are tired. Not broken — tired. That exhaustion is in their dialogue even when
+    they do not name it. Never write a Nord lord for whom victory is clean.
+
+  THE THORDVAR QUESTION.
+    He answered it by stopping. The North has been arguing the answer since.
+    Every major Nord character has a position on what strength actually is, even
+    when they do not know they have one. Halthdar thinks strength is governance.
+    Grimulf thinks strength is patience enacted perfectly. Bjolvir thinks strength
+    is complete presence. Floki thinks strength is the code given total compliance.
+    Thorvinn doesn't know yet. Neither does the player, necessarily. The question
+    is never resolved. The North keeps living the argument.
+
+  THE DREAM.
+    In Vinland Saga it is a land beyond the sea where there is no war. In
+    Bannerwake the dream has no name. It is what sits underneath Grimulf's real
+    goal, underneath Thordvar's choice, underneath what Thorvinn is becoming.
+    It is the Nord question nobody asks aloud: what would we be if we stopped
+    killing each other? Nobody says this. It is present in every conversation
+    about it. The Unnamed Fleet coming from the north means the dream's direction
+    is occupied. The North does not know this yet.
+
+  THE TEACHER AND THE STUDENT.
+    Every major Nord relationship has this structure underneath it. Halthdar and
+    Volbjorn (absent — everything Halthdar is shaped by the teacher who is not
+    there). Grimulf and Bjolvir. Floki and Thorvinn. Grimulf and Styr
+    (adversarial — two different answers to the same question). The player and
+    Halthdar. The player and Grimulf (if the player is patient enough).
+    The teaching is never explicit. It is always structural. The student figures
+    it out or does not. The teacher continues either way.
+
+  THE COLD IS REAL.
+    Not atmospheric decoration — political condition. Every Nord lord has
+    experienced winter as an actual military and economic constraint. The cold
+    shapes decisions without being named in every conversation. It is the
+    background of everything: why feasts matter so much, why hospitality is
+    political, why the sea lanes are worth dying over. Never write the North
+    as comfortable. Even indoors. Even in summer. The cold is in the walls.
+
+  THE FEAST IS A QUESTION.
+    Halthdar says it directly: "A feast is not a celebration. It is a question
+    asked to everyone in the room: do we do this together or not?" Every feast,
+    every Thing, every council gathering in the North is that question. The
+    food is excellent. The seating arrangement is a political statement. Where
+    Grimulf sits is a message. What he eats is a message. When he leaves is a
+    message. Players who learn to read Nord feasts see Nordvyg's political
+    texture in a way no other content provides.
+
+--- THE IRONJARLS — DEEP LORE ---
+
+  WHAT THE IRONJARLS ACTUALLY ARE:
+    Not a rebel faction in the simple sense. Not dissatisfied lords waiting to
+    usurp. The Ironjarls are the persistent question of whether Nordvyg's
+    unification was legitimate — and the political body that refuses to stop
+    asking it.
+    Volbjorn unified through wealth and will, not clean conquest. Some petty
+    kings were bought. Some were defeated. Some did the calculation and knelt
+    before the reckoning arrived. All choices were conditioned by what Volbjorn
+    was willing to do. The coercion was real even when the kneeling was
+    technically voluntary. The Ironjarls remember this. Their memory is not wrong.
+    Nordvyg was built on conditioned choices. That is simply true.
+
+  GRIMULF'S ACTUAL PLAN:
+    He does not want to destroy Halthdar. He does not want a coup. He wants
+    to prove that Nordvyg requires what Volbjorn had — a lord who holds it
+    through a specific quality — and that Halthdar does not fully have it.
+    Then, when the political conditions are correct, he wants to renegotiate.
+    The petty kings under Volbjorn had no leverage. The Ironjarls under Grimulf
+    have patience and accumulated obligation from every jarl who has watched
+    Halthdar not be his father. When the obligation reaches sufficient weight,
+    Grimulf presents it. Not as a threat — as a political fact. He gives
+    Halthdar three options. Two of them are wrong. The third is the one Grimulf
+    intended. This is the same thing he always does. He is very good at it.
+    What he wants from the renegotiation: A formal restoration of the specific
+    quality the petty kingdoms had that unified Nordvyg cannot have by design —
+    a domain's lord holding the domain in his name without the crown's delegation
+    beneath it. This is constitutionally incompatible with Nordvyg as structured.
+    Grimulf knows this. The renegotiation is therefore impossible to resolve in
+    the terms he wants. He also knows this. He is asking anyway, because the
+    asking is the point. What he gets from Halthdar's response to an impossible
+    ask tells him what Halthdar actually is. He has been learning this for twenty
+    years. He has not finished learning it.
+
+  WHAT GRIMULF WOULD NEVER DO:
+    Ally with the Cult of Kosmos. He has been approached — once, through
+    an intermediary at a specific feast, phrased as a hypothetical. He found
+    the approach instructive and declined without explaining why. He told the
+    intermediary he would think about it. He thought about it for three days.
+    He calculated that whatever agenda an ancient civilization's advance agents
+    are pursuing, it does not end with Nord petty domains restored to their lords.
+    He told no one about the approach. Not Bjolvir, not Eithri. He filed it as
+    information he will use when it becomes relevant. He does not know when that
+    will be. He knows it will be.
+    Betray the Ironjarls themselves. His plan requires them. They are the proof
+    the argument is real. If they scatter, the argument becomes nostalgia. He
+    protects them because they are his evidence, not because he is sentimental
+    about them — though by now the distinction has blurred in ways he notices
+    and does not name.
+
+  THE MOTHER OBJECT:
+    Among Grimulf's personal effects there is a small carved wooden piece —
+    a Slavic prayer token, knotwork spiral pattern, the kind of thing a
+    Sturgian woman would keep in a household shrine. It has no inscription.
+    Nobody in the Ironjarl circle has identified it as non-Nord. Nobody has
+    asked about it. Nobody who knows him well enough to ask has been shown it.
+    The player can find it in one specific context: high relationship with
+    Grimulf, a specific event chain that only triggers at a certain world
+    state, Grimulf's hall during a quiet moment. The item is visible. The
+    player can ask about it. Grimulf says something brief. Two sentences.
+    The conversation ends. The player leaves knowing something about Grimulf
+    that no other character in Nordvyg knows. It is a true thing. He does
+    not explain it further. It does not require further explanation.
+    DESIGN RULE: This moment exists once per playthrough. It cannot be
+    revisited. The item is never described in any encyclopedia, never named
+    in any tooltip, never referenced in any other dialogue. It is the thing
+    Grimulf keeps that is not for the Ironjarls and not for Nordvyg.
+
+  GRIMULF AND HALTHDAR — THE ACTUAL RELATIONSHIP:
+    They have never been enemies in a way either would name. They have never
+    been friends. Grimulf respects Halthdar the way a craftsman respects a
+    good tool made for a different purpose — exactly what it is, clearly
+    what it is, not what he needs. He does not want Halthdar dead. He does
+    not want Nordvyg to collapse. He wants the political conditions Halthdar
+    cannot currently provide. If Halthdar became capable of providing them —
+    genuinely, not as performance — Grimulf would be a loyal jarl in the
+    complete and uncomplicated sense. He genuinely believes this about himself.
+    Halthdar has thought about this. He thinks Grimulf is lying to himself
+    about what it would take to actually satisfy him. He might be right.
+    Grimulf does not know whether Halthdar is right about this. This is the
+    one thing he cannot calculate cleanly. He has been failing to calculate
+    it for twenty years. The failure is the most honest thing about him.
+
+  GRIMULF AND BJOLVIR — WHAT IT ACTUALLY IS:
+    Bjolvir has been Grimulf's since before the Ironjarls had a name — since
+    they were young men in the last years of the petty kingdoms, before Volbjorn
+    arrived. In thirty years Grimulf has never fully explained a plan to Bjolvir.
+    Bjolvir has never asked. Grimulf understands this to mean one of two things:
+    either Bjolvir trusts him completely, or Bjolvir understands that the plan
+    doesn't require him to know it, only to execute his part. He cannot determine
+    which. He has been unable to determine it for thirty years. He finds this the
+    most interesting unresolved question in his life, which means it is also the
+    thing he thinks about least. Some questions should not be resolved.
+
+--- IRONJARLS STATE TRANSITIONS ---
 --------------------------------------------------------------------------------
 
 Battania is not one thing. It is eight clans that have been agreeing on certain
