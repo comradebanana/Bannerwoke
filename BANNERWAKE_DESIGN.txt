@@ -1636,7 +1636,7 @@ STANDARD LINE:
   Cavalry: Nabornik → Konnik → Veteran Konnik → Heavy Konnik → Boyar Konnik
 
 ELITE LINE:
-  Otrok → Varyag → Veteran Varyag → Gridnik (MOUNTED from here) →
+  Otrok → Vitaz → Veteran Vitaz → Gridnik (MOUNTED from here) →
   Druzhinnik → Druzhinnik Champion
   Note: Gridnik is the transition to cavalry. Druzhinnik and Champion are
   heavy cavalry. The finest mounted warriors in Sturgia.
@@ -1652,8 +1652,8 @@ NAMING NOTES:
   Konnik = horseman (Old Slavic)
   Ladya = longboat (Old Slavic) — river/lake mariner identity
   Otrok = junior household member (Old Slavic)
-  Varyag = Varangian — what Slavs called Norse mercenaries absorbed into
-           the druzhina. Historically correct even in a pure Slavic faction.
+  Vitaz = warrior/knight (Old Slavic) — the elite household soldier before
+          the full druzhina cavalry transition.
   Gridnik = junior druzhina cavalry member (Old Slavic)
   Druzhinnik = member of the prince's household guard (Old Slavic)
 
