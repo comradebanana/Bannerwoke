@@ -2,8 +2,10 @@
 BANNERWAKE — MOD DESIGN DOCUMENT
 For use with Claude Code. This is the source of truth.
 If it is not in this document, it does not ship without explicit approval.
-Version: 3.0 — structural rewrite: Section 10 added, clan entries merged,
-               Section 12 trimmed to audit flags, TOC added
+Version: 4.0 — Cult of Kosmos named, given dedicated Section 13;
+               Section 8b dissolved (Jawwal->5b, ForbiddenNames->S1,
+               DragonBanner->S9); 9b/9c/9d promoted to 10/11/12;
+               Section 12 Faction Deep Lore parent added (12a Vlandia)
 ================================================================================
 
 TABLE OF CONTENTS
@@ -11,22 +13,23 @@ TABLE OF CONTENTS
   Section 1b   Feature Feasibility Matrix
   Section 2    Faction Colors
   Section 3    Major Faction Identities
-  Section 4    Sub-faction Roster
+  Section 4    Sub-faction Roster (all factions except Cult of Kosmos)
   Section 5    Troop Tree Design Principles
-  Section 5b   Confirmed Faction Troop Trees
+  Section 5b   Confirmed Faction Troop Trees (incl. Jawwal sub-faction)
   Section 6    Naval System
   Section 7    Lore-Driven Campaign Mechanics
-  Section 7b   Leader Titles and Named Heroes
+  Section 7b   Sub-faction Leader Names and Titles
   Section 8    Mod Reference Library
-  Section 8b   Confirmed Design Changes (session locks)
   Section 9    Sub-faction Dynamic State System
   Section 9a   Mortia / Vrak the Foul
-  Section 9b   Karma System
-  Section 9c   Event System — World Events and Encounter Events
-  Section 9d   Faction Deep Lore — Vlandia
-  Section 10   Development Rules and Build Order
-  Section 11   Visual Rework — Textures, Reskins, GUI, Quality Pass
-  Section 12   NPC Roster Reference (audit flags only; full data in NPC ref)
+  Section 10   Karma System
+  Section 11   Event System — World Events and Encounter Events
+  Section 12   Faction Deep Lore (12a Vlandia complete; 12b-12n pending)
+  Section 12a  Vlandia
+  Section 13   Cult of Kosmos — The Endgame Arc
+  Section 14   Development Rules and Build Order
+  Section 15   Visual Rework — Textures, Reskins, GUI, Quality Pass
+  Section 16   NPC Roster Reference (audit flags only; full data in NPC ref)
   Addendum     Local v1.4.5 Audit — 2026-06-03 / 2026-06-05
 
 ================================================================================
@@ -74,6 +77,13 @@ CORRECTION LOCKS:
   XML. Vrak taking Hongard displaces Vartin; it is not an independent castle.
 - Mortia damages four Vlandian clans directly: dey Meroc, dey Tihr,
   dey Arromanc, and dey Jelind.
+- FORBIDDEN OLD CODE NAMES:
+    Skolvard, Tidewrack, Ravenflock, Wildborn, Ironblood.
+    These are retired design-history names. Must not appear in XML IDs,
+    C# classes, folders, file names, state-machine headings, or UI strings.
+    Eleftheroi is NOT a forbidden XML/source id. It is the actual local minor
+    faction id and closest implementation hook for Akritoi. It is forbidden
+    only as the current Bannerwake display name for that concept.
 
 LOCAL ENGINE FEASIBILITY LOCK — 2026-06-05:
 Target install is Mount & Blade II: Bannerlord beta v1.4.5 with official
@@ -89,7 +99,7 @@ Code-facing implementation boundaries:
   party templates, items, equipment rosters, settlements, ship data, banners,
   text, and scenes. XML alone cannot run Bannerwake's dynamic state machine,
   karma, event cards, custom AI vows, land seizures, port blockades, economic
-  timers, Ghilman contract voids, Golden Boar memory, Shroud fragments, or
+  timers, Ghilman contract voids, Golden Boar memory, Kosmos fragments, or
   Vrak/Black Keel re-emergence.
 - Campaign logic belongs in C# CampaignBehaviorBase classes with saved state
   through SyncData. Use CampaignEvents such as DailyTick, HourlyTick,
@@ -639,7 +649,7 @@ THE JOMSVIKINGR
     from first contract to Jomsvígr across the entire campaign.
     Entry: Quest chain — Floki sets five specific tasks testing different
       aspects of the code. Fear, retreat, brotherhood, contract, and Floki's
-      final question. See Section 9c for full quest and event details.
+      final question. See Section 11 for full quest and event details.
     Rank system (party size scales with rank AND skills — full detail in
       skill rework session):
       Nýr (20 troops) — just passed the trial, barely recognized
@@ -902,7 +912,7 @@ DUST SPEAKERS
     enemy position you couldn't have known.
   Notes: Named for the dust their horses raise on the steppe — heard before
     seen, then not seen at all. Their intelligence is unmatched. They know about
-    the Veil Riders, The Shroud, and the Unnamed Fleet before these events occur.
+    the Veil Riders, Cult of Kosmos, and the Unnamed Fleet before these events occur.
     Getting information from them requires a quest chain through steppe burial
     rites. KEEP THE NAME "Dust Speakers" EXACTLY.
 
@@ -1144,132 +1154,6 @@ THE IRONJARLS
     They fill the gap that vanilla Nords completely lack — internal political
     tension within a recently unified kingdom. They make Nordvyg feel fragile
     in a way that is historically accurate to the Norse petty king tradition.
-
-
-
-THE SHROUD
-  Culture: Pan-Calradian — advance agents of an ancient civilization
-  Leader: The Reader (title, not name). The Architect who interprets
-    intelligence and directs the conspiracy. Origin never revealed. May have
-    been the same person for an impossibly long time. May be a title that
-    passes. The fragments about The Reader are the most contradictory of all.
-    The player may learn a name. It may be wrong.
-  Region: Everywhere. Physical parties do not appear until late game.
-  
-  WHAT THE SHROUD ACTUALLY IS:
-    Advance agents of an ancient civilization that predated Calradia — a
-    culture that was here before Calradios the Great led his exiles northward,
-    before any current kingdom existed. They were displaced, diminished, driven
-    back. They have been patient. The Shroud is their instrument of return —
-    agents who have spent centuries ensuring that when their masters come back,
-    there is nothing left capable of stopping them.
-    The Unnamed Fleet is the return. The Shroud has been preparing Calradia
-    for conquest. The civil wars, the fractured kingdoms, the perpetual
-    instability — none of it is accidental. All of it serves the arrangement.
-    The Architects don't rule Calradia. They prepare it.
-    THE SHROUD IS THE VILLAIN FACTION. Not ambiguous. Not morally complex in
-    the "maybe they're right" sense. Full ideological commitment at every tier.
-    Every Face chose this. Every Veil Rider serves willingly. The Reader knows
-    exactly what this is and exactly why.
-
-  RECRUITMENT: Pure recruitment — no hereditary lines. The Shroud identifies
-    people with specific qualities: positioned correctly, ambitious enough,
-    flexible enough in their convictions. Approached individually. Offered
-    something — knowledge, power, purpose, belonging. Those who refuse tend
-    to have accidents. This means a Face can be anyone. The player cannot
-    profile them by bloodline. They have to notice the wrongness directly.
-
-  THREE TIERS:
-    The Faces — agents embedded as normal NPCs throughout Calradia. Lords,
-      merchants, scholars, notable characters. They know everything about
-      what they serve. Full ideological commitment. When exposed they don't
-      plead — they look at the player with complete clarity and say nothing
-      useful. They are true believers.
-    The Wardens (Veil Riders) — physical military presence. Light cavalry,
-      stripped of all cultural markers. No faction colors, no identifiable
-      equipment. Fast, precise, elimination specialists. They don't fight
-      armies. They remove specific people. When a Veil Rider party appears
-      on the campaign map, someone specific is being watched or removed.
-    The Architects — three to five individuals who understand everything.
-      Never on the map. The player only encounters them through written
-      correspondence, through agents, or through one face-to-face meeting
-      deep in a quest chain. The Reader leads them.
-
-  FRAGMENT SYSTEM (mixed fixed and dynamic):
-    Fixed anchor fragments — always exist, always findable:
-      - Letter on a killed Veil Rider: coordinates, a date, no signature
-      - Abandoned watchtower on northern coast: always there, fresh fire-pit,
-        view of nothing but sea
-      - Prisoner from the Unnamed Fleet with silver sigil under collarbone
-    Dynamic fragments — vary by world state and player actions:
-      - Merchant in a specific city who knows too much — appears when that
-        city has been in Shroud-influenced political situation
-      - Dust Speaker who mentions the watchers — only with good Dust Speaker
-        standing
-      - Groveseer who refuses to speak about northern ruins — fires in
-        certain Battanian world states
-      - Lord's letter found after battle — varies by which lords player fought
-    All fragments appear PASSIVELY during normal gameplay. No investigation
-    mode. No fragment quest. The player accumulates understanding without
-    realizing they're accumulating it.
-
-  PLAYER CONTACT:
-    Trigger: Player power threshold — when the player becomes a significant
-      enough force in Calradia to matter. Not investigation — significance.
-      A powerful clan, a kingdom forming, military victories that reshape
-      regional politics.
-    First contact: A Face appears. In a tavern, at the edge of camp, already
-      in the room when the player arrives. They ask questions about decisions
-      the player made that nobody should know about. They phrase it as
-      curiosity. They are demonstrating omniscience, not making conversation.
-      Then they offer something minor — information the player could have
-      found eventually. The smallness is deliberate. They're not buying the
-      player. They're showing what even their minor offerings come from.
-      The player leaves with cold sweat and a small gift. No threats. No
-      demands. Just demonstrated omniscience and a door left open.
-
-  STATE TRANSITIONS:
-    DORMANT → ACTIVE: Campaign start. Faces are embedded. Fragment system
-      running passively. The player has no idea they exist.
-    ACTIVE → ESCALATED: Player power threshold crossed. First contact fires.
-      Veil Riders begin appearing on the steppe and northern coast.
-    ESCALATED → CRISIS (THE SHROUD REVEALED): Enough fragments assembled AND
-      Veil Riders have been encountered. The full picture begins to cohere.
-      The Unnamed Fleet appears on the coastal map. This is Bannerwake's
-      Pendor Order equivalent endgame layer. The player now knows what is
-      coming. The game never tells them what to do about it.
-
-  PLAYER OPTIONS (none are directed — the player chooses):
-    Ignore it — the Fleet still comes. The Shroud continues arranging.
-    Unite Calradia — through normal kingdom mechanics, build something capable
-      of resisting the arrival.
-    Dismantle The Shroud — cell by cell, Face by Face, investigation and
-      targeted military action.
-    Find The Reader — the deepest quest chain in Bannerwake. May be
-      impossible to complete. The answer at the end may raise more questions.
-    Do nothing — watch. Some players will choose this. It is valid.
-
-  BLACK KEEL CONNECTION:
-    Whatever is wrong with Hrothgar and his crew — they found it in the north.
-    In deep waters. Near something that shouldn't be there. The Unnamed Fleet
-    has been approaching for some time, scouting, testing, touching the world.
-    Black Keel sailed into those waters. The connection is never stated.
-    The player assembles it from fragments. It is never confirmed.
-
-  DESIGN RULES (absolute, never violated):
-    NEVER give a definitive answer about The Shroud anywhere in the mod.
-    NEVER give a definitive answer about the Unnamed Fleet anywhere in the mod.
-    NEVER give a definitive answer about The Reader's identity or origin.
-    NEVER give a definitive answer about the ancient civilization.
-    The ambiguity is not laziness. It is the entire point.
-    The player should finish a full campaign and still not be certain of
-    everything. That uncertainty is what makes The Shroud feel real.
-
-  Threat signature: A lord who knew about your battle before your scouts
-    reported it. A merchant who asks specifically about the northern coastline.
-    The Unnamed Fleet on the horizon that was gone by morning. A Face who
-    sits across from you and asks about a decision you made six months ago
-    that you thought nobody witnessed. They knew. They have always known.
 
 
 
@@ -1716,6 +1600,36 @@ VISUAL REFERENCE: Empire wallpaper shows naval landing — purple-plumed
   posh, flashy, ornate, professional. The purple is the identity.
 
 
+--- JAWWAL (sub-faction — Aserai culture) ---
+Cultural identity: Bedouin desert nomads. Pure camel faction — NO horses at any tier.
+Colors: Aserai XML colors FF965228 / FF4F2212 on cloth and banners. Camels and
+  riders dressed in desert-worn Aserai palette throughout.
+
+TROOP TREE (confirmed):
+  Pure camel faction — NO horses at any tier.
+  Camel mounts implemented using existing Bannerlord camel mount system.
+  Camel tiers scale with unit tier: basic camels at T1-T2, War Camels at
+  T3-T4, finest camels at T5.
+  Camel horse-fear mechanic: flag as RESEARCH TASK for Claude Code.
+  May be implementable via C# morale patch — requires investigation.
+  Do not assume it works without verifying.
+
+  Jawwal Ghazw (T1) — on foot or basic camel, barely armed, light linen
+  Jawwal Farsan (T2) — camel rider, javelin + short sword, minimal armor
+  Jawwal Sahrawiy (T3) — experienced raider, bow + blade, light armor
+  Jawwal Hamlah (T4) — war camel, lance + scimitar, medium armor
+  Jawwal Sha'ir (T5) — finest war camel, best weapons, light armor by choice.
+    The poet-warrior. Recites verse before battle. Genuinely dangerous.
+    Sha'ir = poet in Arabic.
+
+NAMING NOTES:
+  Ghazw = raid/razzia (Arabic) — the Jawwal tradition
+  Farsan = horseman (Arabic) — used for camel riders by extension
+  Sahrawiy = desert man, one of the desert (Arabic)
+  Hamlah = charge/attack (Arabic)
+  Sha'ir = poet (Arabic) — the poet-warrior tradition of the Jawwal elite
+
+
 --------------------------------------------------------------------------------
 SECTION 6: NAVAL SYSTEM
 --------------------------------------------------------------------------------
@@ -1761,7 +1675,7 @@ THE UNNAMED FLEET (late-game event):
   A fleet with no banner appears on the coastal map. It does not raid immediately.
   It watches. Investigation across multiple quest chains reveals fragments: old
   coins, a language no one speaks, a fighting style no one teaches. Connected to
-  The Shroud. When it strikes, it is coordinated, overwhelming, unlike anything
+  Cult of Kosmos. When it strikes, it is coordinated, overwhelming, unlike anything
   encountered before. This is Bannerwake's Pendor event equivalent.
   Never give a complete answer about what the Unnamed Fleet is.
 
@@ -1801,7 +1715,7 @@ LATE-GAME THREAT EVENTS:
   The Gathering: A sacred Battanian site is desecrated. Grovebound summon
     every Ca fál adherent simultaneously. Temporary, overwhelming.
 
-  The Shroud Revealed: Enough fragments assembled. Shroud's military arm
+  Cult of Kosmos Revealed: Enough fragments assembled. Cult of Kosmos' military arm
     becomes visible. Unnamed Fleet appears. Endgame threat layer activates.
 
   THE BANDIT KING EVENT — Vrak the Foul:
@@ -1833,7 +1747,7 @@ LATE-GAME THREAT EVENTS:
 
 
 --------------------------------------------------------------------------------
-SECTION 7b: LEADER TITLES AND NAMED HEROES (FULL ROSTER)
+SECTION 7b: SUB-FACTION LEADER NAMES AND TITLES
 --------------------------------------------------------------------------------
 
 NAMING CONVENTIONS BY CULTURE (inferred from local XML names and vanilla style):
@@ -1933,7 +1847,7 @@ CONFIRMED LEADER NAMES AND TITLES:
     Title: Aldking
     Name: Grimulf (no surname — the title carries everything)
 
-  The Shroud:
+  Cult of Kosmos:
     Title: The Reader (the Architect who interprets intelligence. Never named.)
     Name: Unknown. Never revealed directly.
 
@@ -2005,7 +1919,7 @@ STEAM 3172213744 — Adventurer
   chat/duels/gifts, street encounters, caravan escort missions. You noted you
   don't like it as-is, but its systems are relevant.
   Bannerwake improvement: Build our own lore-aware encounter system. Every
-  encounter is scripted and faction-specific, not random. A Shroud Face sits
+  encounter is scripted and faction-specific, not random. A Kosmos Face sits
   across from you in an Imperial city tavern. A Groveseer asks one question.
   A Hidden Hand agent offers a "merchant contract." A tavern keeper posts a
   bounty on Black Keel raiders. Each encounter reflects current world state.
@@ -2028,7 +1942,7 @@ NEXUS 8777 — Champion's Relics (Tournaments Enhanced)
   appropriate items with better stats.
   Bannerwake: Our legendary items are NOT random tournament drops. They are
   specific items tied to specific lore events — a relic from the Unnamed Fleet,
-  a weapon carried by a Shroud Warden, an item from the Grovebound's grove.
+  a weapon carried by a Kosmos Warden, an item from the Grovebound's grove.
   Each has a story and specific acquisition path. The NPC culture-appropriate
   equipment system we implement wholesale — this is essential for visual
   identity and is a Phase 7 requirement.
@@ -2227,75 +2141,6 @@ NEXUS 3826 — Banner Kings
     Is the source available on GitHub for study?
 
 
---------------------------------------------------------------------------------
-SECTION 8b: CONFIRMED DESIGN CHANGES FROM STATE SYSTEM SESSION
---------------------------------------------------------------------------------
-
-The following changes were confirmed during the sub-faction state system design
-session. They supersede any earlier entries in this document.
-
-CANONICAL FACTION LOCKS:
-  THE RENEGATI
-    Culture: Imperial. Renegade Imperial naval officers who kept their ships
-    when the Empire fractured. They denied their oath and kept their galleys.
-    Now they tax the southern sea lanes they used to protect.
-    Leader: Route-Master Cassius Vorn (Imperial name, bureaucratic title)
-    Visual: Imperial naval armor, recognizably Imperial but no longer
-    polished. Rust maintained rather than removed. They look like the Empire
-    used to look. Just angrier and less supervised.
-
-  THE AKRITOI
-    Culture: Imperial frontier cavalry mercenaries.
-    Real Byzantine term for frontier border warriors.
-    Pure elite frontier cavalry. No intelligence-network concept.
-    Leader: Archon Demetrios of the Steppe.
-
-  THE LAST LEGION / THE OLD LEGION
-    Before integration: Last Legion.
-    After Dragon Banner / restored Calradic Empire integration: The Old Legion.
-    Not restored. Not reborn. Always the Legion.
-
-  FORBIDDEN OLD CODE NAMES:
-    Skolvard, Tidewrack, Ravenflock, Wildborn, Ironblood.
-    These are retired design-history names and must not appear in XML IDs,
-    C# classes, folders, file names, state-machine headings, or UI strings.
-    Eleftheroi is NOT a forbidden XML/source id. It is an actual local minor
-    faction id and the closest implementation hook for Akritoi. It is forbidden
-    only as the current Bannerwake display name for that concept.
-
-JAWWAL TROOP TREE (confirmed):
-  Pure camel faction — NO horses at any tier.
-  Camel mounts implemented using existing Bannerlord camel mount system.
-  Camel tiers scale with unit tier: basic camels at T1-T2, War Camels at
-  T3-T4, finest camels at T5.
-  Camel horse-fear mechanic: flag as RESEARCH TASK for Claude Code.
-  May be implementable via C# morale patch — requires investigation.
-  Do not assume it works without verifying.
-
-  Jawwal Ghazw (T1) — on foot or basic camel, barely armed, light linen
-  Jawwal Farsan (T2) — camel rider, javelin + short sword, minimal armor
-  Jawwal Sahrawiy (T3) — experienced raider, bow + blade, light armor
-  Jawwal Hamlah (T4) — war camel, lance + scimitar, medium armor
-  Jawwal Sha'ir (T5) — finest war camel, best weapons, light armor by choice.
-    The poet-warrior. Recites verse before battle. Genuinely dangerous.
-    Sha'ir = poet in Arabic.
-
-LAST LEGION / DRAGON BANNER INTEGRATION:
-  Last Legion holds a randomly selected Imperial border castle from campaign
-  start. Garrison is programmatically inflated — AI patched to deprioritize
-  sieging it until a later campaign stage.
-  Quest integration:
-    Arzagos path (destroy Empire): Last Legion turns HOSTILE to player
-      specifically. They pursue the player with dedicated parties. Personal
-      and permanent.
-    Istiana path (restore Empire): Last Legion shifts to WATCHFUL. Slightly
-      favorable. They don't attack the player. They wait for proof.
-    2/3 Imperial territory controlled + Istiana path: Messenger event fires.
-      One meeting offered. Player earns trust through actions, not words.
-    Full integration event: parchment card fires. They offer their castle
-      and troops. Name changes to The Old Legion.
-    No quest path: Last Legion remains in default neutral-to-hostile state.
-
 
 --------------------------------------------------------------------------------
 SECTION 9: SUB-FACTION DYNAMIC STATE SYSTEM — FULL SPECIFICATION
@@ -2439,7 +2284,21 @@ PERMANENCE CATEGORIES:
   INTEGRATION EVENT: Istiana path + 2/3 Imperial territory controlled.
     Name changes to The Old Legion. Castle offered. Troops available.
   HOSTILE: Arzagos path completed. Pursue player specifically. Personal.
-  See Section 8b for full Dragon Banner quest integration details.
+  DRAGON BANNER QUEST INTEGRATION:
+    Last Legion holds a randomly selected Imperial border castle from campaign
+    start. Garrison programmatically inflated — AI patched to deprioritize
+    sieging it until a later campaign stage.
+    Arzagos path (destroy Empire): Last Legion turns HOSTILE to player
+      specifically. They pursue the player with dedicated parties. Personal
+      and permanent.
+    Istiana path (restore Empire): Last Legion shifts to WATCHFUL. Slightly
+      favorable. They don't attack the player. They wait for proof.
+    2/3 Imperial territory controlled + Istiana path: Messenger event fires.
+      One meeting offered. Player earns trust through actions, not words.
+    Full integration event: parchment card fires. They offer their castle
+      and troops. Name changes to The Old Legion. Not restored. Not reborn.
+      Always the Legion.
+    No quest path: Last Legion remains in default neutral-to-hostile state.
 
 --- HIDDEN HAND STATE TRANSITIONS ---
   Always ACTIVE from campaign start. No formal discovery event.
@@ -2463,7 +2322,7 @@ PERMANENCE CATEGORIES:
   Desert nomads. Always in the Nahhas desert. Always have been.
   ESCALATED: Aserai military collapses. Jawwal expand dramatically. Claim
     oasis settlements. Become genuine desert power.
-  Pure camel faction throughout. See Section 8b for full troop tree.
+  Pure camel faction throughout. See Section 5b for full troop tree.
 
 --- GHILMAN STATE TRANSITIONS ---
   Always ACTIVE from campaign start. Hireable mercenaries.
@@ -2497,7 +2356,9 @@ PERMANENCE CATEGORIES:
   DE-ESCALATION: Player can pay tribute or establish a formal arrangement.
     Pushes back to ACTIVE. Businesslike, not personal.
 
---- THE SHROUD STATE TRANSITIONS ---
+--- CULT OF KOSMOS STATE TRANSITIONS ---
+  Full design in Section 13. State machine architecture identical to other
+  sub-factions — query via bw_SubFactionStateManager like all others.
   Always ACTIVE. Faces embedded as normal NPCs from campaign start.
   Fragment system running passively throughout campaign.
   No discovery event — they don't announce themselves. The player notices
@@ -2506,13 +2367,13 @@ PERMANENCE CATEGORIES:
     significant enough force in Calradia to matter. First contact fires.
     A Face approaches. Demonstrates omniscience. Offers something minor.
     Veil Riders begin appearing on the steppe and northern coast.
-  ESCALATED → CRISIS (THE SHROUD REVEALED): Enough fragments assembled AND
+  ESCALATED → CRISIS (CULT OF KOSMOS REVEALED): Enough fragments assembled AND
     Veil Riders encountered. The picture coheres. The Unnamed Fleet appears
     on the coastal map. The player now knows what is coming.
     The game never tells them what to do about it.
-  THE SHROUD IS THE VILLAIN. Full ideological commitment at every tier.
+  CULT OF KOSMOS IS THE VILLAIN. Full ideological commitment at every tier.
     Every Face chose this. The Reader knows exactly what this is.
-    NEVER give a definitive answer about The Shroud, The Reader, the Unnamed
+    NEVER give a definitive answer about Cult of Kosmos, The Reader, the Unnamed
     Fleet, or the ancient civilization anywhere in the mod.
 
 --- IRONJARLS STATE TRANSITIONS ---
@@ -2939,7 +2800,7 @@ SECTION 9a: MORTIA — VRAK THE FOUL, RAT-KING OF VLANDIA
     THE HIDDEN HAND ANGLE: One of Ingalther's closer advisors carries a
       silver sigil under his collar. Whether Ingalther knows this and finds
       it useful, or is genuinely unaware, the player can never be certain.
-      The Shroud has been watching Vlandia's political destabilization with
+      Cult of Kosmos has been watching Vlandia's political destabilization with
       specific interest. A fractured Vlandia serves the arrangement.
 
 
@@ -2956,7 +2817,7 @@ SECTION 9a: MORTIA — VRAK THE FOUL, RAT-KING OF VLANDIA
 
 
 --------------------------------------------------------------------------------
-SECTION 9b: KARMA SYSTEM
+SECTION 10: KARMA SYSTEM
 --------------------------------------------------------------------------------
 
 Not a binary good/evil slider. A multi-axis behavioral reputation system that
@@ -2970,7 +2831,7 @@ FOUR AXES (each -100 to +100, tracked independently):
 
 No axis is inherently good or bad:
   High Cruelty: certain factions fear the player productively
-  High Cunning: the Shroud respects the player, opens dialogue options
+  High Cunning: Cult of Kosmos respects the player, opens dialogue options
   High Faith: the Grovebound tolerate player presence in Battanian territory,
     Groveseer may initiate contact
   High Honor: the Last Legion treats the player differently, Golden Boar
@@ -3002,7 +2863,7 @@ IMPLEMENTATION:
 
 
 --------------------------------------------------------------------------------
-SECTION 9c: EVENT SYSTEM — WORLD EVENTS AND ENCOUNTER EVENTS
+SECTION 11: EVENT SYSTEM — WORLD EVENTS AND ENCOUNTER EVENTS
 --------------------------------------------------------------------------------
 
 This is one of the most important systems in Bannerwake. The D&D feel of the
@@ -3179,11 +3040,20 @@ DESIGN PRINCIPLES:
   Phase 5 in the build order: after enemy threats, before naval layer.
   Build the state system skeleton first. Build the event system on top of it.
   Never the other way around.
-  Build phases and implementation rules are in Section 10.
+  Build phases and implementation rules are in Section 14.
 
 
 --------------------------------------------------------------------------------
-SECTION 9d: FACTION DEEP LORE — VLANDIA
+SECTION 12: FACTION DEEP LORE
+--------------------------------------------------------------------------------
+
+Pending sections: 12b Sturgia, 12c Nords, 12d Battania, 12e Aserai,
+12f Khuzait, 12g Empire, 12h-12n sub-factions — authored as each faction
+receives its full treatment. See pending task list.
+
+
+--------------------------------------------------------------------------------
+SECTION 12a: VLANDIA
 --------------------------------------------------------------------------------
 
 Vlandia is the most politically complex faction in Bannerwake. Internal dissent
@@ -3228,10 +3098,10 @@ before the player arrived.
     He considers it his job, not his problem.
     Ferrand's wife lives in Rovalt. She knows about the arrangement. She has
     never told anyone. She considers it reasonable.
-    THE SHROUD CONNECTION: Ferrand recently reported a specific merchant in
+    CULT OF KOSMOS CONNECTION: Ferrand recently reported a specific merchant in
     three different Vlandian cities asking odd questions about shipping routes
     and coastal access. He told Derthert six weeks ago. Derthert doesn't know
-    what to make of it. A player who has assembled enough Shroud fragments
+    what to make of it. A player who has assembled enough Kosmos fragments
     will understand immediately what Ferrand saw.
   Dialogue: Derthert speaks carefully. He says less than he knows. He asks
     questions more often than he makes statements. He is trying to understand
@@ -3258,7 +3128,7 @@ before the player arrived.
     He is considering all three. He is in no hurry.
   The Hidden Hand connection: One of Ingalther's closer advisors carries a
     silver sigil under his collar. Whether Ingalther knows and finds it useful,
-    or is genuinely unaware, the player can never be certain. The Shroud has
+    or is genuinely unaware, the player can never be certain. Cult of Kosmos has
     been watching Vlandia's political destabilization with specific interest.
     A fractured Vlandia serves the arrangement.
   Dialogue: Smooth, formal, always positioned. He asks after the player's
@@ -3337,13 +3207,13 @@ before the player arrived.
     listening to what he says about specific settlements — does his unusual
     quality of information become apparent. He never reveals his arrangement
     with Derthert. If pressed, he talks about cloth prices.
-  The Shroud observation: Ferrand has seen a specific merchant in three
+  Cult of Kosmos observation: Ferrand has seen a specific merchant in three
     different Vlandian cities asking questions about shipping routes and coastal
     access that no legitimate merchant would need to ask. He told Derthert.
     If the player encounters Ferrand and asks the right questions, they can
-    learn about this merchant — a Shroud fragment acquired through a merchant
+    learn about this merchant — a Kosmos fragment acquired through a merchant
     conversation about cloth prices, which is exactly the kind of discovery
-    the Shroud fragment system should produce.
+    the Kosmos fragment system should produce.
 
 --- CUMBERT — CALATILD'S LEGAL VOICE ---
   BANNERWAKE-INVENTED. Not a lord, not XML-confirmed. A legal advocate and
@@ -3552,8 +3422,8 @@ IF nobody advocates for Vartin and months pass:
 
 IF player investigates his disappearance:
   Vartin has made contact with a specific traveling merchant. The player who
-  has been tracking Shroud fragments recognizes the description. Vartin dey
-  Jelind has been approached by a Shroud Face. What was offered is unknown.
+  has been tracking Kosmos fragments recognizes the description. Vartin dey
+  Jelind has been approached by a Kosmos Face. What was offered is unknown.
   What Vartin agreed to is unknown. He has not returned to Pravend.
 
 --- ALDMAR DEY VORNAC — DYNAMIC LAYERS ---
@@ -3648,8 +3518,8 @@ IF player becomes a major military force in Vlandia:
   used or needs to be managed. Player responses determine the category.
   There is no neutral answer — every response is read and filed.
 
-IF Ingalther's Shroud connection is surfaced:
-  Advisor identified as a Shroud Face. Response is immediate and technically
+IF Ingalther's Kosmos connection is surfaced:
+  Advisor identified as a Kosmos Face. Response is immediate and technically
   masterful — outrage expressed, advisor dismissed publicly, investigation
   cooperated with, three political moves executed simultaneously that nobody
   was watching for. Whether he knew beforehand is never confirmed. His
@@ -3754,7 +3624,162 @@ OSPIR DEY GUNRIC:
 
 
 --------------------------------------------------------------------------------
-SECTION 10: DEVELOPMENT RULES AND BUILD ORDER
+SECTION 13: CULT OF KOSMOS — THE ENDGAME ARC
+--------------------------------------------------------------------------------
+
+Cult of Kosmos is not a sub-faction. It is not listed in Section 4 alongside
+the Lake Rats or the Ironjarls. It is the overarching late-game villain arc
+that connects: the Unnamed Fleet, Black Keel's wrongness, Vlandia's political
+destabilization through Ingalther's advisor, Vartin's disappearance, Ferrand's
+coastal-route observations, and the Dust Speakers' foreknowledge. It has been
+present in Calradia longer than any current kingdom. It will be present after.
+
+Structural note for Claude Code: implement Cult of Kosmos as a FACTION with
+DORMANT-to-ACTIVE-to-ESCALATED-to-CRISIS state machine mirroring Section 9's
+architecture. Query state through bw_SubFactionStateManager like all others.
+The faction differs in scale and purpose, not technical architecture.
+
+  Culture: Pan-Calradian — advance agents of an ancient civilization
+  Leader: The Reader (title, not name). The Architect who interprets
+    intelligence and directs the conspiracy. Origin never revealed. May have
+    been the same person for an impossibly long time. May be a title that
+    passes. The fragments about The Reader are the most contradictory of all.
+    The player may learn a name. It may be wrong.
+  Region: Everywhere. Physical parties do not appear until late game.
+
+  WHAT THE CULT OF KOSMOS ACTUALLY IS:
+    Advance agents of an ancient civilization that predated Calradia — a
+    culture that was here before Calradios the Great led his exiles northward,
+    before any current kingdom existed. They were displaced, diminished, driven
+    back. They have been patient. Cult of Kosmos is their instrument of return —
+    agents who have spent centuries ensuring that when their masters come back,
+    there is nothing left capable of stopping them.
+    The Unnamed Fleet is the return. Cult of Kosmos has been preparing Calradia
+    for conquest. The civil wars, the fractured kingdoms, the perpetual
+    instability — none of it is accidental. All of it serves the arrangement.
+    The Architects don't rule Calradia. They prepare it.
+    CULT OF KOSMOS IS THE VILLAIN FACTION. Not ambiguous. Not morally complex
+    in the "maybe they're right" sense. Full ideological commitment at every
+    tier. Every Face chose this. Every Veil Rider serves willingly. The Reader
+    knows exactly what this is and exactly why.
+
+  RECRUITMENT: Pure recruitment — no hereditary lines. Cult of Kosmos identifies
+    people with specific qualities: positioned correctly, ambitious enough,
+    flexible enough in their convictions. Approached individually. Offered
+    something — knowledge, power, purpose, belonging. Those who refuse tend
+    to have accidents. This means a Face can be anyone. The player cannot
+    profile them by bloodline. They have to notice the wrongness directly.
+
+  THREE TIERS:
+    The Faces — agents embedded as normal NPCs throughout Calradia. Lords,
+      merchants, scholars, notable characters. They know everything about
+      what they serve. Full ideological commitment. When exposed they don't
+      plead — they look at the player with complete clarity and say nothing
+      useful. They are true believers.
+    The Wardens (Veil Riders) — physical military presence. Light cavalry,
+      stripped of all cultural markers. No faction colors, no identifiable
+      equipment. Fast, precise, elimination specialists. They don't fight
+      armies. They remove specific people. When a Veil Rider party appears
+      on the campaign map, someone specific is being watched or removed.
+    The Architects — three to five individuals who understand everything.
+      Never on the map. The player only encounters them through written
+      correspondence, through agents, or through one face-to-face meeting
+      deep in a quest chain. The Reader leads them.
+
+  FRAGMENT SYSTEM (mixed fixed and dynamic):
+    Fixed anchor fragments — always exist, always findable:
+      - Letter on a killed Veil Rider: coordinates, a date, no signature
+      - Abandoned watchtower on northern coast: always there, fresh fire-pit,
+        view of nothing but sea
+      - Prisoner from the Unnamed Fleet with silver sigil under collarbone
+    Dynamic fragments — vary by world state and player actions:
+      - Merchant in a specific city who knows too much — appears when that
+        city has been in Kosmos-influenced political situation
+      - Dust Speaker who mentions the watchers — only with good Dust Speaker
+        standing
+      - Groveseer who refuses to speak about northern ruins — fires in
+        certain Battanian world states
+      - Lord's letter found after battle — varies by which lords player fought
+    All fragments appear PASSIVELY during normal gameplay. No investigation
+    mode. No fragment quest. The player accumulates understanding without
+    realizing they're accumulating it.
+
+  PLAYER CONTACT:
+    Trigger: Player power threshold — when the player becomes a significant
+      enough force in Calradia to matter. Not investigation — significance.
+    First contact: A Face appears. In a tavern, at the edge of camp, already
+      in the room when the player arrives. They ask questions about decisions
+      the player made that nobody should know about. They phrase it as
+      curiosity. They are demonstrating omniscience, not making conversation.
+      Then they offer something minor — information the player could have
+      found eventually. The smallness is deliberate. They are not buying the
+      player. They are showing what even their minor offerings come from.
+      The player leaves with cold sweat and a small gift. No threats. No
+      demands. Just demonstrated omniscience and a door left open.
+
+  STATE TRANSITIONS:
+    DORMANT (campaign start): Faces embedded. Fragment system running
+      passively. The player has no idea they exist.
+    DORMANT -> ACTIVE: Campaign start. No announcement. They were always here.
+    ACTIVE -> ESCALATED: Player power threshold crossed. First contact fires.
+      Veil Riders begin appearing on the steppe and northern coast.
+    ESCALATED -> CRISIS (CULT OF KOSMOS REVEALED): Enough fragments assembled
+      AND Veil Riders have been encountered. The Unnamed Fleet appears on the
+      coastal map. This is Bannerwake's Pendor Order equivalent endgame layer.
+      The player now knows what is coming. The game never tells them what to
+      do about it.
+
+  PLAYER OPTIONS (none are directed — the player chooses):
+    Ignore it — the Fleet still comes. Cult of Kosmos continues arranging.
+    Unite Calradia — through normal kingdom mechanics, build something capable
+      of resisting the arrival.
+    Dismantle Cult of Kosmos — cell by cell, Face by Face, investigation and
+      targeted military action.
+    Find The Reader — the deepest quest chain in Bannerwake. May be
+      impossible to complete. The answer at the end may raise more questions.
+    Do nothing — watch. Some players will choose this. It is valid.
+
+  BLACK KEEL CONNECTION:
+    Whatever is wrong with Hrothgar and his crew — they found it in the north.
+    In deep waters. Near something that should not be there. The Unnamed Fleet
+    has been approaching for some time, scouting, testing, touching the world.
+    Black Keel sailed into those waters. The connection is never stated.
+    The player assembles it from fragments. It is never confirmed.
+
+  DESIGN RULES (absolute, never violated):
+    NEVER give a definitive answer about Cult of Kosmos anywhere in the mod.
+    NEVER give a definitive answer about the Unnamed Fleet anywhere in the mod.
+    NEVER give a definitive answer about The Reader's identity or origin.
+    NEVER give a definitive answer about the ancient civilization.
+    The ambiguity is not laziness. It is the entire point.
+    The player should finish a full campaign and still not be certain of
+    everything. That uncertainty is what makes Cult of Kosmos feel real.
+
+  Threat signature: A lord who knew about your battle before your scouts
+    reported it. A merchant who asks specifically about the northern coastline.
+    The Unnamed Fleet on the horizon that was gone by morning. A Face who
+    sits across from you and asks about a decision you made six months ago
+    that you thought nobody witnessed. They knew. They have always known.
+
+  VISUAL IDENTITY (Phase 7 art task — see Section 15 for full spec):
+    Source: Tales from the Age of Men (Nexus 7748) dark faction armor sets.
+    License: permits private use with credit. Verify before extracting.
+    Target palette: dark slate grey, almost black. No bright metal.
+    No faction colors. No insignia anywhere. Armor absorbs light, not reflects.
+    The silver sigil — the only Kosmos identifying mark — appears on
+    high-tier Veil Rider units only. At distance a Veil Rider is a shadow.
+    VISUAL WRONGNESS (must be preserved through all recoloring):
+      Armor construction is wrong — not broken, just wrong. Joints articulate
+      differently. Proportions human but subtly off. Plates overlapping in a
+      direction no Calradian armorer would choose. A player fighting a Veil
+      Rider up close should feel something is different without being able to
+      articulate what. Do NOT normalize the silhouette during Phase 7 recolor.
+    bw_kosmos_ prefix for all assets. Flag in MISSING_ASSETS.md until Phase 7.
+
+
+
+--------------------------------------------------------------------------------
+SECTION 14: DEVELOPMENT RULES AND BUILD ORDER
 --------------------------------------------------------------------------------
 
 BUILD ORDER — EIGHT PHASES:
@@ -3836,11 +3861,11 @@ DEVELOPMENT RULES:
 14. The Gathering (Grovebound) must be a campaign event, not a standing army.
     Gathering Warriors should not appear in normal spawning pools.
 
-15. Never give the player a complete answer about The Shroud or the Unnamed Fleet.
+15. Never give the player a complete answer about Cult of Kosmos or the Unnamed Fleet.
 
 
 --------------------------------------------------------------------------------
-SECTION 11: VISUAL REWORK — TEXTURES, RESKINS, GUI, AND QUALITY PASS
+SECTION 15: VISUAL REWORK — TEXTURES, RESKINS, GUI, AND QUALITY PASS
 --------------------------------------------------------------------------------
 
 This is Phase 7 work entirely. Do not attempt any of this before Phase 6 is
@@ -3999,7 +4024,7 @@ AREAS TO REWORK:
     Every sub-faction — Lake Rats, Jomsvikingr, Black Keel, Grovebound, all of
     them — needs a proper encyclopedia entry. The player should be able to
     read about a sub-faction and understand what it is, where it operates,
-    and what it wants. The Shroud's entry should be conspicuously incomplete.
+    and what it wants. Cult of Kosmos' entry should be conspicuously incomplete.
     Black Keel's entry should feel wrong in the same way Black Keel feels wrong.
 
   World Map Visual Pass:
@@ -4073,11 +4098,11 @@ logged to MISSING_ASSETS.md with:
 Black Keel face retexture is currently logged as non-blocking Phase 7.
 Grovebound exclusive armor is currently logged as non-blocking Phase 7.
 Imperial color variants are currently logged as non-blocking Phase 7.
-Shroud Veil Rider armor recolor is currently logged as non-blocking Phase 7.
+Kosmos Veil Rider armor recolor is currently logged as non-blocking Phase 7.
 
 These stay in MISSING_ASSETS.md until Phase 7 is active.
 
-THE SHROUD VISUAL IDENTITY (Phase 7 art task):
+CULT OF KOSMOS VISUAL IDENTITY (Phase 7 art task):
   Asset source: Tales from the Age of Men mod (Nexus 7748) dark faction armor
     sets — specifically the heavily armored Uruk and dark Men of Rhûn assets.
     Human-proportioned but architecturally alien. Armor that looks like it was
@@ -4105,7 +4130,7 @@ THE SHROUD VISUAL IDENTITY (Phase 7 art task):
   Technical path: Extract .dds texture files from Tales from the Age of Men
     dark faction armor sets. Strip fantasy iconography in Photoshop/GIMP.
     Shift palette to dark slate grey, zero saturated color anywhere. Apply
-    specular adjustment — Shroud armor does not shine. Save with bw_shroud_
+    specular adjustment — Kosmos armor does not shine. Save with bw_kosmos_
     prefix. All work in Phase 7.
 
 
@@ -4187,7 +4212,7 @@ END CODEX LOCAL AUDIT ADDENDUM
 
 
 --------------------------------------------------------------------------------
-SECTION 12: EXTRACTED NPC ROSTER APPENDIX — VANILLA + WAR SAILS
+SECTION 16: EXTRACTED NPC ROSTER APPENDIX — VANILLA + WAR SAILS
 --------------------------------------------------------------------------------
 
 Extraction scope:
@@ -4255,5 +4280,5 @@ Roster:
   separate copy here. The NPC reference file is always more complete.
 
 ================================================================================
-END OF BANNERWAKE DESIGN DOCUMENT v3.0
+END OF BANNERWAKE DESIGN DOCUMENT v4.0
 ================================================================================
